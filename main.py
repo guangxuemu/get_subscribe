@@ -257,6 +257,10 @@ def parse_ss(line):
             name = unquote(parts[1])
             link = parts[0]
         
+        # 如果包含 JSON 特征，说明格式错误，跳过
+        if '{' in link or '"' in link:
+            return None
+        
         if '@' not in link:
             link = base64.b64decode(link + '==').decode()
         
@@ -278,6 +282,10 @@ def parse_ss(line):
             else:
                 return None
         else:
+            return None
+        
+        # 验证 cipher 字段，不能包含 JSON
+        if '{' in cipher or '"' in cipher:
             return None
         
         return {
