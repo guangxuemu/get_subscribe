@@ -1,23 +1,155 @@
 # 订阅源列表
 # 来源：mihomo (SmartSub) + get_subscribe 原有订阅源
 # 格式：类型 | 名称|URL
+# 类型：rss, direct, telegram
 
 # ===== GitHub 订阅源 =====
-direct|AutoMergePublicNodes|https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/refs/heads/master/list.yml
+direct|AutoMergePublicNodes|https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.txt
+direct|barry-far V2ray-config|https://raw.githubusercontent.com/barry-far/V2ray-config/main/Sub6.txt
+direct|clashv2ray-hub clashfree|https://raw.githubusercontent.com/clashv2ray-hub/clashfree/refs/heads/main/clash.yaml
 direct|ebrasha free-v2ray|https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/refs/heads/main/all_extracted_configs.txt
 direct|ermaozi get_subscribe|https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt
 direct|free18 v2ray|https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml
-direct|mahdibland V2RayAggregator|https://raw.githubusercontent.com/mahdibland/V2RayAggregator/refs/heads/master/Eternity.yml
+direct|mahdibland V2RayAggregator|https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/Eternity
 direct|MatinGhanbari v2ray-configs|https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/all_sub.txt
 direct|ovmvo FreeSub|https://raw.githubusercontent.com/ovmvo/FreeSub/refs/heads/main/sub/permanent/mihomo.yaml
+direct|Pawdroid Free-servers|https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub
 direct|PuddinCat BestClash|https://raw.githubusercontent.com/PuddinCat/BestClash/refs/heads/main/proxies.yaml
-direct|shaoyouvip free|https://raw.githubusercontent.com/shaoyouvip/free/main/mihomo.yaml
+direct|shaoyouvip free|https://raw.githubusercontent.com/shaoyouvip/free/main/all.yaml
+direct|snakem982 proxypool clash-meta|https://raw.githubusercontent.com/snakem982/proxypool/main/source/clash-meta.yaml
 direct|snakem982 proxypool clash-meta-2|https://raw.githubusercontent.com/snakem982/proxypool/main/source/clash-meta-2.yaml
-direct|openproxylist V2RAY_RAW|https://raw.githubusercontent.com/roosterkid/openproxylist/refs/heads/main/V2RAY_RAW.txt
+direct|tbbatbb Proxy|https://raw.githubusercontent.com/tbbatbb/Proxy/master/dist/v2ray.config.txt
+direct|vveg26 get_proxy|https://raw.githubusercontent.com/vveg26/get_proxy/main/dist/v2ray.config.txt
+direct|yebekhe TelegramV2rayCollector|https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/subscribe/all.txt
+direct|tglaoshiji nodeshare|https://github.com/tglaoshiji/nodeshare/raw/refs/heads/main/v2ray.txt
 
 # ===== 其他订阅源 =====
 direct|cfvvv|https://cfvvv-ev1.pages.dev/sub?token=f0d335d1dde0f1c8881d3547c06f72b0
+direct|openproxylist subscribe|https://openproxylist.com/v2ray/rawlist/subscribe
+direct|openproxylist V2RAY_RAW|https://openproxylist.com/v2ray/rawlist/V2RAY_RAW.txt
 
 # ===== RSS 订阅源 =====
 rss|CFMem|https://www.cfmem.com/feeds/posts/default?alt=rss
 
+# ===== Telegram 频道（完整列表）=====
+telegram|WFVPN|https://t.me/WFVPN
+telegram|ripaojiedian|https://t.me/ripaojiedian
+telegram|FProxies|https://t.me/FProxies
+telegram|TGVPN777|https://t.me/TGVPN777
+telegram|v2queen|https://t.me/v2queen
+telegram|ZDYZ2|https://t.me/ZDYZ2
+telegram|freeyule|https://t.me/freeyule
+telegram|suyucom|https://t.me/suyucom
+telegram|ShareCentre|https://t.me/ShareCentre
+telegram|changfengchannel|https://t.me/changfengchannel
+telegram|Free166|https://t.me/Free166
+telegram|xiaoxinv|https://t.me/xiaoxinv
+telegram|ShareCentrePro|https://t.me/ShareCentrePro
+telegram|zyfxlnn|https://t.me/zyfxlnn
+telegram|juzibaipiao|https://t.me/juzibaipiao
+telegram|freeVPNjd|https://t.me/freeVPNjd
+telegram|v2raydailyupdate|https://t.me/v2raydailyupdate
+telegram|allv2board|https://t.me/allv2board
+telegram|wxdy666|https://t.me/wxdy666
+telegram|mftizi|https://t.me/mftizi
+telegram|freev2rays|https://t.me/freev2rays
+telegram|yaney_01|https://t.me/yaney_01
+telegram|bamboo_vpn|https://t.me/bamboo_vpn
+telegram|maxshare|https://t.me/maxshare
+telegram|BmFt1|https://t.me/BmFt1
+telegram|fffffx2|https://t.me/fffffx2
+telegram|Jsnzk|https://t.me/Jsnzk
+telegram|wbnet|https://t.me/wbnet
+telegram|go4sharing|https://t.me/go4sharing
+telegram|freekankan|https://t.me/freekankan
+telegram|vpnhat|https://t.me/vpnhat
+telegram|dingyue_Center|https://t.me/dingyue_Center
+telegram|kxswa|https://t.me/kxswa
+telegram|hkaa0|https://t.me/hkaa0
+telegram|iosfulishare|https://t.me/iosfulishare
+telegram|V2rayNGn|https://t.me/V2rayNGn
+telegram|free4allVPN|https://t.me/free4allVPN
+telegram|PrivateVPNs|https://t.me/PrivateVPNs
+telegram|V2rayng_Fast|https://t.me/V2rayng_Fast
+telegram|DirectVPN|https://t.me/DirectVPN
+telegram|ProxyFn|https://t.me/ProxyFn
+telegram|v2ray_outlineir|https://t.me/v2ray_outlineir
+telegram|v2ray_swhil|https://t.me/v2ray_swhil
+telegram|NetAccount|https://t.me/NetAccount
+telegram|oneclickvpnkeys|https://t.me/oneclickvpnkeys
+telegram|daorzadannet|https://t.me/daorzadannet
+telegram|LoRd_uL4mo|https://t.me/LoRd_uL4mo
+telegram|Outline_Vpn|https://t.me/Outline_Vpn
+telegram|vpn_xw|https://t.me/vpn_xw
+telegram|prrofile_purple|https://t.me/prrofile_purple
+telegram|proxyymeliii|https://t.me/proxyymeliii
+telegram|ShadowProxy66|https://t.me/ShadowProxy66
+telegram|ShadowSocks_s|https://t.me/ShadowSocks_s
+telegram|V2rayngninja|https://t.me/V2rayngninja
+telegram|VmessProtocol|https://t.me/VmessProtocol
+telegram|VlessConfig|https://t.me/VlessConfig
+telegram|Qv2raychannel|https://t.me/Qv2raychannel
+telegram|TheHotVPN|https://t.me/TheHotVPN
+telegram|FalconPolV2rayNG|https://t.me/FalconPolV2rayNG
+telegram|EXOGAMERS|https://t.me/EXOGAMERS
+telegram|DarkVPNpro|https://t.me/DarkVPNpro
+telegram|Cov2ray|https://t.me/Cov2ray
+telegram|ConfigsHUB|https://t.me/ConfigsHUB
+telegram|AlienVPN402|https://t.me/AlienVPN402
+telegram|CloudCityy|https://t.me/CloudCityy
+telegram|INIT1984|https://t.me/INIT1984
+telegram|Jeyksatan|https://t.me/Jeyksatan
+telegram|LegenderY_Servers|https://t.me/LegenderY_Servers
+telegram|MTConfig|https://t.me/MTConfig
+telegram|MehradLearn|https://t.me/MehradLearn
+telegram|MsV2ray|https://t.me/MsV2ray
+telegram|NIM_VPN_ir|https://t.me/NIM_VPN_ir
+telegram|Napsternetvirani|https://t.me/Napsternetvirani
+telegram|OutlineVpnOfficial|https://t.me/OutlineVpnOfficial
+telegram|PAINB0Y|https://t.me/PAINB0Y
+telegram|Pinkpotatocloud|https://t.me/Pinkpotatocloud
+telegram|Proxy_PJ|https://t.me/Proxy_PJ
+telegram|SafeNet_Server|https://t.me/SafeNet_Server
+telegram|ServerNett|https://t.me/ServerNett
+telegram|UnlimitedDev|https://t.me/UnlimitedDev
+telegram|V2RayTz|https://t.me/V2RayTz
+telegram|VpnProSec|https://t.me/VpnProSec
+telegram|WomanLifeFreedomVPN|https://t.me/WomanLifeFreedomVPN
+telegram|X_Her0|https://t.me/X_Her0
+telegram|azadi_az_inja_migzare|https://t.me/azadi_az_inja_migzare
+telegram|hashmakvpn|https://t.me/hashmakvpn
+telegram|hassan_saboorii|https://t.me/hassan_saboorii
+telegram|iSegaro|https://t.me/iSegaro
+telegram|iran_ray|https://t.me/iran_ray
+telegram|ipV2Ray|https://t.me/ipV2Ray
+telegram|kiava|https://t.me/kiava
+telegram|customv2ray|https://t.me/customv2ray
+telegram|free_v2rayy|https://t.me/free_v2rayy
+telegram|freeconfigv2|https://t.me/freeconfigv2
+telegram|internet4iran|https://t.me/internet4iran
+telegram|lagvpn13|https://t.me/lagvpn13
+telegram|lrnbymaa|https://t.me/lrnbymaa
+telegram|ovpn2|https://t.me/ovpn2
+telegram|proxy_kafee|https://t.me/proxy_kafee
+telegram|server01012|https://t.me/server01012
+telegram|shopingv2ray|https://t.me/shopingv2ray
+telegram|v2freevpn|https://t.me/v2freevpn
+telegram|v2ray1_ng|https://t.me/v2ray1_ng
+telegram|v2rayNG_Matsuri|https://t.me/v2rayNG_Matsuri
+telegram|v2rayNGNeT|https://t.me/v2rayNGNeT
+telegram|v2rayngvpn|https://t.me/v2rayngvpn
+telegram|v2rayNG_VPNN|https://t.me/v2rayNG_VPNN
+telegram|v2ray_vpn_ir|https://t.me/v2ray_vpn_ir
+telegram|v2_team|https://t.me/v2_team
+telegram|vless_vmess|https://t.me/vless_vmess
+telegram|vmessorg|https://t.me/vmessorg
+telegram|vmess_vless_v2rayng|https://t.me/vmess_vless_v2rayng
+telegram|vpnfail_v2ray|https://t.me/vpnfail_v2ray
+telegram|vpn_ioss|https://t.me/vpn_ioss
+telegram|vpn_tehran|https://t.me/vpn_tehran
+telegram|xrayproxy|https://t.me/xrayproxy
+telegram|xrayzxn|https://t.me/xrayzxn
+telegram|Helix_Servers|https://t.me/Helix_Servers
+telegram|FreeIranT|https://t.me/FreeIranT
+telegram|V2rayCollectorDonate|https://t.me/V2rayCollectorDonate
+telegram|irancpi|https://t.me/irancpi
