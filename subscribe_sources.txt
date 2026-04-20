@@ -13,11 +13,10 @@ direct|ovmvo FreeSub|https://raw.githubusercontent.com/ovmvo/FreeSub/refs/heads/
 direct|PuddinCat BestClash|https://raw.githubusercontent.com/PuddinCat/BestClash/refs/heads/main/proxies.yaml
 direct|shaoyouvip free|https://raw.githubusercontent.com/shaoyouvip/free/main/mihomo.yaml
 direct|snakem982 proxypool clash-meta-2|https://raw.githubusercontent.com/snakem982/proxypool/main/source/clash-meta-2.yaml
+direct|openproxylist V2RAY_RAW|https://raw.githubusercontent.com/roosterkid/openproxylist/refs/heads/main/V2RAY_RAW.txt
 
 # ===== 其他订阅源 =====
 direct|cfvvv|https://cfvvv-ev1.pages.dev/sub?token=f0d335d1dde0f1c8881d3547c06f72b0
-direct|openproxylist subscribe|https://openproxylist.com/v2ray/rawlist/subscribe
-direct|openproxylist V2RAY_RAW|https://openproxylist.com/v2ray/rawlist/V2RAY_RAW.txt
 
 # ===== RSS 订阅源 =====
 rss|CFMem|https://www.cfmem.com/feeds/posts/default?alt=rss
