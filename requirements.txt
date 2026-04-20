@@ -1,5 +1,3 @@
-requests
 feedparser
-matplotlib
-pandas
-
+requests
+PyYAML
