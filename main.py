@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-订阅源抓取工具（带节点可用性检测）
+订阅源抓取工具（只去重，不检测可用性）
 从 subscribe_sources.txt 读取订阅源列表，自动抓取并更新订阅文件
 """
 import os
@@ -9,11 +9,8 @@ import re
 import sys
 import time
 import json
-import socket
 import feedparser
 import requests
-import base64
-from urllib.parse import parse_qs, unquote
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 requests.packages.urllib3.disable_warnings()
@@ -30,11 +27,6 @@ HEADERS = {
 }
 TIMEOUT = 30
 OK_CODES = [200, 201, 202, 203, 204, 205, 206]
-
-# 节点检测配置
-NODE_TEST_TIMEOUT = 5  # 节点测试超时（秒）
-NODE_TEST_WORKERS = 200  # 并发测试数
-MIN_AVAILABLE_RATIO = 0.3  # 最低可用率（30%），低于此值认为订阅源失效
 
 
 def write_log(content, level="INFO"):
@@ -109,11 +101,13 @@ def fetch_rss_source(source):
         for entry in entries[:3]:
             summary = entry.get('summary', '')
             
+            # 提取 V2Ray 链接
             if not v2ray_url:
                 matches = re.findall(r">V2Ray[^>]*-&gt;\s*(.*?)</span>", summary)
                 if matches:
                     v2ray_url = matches[-1].replace('amp;', '')
             
+            # 提取 Clash 链接
             if not clash_url:
                 matches = re.findall(r">clash[^>]*-&gt;\s*(.*?)</span>", summary)
                 if matches and not matches[-1].startswith("订阅地址生成失败"):
@@ -151,196 +145,30 @@ def fetch_direct_source(source):
         return None
 
 
-def parse_node(line):
-    """解析节点链接，提取服务器和端口"""
-    try:
-        line = line.strip()
-        if not line or '://' not in line:
-            return None, None
-        
-        proto = line.split('://')[0]
-        
-        if proto == 'ss':
-            return parse_ss(line)
-        elif proto == 'vmess':
-            return parse_vmess(line)
-        elif proto == 'trojan':
-            return parse_trojan(line)
-        elif proto == 'vless':
-            return parse_vless(line)
-        elif proto in ('hysteria2', 'hysteria'):
-            return parse_hysteria2(line)
-        
-        return None, None
-    except:
-        return None, None
-
-
-def parse_ss(line):
-    try:
-        link = line[5:]
-        if '@' not in link:
-            link = base64.b64decode(link + '==').decode()
-        if '@' in link:
-            _, serverpart = link.split('@', 1)
-            serverpart = serverpart.split('?')[0]
-            if ':' in serverpart:
-                server, port = serverpart.rsplit(':', 1)
-                return server.strip(), int(port.strip())
-    except:
-        pass
-    return None, None
-
-
-def parse_vmess(line):
-    try:
-        b64 = line[8:]
-        b64 += '=' * (4 - len(b64) % 4) if len(b64) % 4 else ''
-        data = json.loads(base64.b64decode(b64).decode())
-        server = data.get('add', '')
-        port = str(data.get('port', ''))
-        if server and port.isdigit():
-            return server, int(port)
-    except:
-        pass
-    return None, None
-
-
-def parse_trojan(line):
-    try:
-        link = line[9:]
-        if '#' in link:
-            link = link.split('#')[0]
-        if '@' in link:
-            _, serverpart = link.split('@', 1)
-            serverpart = serverpart.split('?')[0]
-            if ':' in serverpart:
-                server, port = serverpart.rsplit(':', 1)
-                return server.strip(), int(port.strip())
-    except:
-        pass
-    return None, None
-
-
-def parse_vless(line):
-    try:
-        link = line[7:]
-        if '#' in link:
-            link = link.split('#')[0]
-        if '@' in link:
-            _, serverpart = link.split('@', 1)
-            serverpart = serverpart.split('?')[0]
-            if ':' in serverpart:
-                server, port = serverpart.rsplit(':', 1)
-                return server.strip(), int(port.strip())
-    except:
-        pass
-    return None, None
-
-
-def parse_hysteria2(line):
-    try:
-        link = line[12:]
-        if '#' in link:
-            link = link.split('#')[0]
-        if '@' in link:
-            _, serverpart = link.split('@', 1)
-            serverpart = serverpart.split('?')[0]
-            if ':' in serverpart:
-                server, port = serverpart.rsplit(':', 1)
-                return server.strip(), int(port.strip())
-    except:
-        pass
-    return None, None
-
-
-def test_node(server, port):
-    """测试节点 TCP 连接"""
-    if not server or not port:
-        return False
-    
-    try:
-        # DNS 解析
-        if not server.replace('.', '').replace('-', '').isdigit():
-            ip = socket.gethostbyname(server)
-        else:
-            ip = server
-        
-        # TCP 连接
-        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        sock.settimeout(NODE_TEST_TIMEOUT)
-        result = sock.connect_ex((ip, port))
-        sock.close()
-        
-        return result == 0
-    except:
-        return False
-
-
-def test_nodes_availability(nodes):
-    """批量测试节点可用性"""
-    if not nodes:
-        return []
-    
-    write_log(f"开始测试 {len(nodes)} 个节点的可用性 (并发={NODE_TEST_WORKERS})...")
-    
-    # 解析所有节点
-    parsed = []
-    for line in nodes:
-        server, port = parse_node(line)
-        if server and port:
-            parsed.append((line, server, port))
-    
-    write_log(f"成功解析 {len(parsed)} 个节点")
-    
-    # 批量测试
-    available = []
-    
-    with ThreadPoolExecutor(max_workers=NODE_TEST_WORKERS) as executor:
-        future_to_node = {
-            executor.submit(test_node, server, port): (line, server, port)
-            for line, server, port in parsed
-        }
-        
-        for i, future in enumerate(as_completed(future_to_node), 1):
-            line, server, port = future_to_node[future]
-            try:
-                if future.result():
-                    available.append(line)
-                
-                if i % 500 == 0:
-                    write_log(f"  测试进度：{i}/{len(parsed)} (可用：{len(available)})")
-            except:
-                pass
-    
-    # 计算可用率
-    ratio = len(available) / len(parsed) if parsed else 0
-    write_log(f"节点可用率：{ratio*100:.1f}% ({len(available)}/{len(parsed)})")
-    
-    return available
-
-
 def merge_v2ray_nodes(contents):
-    """合并多个 V2Ray 订阅内容"""
+    """合并多个 V2Ray 订阅内容（只去重）"""
     all_nodes = set()
     
     for content in contents:
         if not content:
             continue
         
-        nodes = [line.strip() for line in content.split('\n') if line.strip()]
+        # 按行分割，过滤空行和注释
+        nodes = [line.strip() for line in content.split('\n') if line.strip() and not line.startswith('#')]
         
+        # 只保留有效的节点链接
         for node in nodes:
-            if node.startswith(('vmess://', 'vless://', 'trojan://', 'ss://', 'hysteria2://')):
+            if node.startswith(('vmess://', 'vless://', 'trojan://', 'ss://', 'hysteria2://', 'ssr://')):
                 all_nodes.add(node)
     
-    return list(all_nodes)
+    write_log(f"去重后共 {len(all_nodes)} 个节点")
+    return sorted(list(all_nodes))
 
 
 def main():
     """主函数"""
     write_log("=" * 50)
-    write_log("开始抓取订阅")
+    write_log("开始抓取订阅（只去重，不检测可用性）")
     
     # 创建输出目录
     os.makedirs(OUTPUT_DIR, exist_ok=True)
@@ -399,19 +227,15 @@ def main():
                 except:
                     pass
     
-    # 合并 V2Ray 节点
+    # 合并 V2Ray 节点（只去重）
     if v2ray_contents:
         merged_v2ray = merge_v2ray_nodes(v2ray_contents)
-        write_log(f"合并后共 {len(merged_v2ray)} 个 V2Ray 节点")
         
-        # 测试节点可用性
-        available_v2ray = test_nodes_availability(merged_v2ray)
-        
-        if available_v2ray:
+        if merged_v2ray:
             v2ray_file = os.path.join(OUTPUT_DIR, 'v2ray.txt')
             with open(v2ray_file, 'w', encoding='utf-8') as f:
-                f.write('\n'.join(sorted(available_v2ray)))
-            write_log(f"已保存 V2Ray 订阅：{v2ray_file} ({len(available_v2ray)} 行)")
+                f.write('\n'.join(merged_v2ray))
+            write_log(f"已保存 V2Ray 订阅：{v2ray_file} ({len(merged_v2ray)} 行)")
     
     # 保存 Clash 订阅
     if clash_contents:
