@@ -555,6 +555,9 @@ def main():
 
 
 if __name__ == '__main__':
-    # 导入 yaml
-    import yaml
+    try:
+        import yaml
+    except ImportError:
+        print("请安装 PyYAML: pip install PyYAML")
+        sys.exit(1)
     main()
