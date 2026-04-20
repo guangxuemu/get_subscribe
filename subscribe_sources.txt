@@ -1,0 +1,18 @@
+# 订阅源列表
+# 格式：类型|名称|URL
+# 类型：rss 或 direct
+# 每行一个订阅源，# 开头的是注释
+
+# === 推荐的订阅源（已启用）===
+rss|CFMem|https://www.cfmem.com/feeds/posts/default?alt=rss
+direct|NoMoreWalls|https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.txt
+direct|Mahdi SSAggregator|https://raw.githubusercontent.com/mahdibland/SSAggregator/master/sub/sub_merge.txt
+
+# === 备用订阅源（未启用）===
+# rss|V2rayShare|https://v2rayshare.com/feed/
+# direct|FreeV2ray|https://raw.githubusercontent.com/free18/v2ray/main/sub.txt
+# direct|Pojiezhiyuanjun|https://raw.githubusercontent.com/pojiezhiyuanjun/2023/master/1225.txt
+# direct|Ermaozi|https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt
+
+# === 添加新订阅源示例 ===
+# direct|你的订阅源名称 | 订阅源 URL
