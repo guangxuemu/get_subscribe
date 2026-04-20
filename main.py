@@ -160,6 +160,30 @@ def merge_v2ray_nodes(contents):
     return sorted(list(all_nodes))
 
 
+def clean_node_name(name):
+    """清理节点名称，移除 YAML 特殊字符"""
+    if not name:
+        return 'Unnamed'
+    
+    # 移除 emoji 和特殊符号
+    name = re.sub(r'[\U0001F300-\U0001F9FF]', '', name)  # emoji
+    name = re.sub(r'[\U0001F600-\U0001F64F]', '', name)  # emoticons
+    name = re.sub(r'[\U0001F680-\U0001F6FF]', '', name)  # transport symbols
+    name = re.sub(r'[\U0001F1E0-\U0001F1FF]', '', name)  # flags
+    
+    # 移除特殊字符
+    name = re.sub(r'["\'\\:\{\}\[\],]', '', name)
+    
+    # 移除多余空格
+    name = ' '.join(name.split())
+    
+    # 如果名称为空，生成一个默认名称
+    if not name.strip():
+        return 'Node-' + str(hash(name))[:6]
+    
+    return name.strip()[:50]  # 限制长度
+
+
 def parse_v2ray_node(line):
     """解析 v2ray 节点链接"""
     try:
@@ -192,7 +216,7 @@ def parse_vmess(line):
         b64 += '=' * (4 - len(b64) % 4) if len(b64) % 4 else ''
         data = json.loads(base64.b64decode(b64).decode('utf-8'))
         
-        name = data.get('ps', 'VMess-' + str(hash(line))[:6])
+        name = clean_node_name(data.get('ps', 'VMess'))
         proxy = {
             'name': name,
             'type': 'vmess',
@@ -257,7 +281,7 @@ def parse_ss(line):
             return None
         
         return {
-            'name': name,
+            'name': clean_node_name(name),
             'type': 'ss',
             'server': server,
             'port': port,
@@ -300,7 +324,7 @@ def parse_trojan(line):
             return None
         
         proxy = {
-            'name': name,
+            'name': clean_node_name(name),
             'type': 'trojan',
             'server': server,
             'port': port,
@@ -350,7 +374,7 @@ def parse_vless(line):
             return None
         
         proxy = {
-            'name': name,
+            'name': clean_node_name(name),
             'type': 'vless',
             'server': server,
             'port': port,
@@ -394,7 +418,7 @@ def parse_hysteria2(line):
             return None
         
         return {
-            'name': name,
+            'name': clean_node_name(name),
             'type': 'hysteria2',
             'server': server,
             'port': port,
@@ -539,7 +563,7 @@ def main():
                 
                 clash_file = os.path.join(OUTPUT_DIR, 'clash.yml')
                 with open(clash_file, 'w', encoding='utf-8') as f:
-                    yaml.dump(clash_config, f, default_flow_style=False, allow_unicode=True)
+                    yaml.dump(clash_config, f, default_flow_style=False, allow_unicode=True, sort_keys=False)
                 
                 write_log(f"已保存 Clash 订阅：{clash_file} ({len(clash_proxies)} 个节点)")
     
@@ -555,6 +579,7 @@ def main():
 
 
 if __name__ == '__main__':
+    # 导入 yaml
     try:
         import yaml
     except ImportError:
