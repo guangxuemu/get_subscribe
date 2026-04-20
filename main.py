@@ -1,19 +1,15 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-订阅源抓取工具（带 TCP 可用性测试）
-GitHub Actions 版本
+订阅源抓取工具（只去重，不检测可用性，不做转换）
 """
 import os
 import re
 import sys
 import time
 import json
-import socket
-import base64
 import feedparser
 import requests
-from urllib.parse import parse_qs, unquote
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 requests.packages.urllib3.disable_warnings()
@@ -30,10 +26,6 @@ HEADERS = {
 }
 TIMEOUT = 30
 OK_CODES = [200, 201, 202, 203, 204, 205, 206]
-
-# 节点测试配置（GitHub Actions）
-NODE_TEST_TIMEOUT = 3  # 超时更短
-NODE_TEST_WORKERS = 150  # 并发稍低，避免被限制
 
 
 def write_log(content, level="INFO"):
@@ -165,185 +157,10 @@ def merge_v2ray_nodes(contents):
     return sorted(list(all_nodes))
 
 
-def parse_node_server_port(line):
-    """从节点链接提取服务器和端口"""
-    try:
-        line = line.strip()
-        if not line or '://' not in line:
-            return None, None
-        
-        proto = line.split('://')[0].lower()
-        
-        if proto == 'ss':
-            return parse_ss_server(line)
-        elif proto == 'vmess':
-            return parse_vmess_server(line)
-        elif proto == 'trojan':
-            return parse_trojan_server(line)
-        elif proto == 'vless':
-            return parse_vless_server(line)
-        elif proto in ('hysteria2', 'hysteria'):
-            return parse_hysteria_server(line)
-        
-        return None, None
-    except:
-        return None, None
-
-
-def parse_ss_server(line):
-    try:
-        link = line[5:]
-        if '@' not in link:
-            link = base64.b64decode(link + '==').decode()
-        if '@' in link:
-            _, serverpart = link.split('@', 1)
-            serverpart = serverpart.split('?')[0]
-            if ':' in serverpart:
-                server, port = serverpart.rsplit(':', 1)
-                return server.strip(), int(port.strip())
-    except:
-        pass
-    return None, None
-
-
-def parse_vmess_server(line):
-    try:
-        b64 = line[8:]
-        b64 += '=' * (4 - len(b64) % 4) if len(b64) % 4 else ''
-        data = json.loads(base64.b64decode(b64).decode())
-        server = data.get('add', '')
-        port = str(data.get('port', ''))
-        if server and port.isdigit():
-            return server, int(port)
-    except:
-        pass
-    return None, None
-
-
-def parse_trojan_server(line):
-    try:
-        link = line[9:]
-        if '#' in link:
-            link = link.split('#')[0]
-        if '@' in link:
-            _, serverpart = link.split('@', 1)
-            serverpart = serverpart.split('?')[0]
-            if ':' in serverpart:
-                server, port = serverpart.rsplit(':', 1)
-                return server.strip(), int(port.strip())
-    except:
-        pass
-    return None, None
-
-
-def parse_vless_server(line):
-    try:
-        link = line[7:]
-        if '#' in link:
-            link = link.split('#')[0]
-        if '@' in link:
-            _, serverpart = link.split('@', 1)
-            serverpart = serverpart.split('?')[0]
-            if ':' in serverpart:
-                server, port = serverpart.rsplit(':', 1)
-                return server.strip(), int(port.strip())
-    except:
-        pass
-    return None, None
-
-
-def parse_hysteria_server(line):
-    try:
-        link = line[12:]
-        if '#' in link:
-            link = link.split('#')[0]
-        if '@' in link:
-            _, serverpart = link.split('@', 1)
-            serverpart = serverpart.split('?')[0].split('/')[0]
-            if ':' in serverpart:
-                server, port = serverpart.rsplit(':', 1)
-                return server.strip(), int(port.strip())
-    except:
-        pass
-    return None, None
-
-
-def test_tcp(server, port):
-    """测试 TCP 连接（GitHub Actions 版本）"""
-    if not server or not port:
-        return False
-    
-    try:
-        # DNS 解析
-        if not server.replace('.', '').replace('-', '').isdigit():
-            ip = socket.gethostbyname(server)
-        else:
-            ip = server
-        
-        # TCP 连接
-        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        sock.settimeout(NODE_TEST_TIMEOUT)
-        result = sock.connect_ex((ip, port))
-        sock.close()
-        
-        return result == 0
-    except:
-        return False
-
-
-def test_nodes_availability(nodes):
-    """批量测试节点可用性（GitHub Actions 版本）"""
-    if not nodes:
-        return []
-    
-    write_log(f"开始 TCP 可用性测试 (并发={NODE_TEST_WORKERS}, 超时={NODE_TEST_TIMEOUT}s)...")
-    
-    # 解析所有节点
-    parsed = []
-    parse_failed = 0
-    for line in nodes:
-        server, port = parse_node_server_port(line)
-        if server and port:
-            parsed.append((line, server, port))
-        else:
-            parse_failed += 1
-    
-    if parse_failed > 0:
-        write_log(f"解析失败：{parse_failed} 个节点（格式错误）", "WARN")
-    
-    write_log(f"成功解析：{len(parsed)} 个节点")
-    
-    # 批量测试
-    available = []
-    
-    with ThreadPoolExecutor(max_workers=NODE_TEST_WORKERS) as executor:
-        future_to_node = {
-            executor.submit(test_tcp, server, port): (line, server, port)
-            for line, server, port in parsed
-        }
-        
-        for i, future in enumerate(as_completed(future_to_node), 1):
-            line, server, port = future_to_node[future]
-            try:
-                if future.result():
-                    available.append(line)
-                
-                if i % 500 == 0:
-                    write_log(f"  测试进度：{i}/{len(parsed)} (可用：{len(available)})")
-            except:
-                pass
-    
-    # 计算可用率
-    ratio = len(available) / len(parsed) * 100 if parsed else 0
-    write_log(f"节点可用率：{ratio:.1f}% ({len(available)}/{len(parsed)})")
-    
-    return available
-
-
 def main():
     """主函数"""
     write_log("=" * 50)
-    write_log("开始抓取订阅（带 TCP 可用性测试 - GitHub Actions）")
+    write_log("开始抓取订阅（只去重，不做转换）")
     
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     
@@ -391,6 +208,7 @@ def main():
                 try:
                     content = future.result()
                     if content:
+                        # 判断内容类型
                         if content.startswith('proxies:') or 'proxy-groups:' in content:
                             clash_contents.append(content)
                         else:
@@ -403,16 +221,12 @@ def main():
         merged_v2ray = merge_v2ray_nodes(v2ray_contents)
         
         if merged_v2ray:
-            # TCP 可用性测试
-            available_v2ray = test_nodes_availability(merged_v2ray)
-            
-            if available_v2ray:
-                v2ray_file = os.path.join(OUTPUT_DIR, 'v2ray.txt')
-                with open(v2ray_file, 'w', encoding='utf-8') as f:
-                    f.write('\n'.join(available_v2ray))
-                write_log(f"已保存 V2Ray 订阅：{v2ray_file} ({len(available_v2ray)} 行)")
+            v2ray_file = os.path.join(OUTPUT_DIR, 'v2ray.txt')
+            with open(v2ray_file, 'w', encoding='utf-8') as f:
+                f.write('\n'.join(merged_v2ray))
+            write_log(f"已保存 V2Ray 订阅：{v2ray_file} ({len(merged_v2ray)} 行)")
     
-    # 保存 Clash 订阅
+    # 保存 Clash 订阅（只保存原始 clash 格式）
     if clash_contents:
         clash_file = os.path.join(OUTPUT_DIR, 'clash.yml')
         with open(clash_file, 'w', encoding='utf-8') as f:
