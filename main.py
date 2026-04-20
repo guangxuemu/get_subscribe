@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 订阅源抓取工具（只去重，不检测可用性，不做转换）
+自动处理 clash 节点名称重复问题
 """
 import os
 import re
@@ -10,6 +11,7 @@ import time
 import json
 import feedparser
 import requests
+from collections import Counter
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 requests.packages.urllib3.disable_warnings()
@@ -157,6 +159,31 @@ def merge_v2ray_nodes(contents):
     return sorted(list(all_nodes))
 
 
+def deduplicate_clash_names(clash_content):
+    """处理 clash 节点名称重复问题"""
+    lines = clash_content.split('\n')
+    new_lines = []
+    name_counter = Counter()
+    
+    for line in lines:
+        if line.strip().startswith('- name:'):
+            # 提取名称
+            match = re.match(r'\s*- name:\s*(.+)', line)
+            if match:
+                name = match.group(1).strip()
+                name_counter[name] += 1
+                
+                if name_counter[name] > 1:
+                    # 重命名重复的名称
+                    new_name = f"{name} #{name_counter[name]}"
+                    line = line.replace(name, new_name)
+                    write_log(f"重命名重复节点：{name} → {new_name}", "DEBUG")
+        
+        new_lines.append(line)
+    
+    return '\n'.join(new_lines)
+
+
 def main():
     """主函数"""
     write_log("=" * 50)
@@ -226,12 +253,18 @@ def main():
                 f.write('\n'.join(merged_v2ray))
             write_log(f"已保存 V2Ray 订阅：{v2ray_file} ({len(merged_v2ray)} 行)")
     
-    # 保存 Clash 订阅（只保存原始 clash 格式）
+    # 保存 Clash 订阅（处理重复名称）
     if clash_contents:
+        # 合并所有 clash 内容
+        merged_clash = clash_contents[0]
+        
+        # 处理重复名称
+        deduplicated_clash = deduplicate_clash_names(merged_clash)
+        
         clash_file = os.path.join(OUTPUT_DIR, 'clash.yml')
         with open(clash_file, 'w', encoding='utf-8') as f:
-            f.write(clash_contents[0])
-        write_log(f"已保存 Clash 订阅：{clash_file}")
+            f.write(deduplicated_clash)
+        write_log(f"已保存 Clash 订阅：{clash_file}（已处理重复名称）")
     
     write_log("订阅抓取完成")
     write_log("=" * 50)
