@@ -4,29 +4,21 @@
 # 类型：rss, direct, telegram
 
 # ===== GitHub 订阅源 =====
-direct|AutoMergePublicNodes|https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.txt
-direct|barry-far V2ray-config|https://raw.githubusercontent.com/barry-far/V2ray-config/main/Sub6.txt
-direct|clashv2ray-hub clashfree|https://raw.githubusercontent.com/clashv2ray-hub/clashfree/refs/heads/main/clash.yaml
+direct|AutoMergePublicNodes|https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/refs/heads/master/list_raw.txt
+direct|barry-far V2ray-config|https://github.com/barry-far/V2ray-Config/raw/refs/heads/main/All_Configs_Sub.txt
 direct|ebrasha free-v2ray|https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/refs/heads/main/all_extracted_configs.txt
-direct|ermaozi get_subscribe|https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt
 direct|free18 v2ray|https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml
-direct|mahdibland V2RayAggregator|https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/Eternity
+direct|mahdibland V2RayAggregator|https://raw.githubusercontent.com/mahdibland/V2RayAggregator/refs/heads/master/Eternity.txt
 direct|MatinGhanbari v2ray-configs|https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/all_sub.txt
 direct|ovmvo FreeSub|https://raw.githubusercontent.com/ovmvo/FreeSub/refs/heads/main/sub/permanent/mihomo.yaml
 direct|Pawdroid Free-servers|https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub
 direct|PuddinCat BestClash|https://raw.githubusercontent.com/PuddinCat/BestClash/refs/heads/main/proxies.yaml
 direct|shaoyouvip free|https://raw.githubusercontent.com/shaoyouvip/free/main/all.yaml
-direct|snakem982 proxypool clash-meta|https://raw.githubusercontent.com/snakem982/proxypool/main/source/clash-meta.yaml
-direct|snakem982 proxypool clash-meta-2|https://raw.githubusercontent.com/snakem982/proxypool/main/source/clash-meta-2.yaml
-direct|tbbatbb Proxy|https://raw.githubusercontent.com/tbbatbb/Proxy/master/dist/v2ray.config.txt
-direct|vveg26 get_proxy|https://raw.githubusercontent.com/vveg26/get_proxy/main/dist/v2ray.config.txt
-direct|yebekhe TelegramV2rayCollector|https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/subscribe/all.txt
 direct|tglaoshiji nodeshare|https://github.com/tglaoshiji/nodeshare/raw/refs/heads/main/v2ray.txt
+direct|openproxylist V2RAY_RAW|https://raw.githubusercontent.com/roosterkid/openproxylist/refs/heads/main/V2RAY_RAW.txt
 
 # ===== 其他订阅源 =====
 direct|cfvvv|https://cfvvv-ev1.pages.dev/sub?token=f0d335d1dde0f1c8881d3547c06f72b0
-direct|openproxylist subscribe|https://openproxylist.com/v2ray/rawlist/subscribe
-direct|openproxylist V2RAY_RAW|https://openproxylist.com/v2ray/rawlist/V2RAY_RAW.txt
 
 # ===== RSS 订阅源 =====
 rss|CFMem|https://www.cfmem.com/feeds/posts/default?alt=rss
