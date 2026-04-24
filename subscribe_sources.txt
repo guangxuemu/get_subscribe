@@ -16,6 +16,8 @@ direct|PuddinCat BestClash|https://raw.githubusercontent.com/PuddinCat/BestClash
 direct|shaoyouvip free|https://raw.githubusercontent.com/shaoyouvip/free/main/all.yaml
 direct|tglaoshiji nodeshare|https://github.com/tglaoshiji/nodeshare/raw/refs/heads/main/v2ray.txt
 direct|openproxylist V2RAY_RAW|https://raw.githubusercontent.com/roosterkid/openproxylist/refs/heads/main/V2RAY_RAW.txt
+direct|twj0sub_platform|https://raw.githubusercontent.com/twj0/subseek/refs/heads/master/data/sub_platform.txt
+direct|twj0sub_github|https://raw.githubusercontent.com/twj0/subseek/refs/heads/master/data/sub_github.txt
 
 # ===== 其他订阅源 =====
 direct|cfvvv|https://cfvvv-ev1.pages.dev/sub?token=f0d335d1dde0f1c8881d3547c06f72b0
@@ -145,3 +147,6 @@ telegram|Helix_Servers|https://t.me/Helix_Servers
 telegram|FreeIranT|https://t.me/FreeIranT
 telegram|V2rayCollectorDonate|https://t.me/V2rayCollectorDonate
 telegram|irancpi|https://t.me/irancpi
+telegram|proxygogogo|https://t.me/proxygogogo
+telegram|shadowrocket_android|https://t.me/shadowrocket_android
+
