@@ -20,6 +20,8 @@ direct|twj0sub_platform|https://raw.githubusercontent.com/twj0/subseek/refs/head
 direct|twj0sub_github|https://raw.githubusercontent.com/twj0/subseek/refs/heads/master/data/sub_github.txt
 direct|gslege|https://raw.githubusercontent.com/gslege/CloudflareIP/refs/heads/main/Vless.txt
 direct|medicandong|https://raw.githubusercontent.com/medicandong/mibei/refs/heads/main/subscription.txt
+direct|PuddinCat|https://raw.githubusercontent.com/PuddinCat/BestClash/refs/heads/main/proxies.yaml
+direct|ts-sf|https://raw.githubusercontent.com/ts-sf/fly/main/v2
 
 
 # ===== 其他订阅源 =====
