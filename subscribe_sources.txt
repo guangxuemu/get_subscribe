@@ -11,13 +11,16 @@ direct|free18 v2ray|https://raw.githubusercontent.com/free18/v2ray/refs/heads/ma
 direct|mahdibland V2RayAggregator|https://raw.githubusercontent.com/mahdibland/V2RayAggregator/refs/heads/master/Eternity.txt
 direct|MatinGhanbari v2ray-configs|https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/all_sub.txt
 direct|ovmvo FreeSub|https://raw.githubusercontent.com/ovmvo/FreeSub/refs/heads/main/sub/permanent/mihomo.yaml
-direct|Pawdroid Free-servers|https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub
+direct|dongchengjie|https://raw.githubusercontent.com/dongchengjie/airport/refs/heads/main/subs/merged/tested_within.yaml
 direct|PuddinCat BestClash|https://raw.githubusercontent.com/PuddinCat/BestClash/refs/heads/main/proxies.yaml
 direct|shaoyouvip free|https://raw.githubusercontent.com/shaoyouvip/free/main/all.yaml
 direct|tglaoshiji nodeshare|https://github.com/tglaoshiji/nodeshare/raw/refs/heads/main/v2ray.txt
 direct|openproxylist V2RAY_RAW|https://raw.githubusercontent.com/roosterkid/openproxylist/refs/heads/main/V2RAY_RAW.txt
 direct|twj0sub_platform|https://raw.githubusercontent.com/twj0/subseek/refs/heads/master/data/sub_platform.txt
 direct|twj0sub_github|https://raw.githubusercontent.com/twj0/subseek/refs/heads/master/data/sub_github.txt
+direct|gslege|https://raw.githubusercontent.com/gslege/CloudflareIP/refs/heads/main/Vless.txt
+direct|medicandong|https://raw.githubusercontent.com/medicandong/mibei/refs/heads/main/subscription.txt
+
 
 # ===== 其他订阅源 =====
 direct|cfvvv|https://cfvvv-ev1.pages.dev/sub?token=f0d335d1dde0f1c8881d3547c06f72b0
