@@ -1,0 +1,1931 @@
+[2026-08-01 10:09:41] [INFO] ==================================================
+[2026-08-01 10:09:41] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-01 10:09:41] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-01 10:09:41] [INFO] 处理 1 个 RSS 源...
+[2026-08-01 10:09:41] [INFO] 正在抓取 RSS: CFMem
+[2026-08-01 10:09:42] [INFO] 处理 19 个直链源...
+[2026-08-01 10:09:42] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-01 10:09:42] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-01 10:09:42] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-01 10:09:42] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-01 10:09:42] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-01 10:09:42] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-01 10:09:42] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-01 10:09:42] [INFO] 正在抓取直链：dongchengjie
+[2026-08-01 10:09:42] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-01 10:09:42] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-01 10:09:42] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-01 10:09:42] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-01 10:09:42] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-01 10:09:42] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-01 10:09:42] [INFO] 正在抓取直链：medicandong
+[2026-08-01 10:09:42] [INFO] 正在抓取直链：gslege
+[2026-08-01 10:09:42] [INFO] 正在抓取直链：PuddinCat
+[2026-08-01 10:09:42] [INFO] 正在抓取直链：ts-sf
+[2026-08-01 10:09:42] [INFO] 正在抓取直链：cfvvv
+[2026-08-01 10:09:42] [WARN] 直链 twj0sub_platform 内容为空
+[2026-08-01 10:09:42] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-01 10:09:43] [INFO] 去重后共 19945 个节点
+[2026-08-01 10:09:43] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (19945 行)
+[2026-08-01 10:09:43] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-01 10:09:43] [INFO] 订阅抓取完成
+[2026-08-01 10:09:43] [INFO] ==================================================
+[2026-08-01 21:03:42] [INFO] ==================================================
+[2026-08-01 21:03:42] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-01 21:03:42] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-01 21:03:42] [INFO] 处理 1 个 RSS 源...
+[2026-08-01 21:03:42] [INFO] 正在抓取 RSS: CFMem
+[2026-08-01 21:03:42] [INFO] 处理 19 个直链源...
+[2026-08-01 21:03:42] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-01 21:03:42] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-01 21:03:42] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-01 21:03:42] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-01 21:03:42] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-01 21:03:42] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-01 21:03:42] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-01 21:03:42] [INFO] 正在抓取直链：dongchengjie
+[2026-08-01 21:03:42] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-01 21:03:42] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-01 21:03:42] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-01 21:03:42] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-01 21:03:42] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-01 21:03:42] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-01 21:03:43] [INFO] 正在抓取直链：gslege
+[2026-08-01 21:03:43] [INFO] 正在抓取直链：medicandong
+[2026-08-01 21:03:43] [INFO] 正在抓取直链：PuddinCat
+[2026-08-01 21:03:43] [INFO] 正在抓取直链：ts-sf
+[2026-08-01 21:03:43] [INFO] 正在抓取直链：cfvvv
+[2026-08-01 21:03:43] [WARN] 直链 twj0sub_platform 内容为空
+[2026-08-01 21:03:43] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-01 21:03:43] [INFO] 去重后共 20219 个节点
+[2026-08-01 21:03:43] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (20219 行)
+[2026-08-01 21:03:43] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-01 21:03:43] [INFO] 订阅抓取完成
+[2026-08-01 21:03:43] [INFO] ==================================================
+[2026-08-02 10:06:21] [INFO] ==================================================
+[2026-08-02 10:06:21] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-02 10:06:21] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-02 10:06:21] [INFO] 处理 1 个 RSS 源...
+[2026-08-02 10:06:21] [INFO] 正在抓取 RSS: CFMem
+[2026-08-02 10:06:21] [INFO] 处理 19 个直链源...
+[2026-08-02 10:06:21] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-02 10:06:21] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-02 10:06:21] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-02 10:06:21] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-02 10:06:21] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-02 10:06:21] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-02 10:06:21] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-02 10:06:21] [INFO] 正在抓取直链：dongchengjie
+[2026-08-02 10:06:21] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-02 10:06:21] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-02 10:06:22] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-02 10:06:22] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-02 10:06:22] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-02 10:06:22] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-02 10:06:22] [INFO] 正在抓取直链：gslege
+[2026-08-02 10:06:22] [INFO] 正在抓取直链：medicandong
+[2026-08-02 10:06:22] [INFO] 正在抓取直链：PuddinCat
+[2026-08-02 10:06:22] [WARN] 直链 twj0sub_platform 内容为空
+[2026-08-02 10:06:22] [INFO] 正在抓取直链：ts-sf
+[2026-08-02 10:06:22] [INFO] 正在抓取直链：cfvvv
+[2026-08-02 10:06:22] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-02 10:06:23] [INFO] 去重后共 20060 个节点
+[2026-08-02 10:06:23] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (20060 行)
+[2026-08-02 10:06:23] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-02 10:06:23] [INFO] 订阅抓取完成
+[2026-08-02 10:06:23] [INFO] ==================================================
+[2026-08-02 21:05:54] [INFO] ==================================================
+[2026-08-02 21:05:54] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-02 21:05:54] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-02 21:05:54] [INFO] 处理 1 个 RSS 源...
+[2026-08-02 21:05:54] [INFO] 正在抓取 RSS: CFMem
+[2026-08-02 21:05:54] [INFO] 处理 19 个直链源...
+[2026-08-02 21:05:54] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-02 21:05:54] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-02 21:05:54] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-02 21:05:54] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-02 21:05:54] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-02 21:05:54] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-02 21:05:54] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-02 21:05:54] [INFO] 正在抓取直链：dongchengjie
+[2026-08-02 21:05:54] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-02 21:05:54] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-02 21:05:54] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-02 21:05:54] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-02 21:05:54] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-02 21:05:54] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-02 21:05:54] [INFO] 正在抓取直链：gslege
+[2026-08-02 21:05:54] [INFO] 正在抓取直链：medicandong
+[2026-08-02 21:05:54] [INFO] 正在抓取直链：PuddinCat
+[2026-08-02 21:05:54] [INFO] 正在抓取直链：ts-sf
+[2026-08-02 21:05:54] [WARN] 直链 twj0sub_platform 内容为空
+[2026-08-02 21:05:54] [INFO] 正在抓取直链：cfvvv
+[2026-08-02 21:05:55] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-02 21:05:55] [INFO] 去重后共 19929 个节点
+[2026-08-02 21:05:55] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (19929 行)
+[2026-08-02 21:05:55] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-02 21:05:55] [INFO] 订阅抓取完成
+[2026-08-02 21:05:55] [INFO] ==================================================
+[2026-08-03 10:08:29] [INFO] ==================================================
+[2026-08-03 10:08:29] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-03 10:08:29] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-03 10:08:29] [INFO] 处理 1 个 RSS 源...
+[2026-08-03 10:08:29] [INFO] 正在抓取 RSS: CFMem
+[2026-08-03 10:08:30] [INFO] 处理 19 个直链源...
+[2026-08-03 10:08:30] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-03 10:08:30] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-03 10:08:30] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-03 10:08:30] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-03 10:08:30] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-03 10:08:30] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-03 10:08:30] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-03 10:08:30] [INFO] 正在抓取直链：dongchengjie
+[2026-08-03 10:08:30] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-03 10:08:30] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-03 10:08:30] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-03 10:08:30] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-03 10:08:30] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-03 10:08:30] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-03 10:08:30] [INFO] 正在抓取直链：gslege
+[2026-08-03 10:08:30] [INFO] 正在抓取直链：medicandong
+[2026-08-03 10:08:30] [INFO] 正在抓取直链：PuddinCat
+[2026-08-03 10:08:30] [INFO] 正在抓取直链：ts-sf
+[2026-08-03 10:08:30] [INFO] 正在抓取直链：cfvvv
+[2026-08-03 10:08:30] [WARN] 直链 twj0sub_platform 内容为空
+[2026-08-03 10:08:30] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-03 10:08:31] [INFO] 去重后共 19940 个节点
+[2026-08-03 10:08:31] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (19940 行)
+[2026-08-03 10:08:31] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-03 10:08:31] [INFO] 订阅抓取完成
+[2026-08-03 10:08:31] [INFO] ==================================================
+[2026-08-03 22:23:36] [INFO] ==================================================
+[2026-08-03 22:23:36] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-03 22:23:36] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-03 22:23:36] [INFO] 处理 1 个 RSS 源...
+[2026-08-03 22:23:36] [INFO] 正在抓取 RSS: CFMem
+[2026-08-03 22:23:37] [INFO] 处理 19 个直链源...
+[2026-08-03 22:23:37] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-03 22:23:37] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-03 22:23:37] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-03 22:23:37] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-03 22:23:37] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-03 22:23:37] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-03 22:23:37] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-03 22:23:37] [INFO] 正在抓取直链：dongchengjie
+[2026-08-03 22:23:37] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-03 22:23:37] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-03 22:23:37] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-03 22:23:37] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-03 22:23:37] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-03 22:23:37] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-03 22:23:37] [INFO] 正在抓取直链：gslege
+[2026-08-03 22:23:37] [INFO] 正在抓取直链：medicandong
+[2026-08-03 22:23:37] [INFO] 正在抓取直链：PuddinCat
+[2026-08-03 22:23:37] [INFO] 正在抓取直链：ts-sf
+[2026-08-03 22:23:37] [INFO] 正在抓取直链：cfvvv
+[2026-08-03 22:23:37] [WARN] 直链 twj0sub_platform 内容为空
+[2026-08-03 22:23:37] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-03 22:23:38] [INFO] 去重后共 20070 个节点
+[2026-08-03 22:23:38] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (20070 行)
+[2026-08-03 22:23:38] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-03 22:23:38] [INFO] 订阅抓取完成
+[2026-08-03 22:23:38] [INFO] ==================================================
+[2026-08-04 09:54:06] [INFO] ==================================================
+[2026-08-04 09:54:06] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-04 09:54:06] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-04 09:54:06] [INFO] 处理 1 个 RSS 源...
+[2026-08-04 09:54:06] [INFO] 正在抓取 RSS: CFMem
+[2026-08-04 09:54:07] [INFO] 处理 19 个直链源...
+[2026-08-04 09:54:07] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-04 09:54:07] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-04 09:54:07] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-04 09:54:07] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-04 09:54:07] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-04 09:54:07] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-04 09:54:07] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-04 09:54:07] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-04 09:54:07] [INFO] 正在抓取直链：dongchengjie
+[2026-08-04 09:54:07] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-04 09:54:07] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-04 09:54:07] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-04 09:54:07] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-04 09:54:07] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-04 09:54:07] [INFO] 正在抓取直链：gslege
+[2026-08-04 09:54:07] [INFO] 正在抓取直链：medicandong
+[2026-08-04 09:54:07] [INFO] 正在抓取直链：PuddinCat
+[2026-08-04 09:54:07] [INFO] 正在抓取直链：ts-sf
+[2026-08-04 09:54:07] [INFO] 正在抓取直链：cfvvv
+[2026-08-04 09:54:07] [WARN] 直链 twj0sub_platform 内容为空
+[2026-08-04 09:54:07] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-04 09:54:08] [INFO] 去重后共 19916 个节点
+[2026-08-04 09:54:08] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (19916 行)
+[2026-08-04 09:54:08] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-04 09:54:08] [INFO] 订阅抓取完成
+[2026-08-04 09:54:08] [INFO] ==================================================
+[2026-08-04 21:54:21] [INFO] ==================================================
+[2026-08-04 21:54:21] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-04 21:54:21] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-04 21:54:21] [INFO] 处理 1 个 RSS 源...
+[2026-08-04 21:54:21] [INFO] 正在抓取 RSS: CFMem
+[2026-08-04 21:54:21] [INFO] 处理 19 个直链源...
+[2026-08-04 21:54:21] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-04 21:54:21] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-04 21:54:21] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-04 21:54:21] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-04 21:54:21] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-04 21:54:21] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-04 21:54:21] [INFO] 正在抓取直链：dongchengjie
+[2026-08-04 21:54:21] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-04 21:54:21] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-04 21:54:21] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-04 21:54:21] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-04 21:54:21] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-04 21:54:21] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-04 21:54:21] [INFO] 正在抓取直链：gslege
+[2026-08-04 21:54:21] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-04 21:54:21] [INFO] 正在抓取直链：medicandong
+[2026-08-04 21:54:21] [INFO] 正在抓取直链：PuddinCat
+[2026-08-04 21:54:21] [INFO] 正在抓取直链：ts-sf
+[2026-08-04 21:54:21] [INFO] 正在抓取直链：cfvvv
+[2026-08-04 21:54:21] [WARN] 直链 twj0sub_platform 内容为空
+[2026-08-04 21:54:21] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-04 21:54:22] [INFO] 去重后共 20911 个节点
+[2026-08-04 21:54:22] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (20911 行)
+[2026-08-04 21:54:22] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-04 21:54:22] [INFO] 订阅抓取完成
+[2026-08-04 21:54:22] [INFO] ==================================================
+[2026-08-05 09:53:55] [INFO] ==================================================
+[2026-08-05 09:53:55] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-05 09:53:55] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-05 09:53:55] [INFO] 处理 1 个 RSS 源...
+[2026-08-05 09:53:55] [INFO] 正在抓取 RSS: CFMem
+[2026-08-05 09:53:55] [WARN] RSS CFMem 没有内容
+[2026-08-05 09:53:55] [INFO] 处理 19 个直链源...
+[2026-08-05 09:53:55] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-05 09:53:55] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-05 09:53:55] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-05 09:53:55] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-05 09:53:55] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-05 09:53:55] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-05 09:53:55] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-05 09:53:55] [INFO] 正在抓取直链：dongchengjie
+[2026-08-05 09:53:55] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-05 09:53:55] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-05 09:53:55] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-05 09:53:55] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-05 09:53:55] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-05 09:53:56] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-05 09:53:56] [INFO] 正在抓取直链：medicandong
+[2026-08-05 09:53:56] [INFO] 正在抓取直链：gslege
+[2026-08-05 09:53:56] [INFO] 正在抓取直链：PuddinCat
+[2026-08-05 09:53:56] [INFO] 正在抓取直链：ts-sf
+[2026-08-05 09:53:56] [INFO] 正在抓取直链：cfvvv
+[2026-08-05 09:53:56] [WARN] 直链 twj0sub_platform 内容为空
+[2026-08-05 09:53:56] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-05 09:53:56] [INFO] 去重后共 21233 个节点
+[2026-08-05 09:53:56] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (21233 行)
+[2026-08-05 09:53:56] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-05 09:53:56] [INFO] 订阅抓取完成
+[2026-08-05 09:53:56] [INFO] ==================================================
+[2026-08-05 21:50:50] [INFO] ==================================================
+[2026-08-05 21:50:50] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-05 21:50:50] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-05 21:50:50] [INFO] 处理 1 个 RSS 源...
+[2026-08-05 21:50:50] [INFO] 正在抓取 RSS: CFMem
+[2026-08-05 21:50:51] [INFO] 处理 19 个直链源...
+[2026-08-05 21:50:51] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-05 21:50:51] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-05 21:50:51] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-05 21:50:51] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-05 21:50:51] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-05 21:50:51] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-05 21:50:51] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-05 21:50:51] [INFO] 正在抓取直链：dongchengjie
+[2026-08-05 21:50:51] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-05 21:50:51] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-05 21:50:51] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-05 21:50:51] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-05 21:50:51] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-05 21:50:51] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-05 21:50:51] [INFO] 正在抓取直链：gslege
+[2026-08-05 21:50:51] [INFO] 正在抓取直链：medicandong
+[2026-08-05 21:50:51] [INFO] 正在抓取直链：PuddinCat
+[2026-08-05 21:50:51] [INFO] 正在抓取直链：ts-sf
+[2026-08-05 21:50:51] [INFO] 正在抓取直链：cfvvv
+[2026-08-05 21:50:51] [WARN] 直链 twj0sub_platform 内容为空
+[2026-08-05 21:50:51] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-05 21:50:52] [INFO] 去重后共 20835 个节点
+[2026-08-05 21:50:52] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (20835 行)
+[2026-08-05 21:50:52] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-05 21:50:52] [INFO] 订阅抓取完成
+[2026-08-05 21:50:52] [INFO] ==================================================
+[2026-08-06 09:56:48] [INFO] ==================================================
+[2026-08-06 09:56:48] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-06 09:56:48] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-06 09:56:48] [INFO] 处理 1 个 RSS 源...
+[2026-08-06 09:56:48] [INFO] 正在抓取 RSS: CFMem
+[2026-08-06 09:56:49] [INFO] 处理 19 个直链源...
+[2026-08-06 09:56:49] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-06 09:56:49] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-06 09:56:49] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-06 09:56:49] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-06 09:56:49] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-06 09:56:49] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-06 09:56:49] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-06 09:56:49] [INFO] 正在抓取直链：dongchengjie
+[2026-08-06 09:56:49] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-06 09:56:49] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-06 09:56:49] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-06 09:56:49] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-06 09:56:49] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-06 09:56:49] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-06 09:56:49] [INFO] 正在抓取直链：gslege
+[2026-08-06 09:56:49] [INFO] 正在抓取直链：medicandong
+[2026-08-06 09:56:49] [INFO] 正在抓取直链：PuddinCat
+[2026-08-06 09:56:49] [INFO] 正在抓取直链：ts-sf
+[2026-08-06 09:56:49] [WARN] 直链 twj0sub_platform 内容为空
+[2026-08-06 09:56:50] [INFO] 正在抓取直链：cfvvv
+[2026-08-06 09:56:50] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-06 09:56:50] [INFO] 去重后共 20997 个节点
+[2026-08-06 09:56:50] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (20997 行)
+[2026-08-06 09:56:50] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-06 09:56:50] [INFO] 订阅抓取完成
+[2026-08-06 09:56:50] [INFO] ==================================================
+[2026-08-06 21:48:30] [INFO] ==================================================
+[2026-08-06 21:48:30] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-06 21:48:30] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-06 21:48:30] [INFO] 处理 1 个 RSS 源...
+[2026-08-06 21:48:30] [INFO] 正在抓取 RSS: CFMem
+[2026-08-06 21:48:30] [INFO] 处理 19 个直链源...
+[2026-08-06 21:48:30] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-06 21:48:30] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-06 21:48:30] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-06 21:48:30] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-06 21:48:30] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-06 21:48:30] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-06 21:48:30] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-06 21:48:30] [INFO] 正在抓取直链：dongchengjie
+[2026-08-06 21:48:30] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-06 21:48:30] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-06 21:48:30] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-06 21:48:30] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-06 21:48:30] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-06 21:48:31] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-06 21:48:31] [INFO] 正在抓取直链：gslege
+[2026-08-06 21:48:31] [INFO] 正在抓取直链：medicandong
+[2026-08-06 21:48:31] [INFO] 正在抓取直链：PuddinCat
+[2026-08-06 21:48:31] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-06 21:48:31] [INFO] 正在抓取直链：ts-sf
+[2026-08-06 21:48:31] [INFO] 正在抓取直链：cfvvv
+[2026-08-06 21:48:31] [WARN] 直链 twj0sub_platform 内容为空
+[2026-08-06 21:48:31] [INFO] 去重后共 19753 个节点
+[2026-08-06 21:48:31] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (19753 行)
+[2026-08-06 21:48:31] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-06 21:48:31] [INFO] 订阅抓取完成
+[2026-08-06 21:48:31] [INFO] ==================================================
+[2026-08-07 10:20:00] [INFO] ==================================================
+[2026-08-07 10:20:00] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-07 10:20:00] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-07 10:20:00] [INFO] 处理 1 个 RSS 源...
+[2026-08-07 10:20:00] [INFO] 正在抓取 RSS: CFMem
+[2026-08-07 10:20:00] [INFO] 处理 19 个直链源...
+[2026-08-07 10:20:00] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-07 10:20:00] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-07 10:20:00] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-07 10:20:00] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-07 10:20:00] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-07 10:20:00] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-07 10:20:00] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-07 10:20:00] [INFO] 正在抓取直链：dongchengjie
+[2026-08-07 10:20:00] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-07 10:20:00] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-07 10:20:00] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-07 10:20:00] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-07 10:20:01] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-07 10:20:01] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-07 10:20:01] [INFO] 正在抓取直链：gslege
+[2026-08-07 10:20:01] [INFO] 正在抓取直链：medicandong
+[2026-08-07 10:20:01] [INFO] 正在抓取直链：PuddinCat
+[2026-08-07 10:20:01] [INFO] 正在抓取直链：ts-sf
+[2026-08-07 10:20:01] [INFO] 正在抓取直链：cfvvv
+[2026-08-07 10:20:01] [WARN] 直链 twj0sub_platform 内容为空
+[2026-08-07 10:20:01] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-07 10:20:01] [INFO] 去重后共 19713 个节点
+[2026-08-07 10:20:01] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (19713 行)
+[2026-08-07 10:20:01] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-07 10:20:01] [INFO] 订阅抓取完成
+[2026-08-07 10:20:01] [INFO] ==================================================
+[2026-08-07 20:46:14] [INFO] ==================================================
+[2026-08-07 20:46:14] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-07 20:46:14] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-07 20:46:14] [INFO] 处理 1 个 RSS 源...
+[2026-08-07 20:46:14] [INFO] 正在抓取 RSS: CFMem
+[2026-08-07 20:46:15] [INFO] 处理 19 个直链源...
+[2026-08-07 20:46:15] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-07 20:46:15] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-07 20:46:15] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-07 20:46:15] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-07 20:46:15] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-07 20:46:15] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-07 20:46:15] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-07 20:46:15] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-07 20:46:15] [INFO] 正在抓取直链：dongchengjie
+[2026-08-07 20:46:15] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-07 20:46:15] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-07 20:46:15] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-07 20:46:15] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-07 20:46:15] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-07 20:46:15] [INFO] 正在抓取直链：gslege
+[2026-08-07 20:46:15] [INFO] 正在抓取直链：medicandong
+[2026-08-07 20:46:15] [INFO] 正在抓取直链：PuddinCat
+[2026-08-07 20:46:15] [INFO] 正在抓取直链：ts-sf
+[2026-08-07 20:46:15] [INFO] 正在抓取直链：cfvvv
+[2026-08-07 20:46:15] [WARN] 直链 twj0sub_platform 内容为空
+[2026-08-07 20:46:16] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-07 20:46:16] [INFO] 去重后共 19825 个节点
+[2026-08-07 20:46:16] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (19825 行)
+[2026-08-07 20:46:16] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-07 20:46:16] [INFO] 订阅抓取完成
+[2026-08-07 20:46:16] [INFO] ==================================================
+[2026-08-08 09:05:56] [INFO] ==================================================
+[2026-08-08 09:05:56] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-08 09:05:56] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-08 09:05:56] [INFO] 处理 1 个 RSS 源...
+[2026-08-08 09:05:56] [INFO] 正在抓取 RSS: CFMem
+[2026-08-08 09:05:57] [INFO] 处理 19 个直链源...
+[2026-08-08 09:05:57] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-08 09:05:57] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-08 09:05:57] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-08 09:05:57] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-08 09:05:57] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-08 09:05:57] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-08 09:05:57] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-08 09:05:57] [INFO] 正在抓取直链：dongchengjie
+[2026-08-08 09:05:57] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-08 09:05:57] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-08 09:05:57] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-08 09:05:57] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-08 09:05:57] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-08 09:05:57] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-08 09:05:57] [INFO] 正在抓取直链：gslege
+[2026-08-08 09:05:57] [INFO] 正在抓取直链：medicandong
+[2026-08-08 09:05:57] [INFO] 正在抓取直链：PuddinCat
+[2026-08-08 09:05:57] [INFO] 正在抓取直链：ts-sf
+[2026-08-08 09:05:57] [INFO] 正在抓取直链：cfvvv
+[2026-08-08 09:05:57] [WARN] 直链 twj0sub_platform 内容为空
+[2026-08-08 09:05:58] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-08 09:05:58] [INFO] 去重后共 19926 个节点
+[2026-08-08 09:05:58] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (19926 行)
+[2026-08-08 09:05:58] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-08 09:05:58] [INFO] 订阅抓取完成
+[2026-08-08 09:05:58] [INFO] ==================================================
+[2026-08-08 20:33:13] [INFO] ==================================================
+[2026-08-08 20:33:13] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-08 20:33:13] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-08 20:33:13] [INFO] 处理 1 个 RSS 源...
+[2026-08-08 20:33:13] [INFO] 正在抓取 RSS: CFMem
+[2026-08-08 20:33:13] [INFO] 处理 19 个直链源...
+[2026-08-08 20:33:13] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-08 20:33:13] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-08 20:33:13] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-08 20:33:13] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-08 20:33:13] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-08 20:33:13] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-08 20:33:13] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-08 20:33:13] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-08 20:33:13] [INFO] 正在抓取直链：dongchengjie
+[2026-08-08 20:33:13] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-08 20:33:14] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-08 20:33:14] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-08 20:33:14] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-08 20:33:14] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-08 20:33:14] [INFO] 正在抓取直链：gslege
+[2026-08-08 20:33:14] [INFO] 正在抓取直链：medicandong
+[2026-08-08 20:33:14] [INFO] 正在抓取直链：PuddinCat
+[2026-08-08 20:33:14] [INFO] 正在抓取直链：ts-sf
+[2026-08-08 20:33:14] [INFO] 正在抓取直链：cfvvv
+[2026-08-08 20:33:14] [WARN] 直链 twj0sub_platform 内容为空
+[2026-08-08 20:33:14] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-08 20:33:14] [INFO] 去重后共 20334 个节点
+[2026-08-08 20:33:14] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (20334 行)
+[2026-08-08 20:33:14] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-08 20:33:14] [INFO] 订阅抓取完成
+[2026-08-08 20:33:14] [INFO] ==================================================
+[2026-08-09 09:10:39] [INFO] ==================================================
+[2026-08-09 09:10:39] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-09 09:10:39] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-09 09:10:39] [INFO] 处理 1 个 RSS 源...
+[2026-08-09 09:10:39] [INFO] 正在抓取 RSS: CFMem
+[2026-08-09 09:10:39] [INFO] 处理 19 个直链源...
+[2026-08-09 09:10:39] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-09 09:10:39] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-09 09:10:39] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-09 09:10:39] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-09 09:10:39] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-09 09:10:39] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-09 09:10:39] [INFO] 正在抓取直链：dongchengjie
+[2026-08-09 09:10:39] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-09 09:10:39] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-09 09:10:39] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-09 09:10:39] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-09 09:10:39] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-09 09:10:39] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-09 09:10:40] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-09 09:10:40] [INFO] 正在抓取直链：gslege
+[2026-08-09 09:10:40] [INFO] 正在抓取直链：medicandong
+[2026-08-09 09:10:40] [INFO] 正在抓取直链：PuddinCat
+[2026-08-09 09:10:40] [INFO] 正在抓取直链：ts-sf
+[2026-08-09 09:10:40] [INFO] 正在抓取直链：cfvvv
+[2026-08-09 09:10:40] [WARN] 直链 twj0sub_platform 内容为空
+[2026-08-09 09:10:40] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-09 09:10:40] [INFO] 去重后共 20264 个节点
+[2026-08-09 09:10:40] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (20264 行)
+[2026-08-09 09:10:40] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-09 09:10:40] [INFO] 订阅抓取完成
+[2026-08-09 09:10:40] [INFO] ==================================================
+[2026-08-09 20:35:43] [INFO] ==================================================
+[2026-08-09 20:35:43] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-09 20:35:43] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-09 20:35:43] [INFO] 处理 1 个 RSS 源...
+[2026-08-09 20:35:43] [INFO] 正在抓取 RSS: CFMem
+[2026-08-09 20:35:43] [INFO] 处理 19 个直链源...
+[2026-08-09 20:35:43] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-09 20:35:43] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-09 20:35:43] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-09 20:35:43] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-09 20:35:43] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-09 20:35:43] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-09 20:35:43] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-09 20:35:43] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-09 20:35:43] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-09 20:35:43] [INFO] 正在抓取直链：dongchengjie
+[2026-08-09 20:35:43] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-09 20:35:43] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-09 20:35:43] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-09 20:35:43] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-09 20:35:44] [INFO] 正在抓取直链：gslege
+[2026-08-09 20:35:44] [INFO] 正在抓取直链：medicandong
+[2026-08-09 20:35:44] [INFO] 正在抓取直链：PuddinCat
+[2026-08-09 20:35:44] [INFO] 正在抓取直链：ts-sf
+[2026-08-09 20:35:44] [INFO] 正在抓取直链：cfvvv
+[2026-08-09 20:35:44] [WARN] 直链 twj0sub_platform 内容为空
+[2026-08-09 20:35:44] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-09 20:35:44] [INFO] 去重后共 19654 个节点
+[2026-08-09 20:35:44] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (19654 行)
+[2026-08-09 20:35:44] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-09 20:35:44] [INFO] 订阅抓取完成
+[2026-08-09 20:35:44] [INFO] ==================================================
+[2026-08-10 09:12:35] [INFO] ==================================================
+[2026-08-10 09:12:35] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-10 09:12:35] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-10 09:12:35] [INFO] 处理 1 个 RSS 源...
+[2026-08-10 09:12:35] [INFO] 正在抓取 RSS: CFMem
+[2026-08-10 09:12:35] [INFO] 处理 19 个直链源...
+[2026-08-10 09:12:35] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-10 09:12:35] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-10 09:12:35] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-10 09:12:35] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-10 09:12:35] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-10 09:12:35] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-10 09:12:35] [INFO] 正在抓取直链：dongchengjie
+[2026-08-10 09:12:35] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-10 09:12:35] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-10 09:12:35] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-10 09:12:36] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-10 09:12:36] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-10 09:12:36] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-10 09:12:36] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-10 09:12:36] [INFO] 正在抓取直链：gslege
+[2026-08-10 09:12:36] [INFO] 正在抓取直链：medicandong
+[2026-08-10 09:12:36] [INFO] 正在抓取直链：PuddinCat
+[2026-08-10 09:12:36] [INFO] 正在抓取直链：ts-sf
+[2026-08-10 09:12:36] [INFO] 正在抓取直链：cfvvv
+[2026-08-10 09:12:36] [WARN] 直链 twj0sub_platform 内容为空
+[2026-08-10 09:12:36] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-10 09:12:36] [INFO] 去重后共 19763 个节点
+[2026-08-10 09:12:36] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (19763 行)
+[2026-08-10 09:12:36] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-10 09:12:36] [INFO] 订阅抓取完成
+[2026-08-10 09:12:36] [INFO] ==================================================
+[2026-08-10 20:52:54] [INFO] ==================================================
+[2026-08-10 20:52:54] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-10 20:52:54] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-10 20:52:54] [INFO] 处理 1 个 RSS 源...
+[2026-08-10 20:52:54] [INFO] 正在抓取 RSS: CFMem
+[2026-08-10 20:52:54] [INFO] 处理 19 个直链源...
+[2026-08-10 20:52:54] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-10 20:52:54] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-10 20:52:54] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-10 20:52:54] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-10 20:52:54] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-10 20:52:54] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-10 20:52:54] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-10 20:52:54] [INFO] 正在抓取直链：dongchengjie
+[2026-08-10 20:52:54] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-10 20:52:54] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-10 20:52:54] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-10 20:52:54] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-10 20:52:54] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-10 20:52:54] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-10 20:52:54] [INFO] 正在抓取直链：gslege
+[2026-08-10 20:52:54] [INFO] 正在抓取直链：medicandong
+[2026-08-10 20:52:54] [INFO] 正在抓取直链：PuddinCat
+[2026-08-10 20:52:54] [INFO] 正在抓取直链：ts-sf
+[2026-08-10 20:52:54] [INFO] 正在抓取直链：cfvvv
+[2026-08-10 20:52:54] [WARN] 直链 twj0sub_platform 内容为空
+[2026-08-10 20:52:55] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-10 20:52:55] [INFO] 去重后共 20187 个节点
+[2026-08-10 20:52:55] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (20187 行)
+[2026-08-10 20:52:55] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-10 20:52:55] [INFO] 订阅抓取完成
+[2026-08-10 20:52:55] [INFO] ==================================================
+[2026-08-11 09:10:55] [INFO] ==================================================
+[2026-08-11 09:10:55] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-11 09:10:55] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-11 09:10:55] [INFO] 处理 1 个 RSS 源...
+[2026-08-11 09:10:55] [INFO] 正在抓取 RSS: CFMem
+[2026-08-11 09:10:56] [INFO] 处理 19 个直链源...
+[2026-08-11 09:10:56] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-11 09:10:56] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-11 09:10:56] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-11 09:10:56] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-11 09:10:56] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-11 09:10:56] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-11 09:10:56] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-11 09:10:56] [INFO] 正在抓取直链：dongchengjie
+[2026-08-11 09:10:56] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-11 09:10:56] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-11 09:10:56] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-11 09:10:56] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-11 09:10:56] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-11 09:10:56] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-11 09:10:56] [INFO] 正在抓取直链：gslege
+[2026-08-11 09:10:56] [INFO] 正在抓取直链：medicandong
+[2026-08-11 09:10:56] [INFO] 正在抓取直链：PuddinCat
+[2026-08-11 09:10:56] [INFO] 正在抓取直链：ts-sf
+[2026-08-11 09:10:56] [INFO] 正在抓取直链：cfvvv
+[2026-08-11 09:10:56] [WARN] 直链 twj0sub_platform 内容为空
+[2026-08-11 09:10:57] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-11 09:10:57] [INFO] 去重后共 19936 个节点
+[2026-08-11 09:10:57] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (19936 行)
+[2026-08-11 09:10:57] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-11 09:10:57] [INFO] 订阅抓取完成
+[2026-08-11 09:10:57] [INFO] ==================================================
+[2026-08-11 20:47:43] [INFO] ==================================================
+[2026-08-11 20:47:43] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-11 20:47:43] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-11 20:47:43] [INFO] 处理 1 个 RSS 源...
+[2026-08-11 20:47:43] [INFO] 正在抓取 RSS: CFMem
+[2026-08-11 20:47:43] [INFO] 处理 19 个直链源...
+[2026-08-11 20:47:43] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-11 20:47:43] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-11 20:47:43] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-11 20:47:43] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-11 20:47:43] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-11 20:47:43] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-11 20:47:43] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-11 20:47:43] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-11 20:47:43] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-11 20:47:43] [INFO] 正在抓取直链：dongchengjie
+[2026-08-11 20:47:43] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-11 20:47:43] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-11 20:47:43] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-11 20:47:43] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-11 20:47:43] [INFO] 正在抓取直链：gslege
+[2026-08-11 20:47:43] [INFO] 正在抓取直链：medicandong
+[2026-08-11 20:47:44] [INFO] 正在抓取直链：PuddinCat
+[2026-08-11 20:47:44] [WARN] 直链 twj0sub_platform 内容为空
+[2026-08-11 20:47:44] [INFO] 正在抓取直链：ts-sf
+[2026-08-11 20:47:44] [INFO] 正在抓取直链：cfvvv
+[2026-08-11 20:47:44] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-11 20:47:44] [INFO] 去重后共 20242 个节点
+[2026-08-11 20:47:44] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (20242 行)
+[2026-08-11 20:47:44] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-11 20:47:44] [INFO] 订阅抓取完成
+[2026-08-11 20:47:44] [INFO] ==================================================
+[2026-08-12 09:18:51] [INFO] ==================================================
+[2026-08-12 09:18:51] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-12 09:18:51] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-12 09:18:51] [INFO] 处理 1 个 RSS 源...
+[2026-08-12 09:18:51] [INFO] 正在抓取 RSS: CFMem
+[2026-08-12 09:18:51] [INFO] 处理 19 个直链源...
+[2026-08-12 09:18:51] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-12 09:18:51] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-12 09:18:51] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-12 09:18:51] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-12 09:18:51] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-12 09:18:51] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-12 09:18:51] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-12 09:18:51] [INFO] 正在抓取直链：dongchengjie
+[2026-08-12 09:18:51] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-12 09:18:51] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-12 09:18:51] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-12 09:18:51] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-12 09:18:52] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-12 09:18:52] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-12 09:18:52] [INFO] 正在抓取直链：gslege
+[2026-08-12 09:18:52] [INFO] 正在抓取直链：medicandong
+[2026-08-12 09:18:52] [INFO] 正在抓取直链：PuddinCat
+[2026-08-12 09:18:52] [INFO] 正在抓取直链：ts-sf
+[2026-08-12 09:18:52] [INFO] 正在抓取直链：cfvvv
+[2026-08-12 09:18:52] [WARN] 直链 twj0sub_platform 内容为空
+[2026-08-12 09:18:52] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-12 09:18:52] [INFO] 去重后共 20138 个节点
+[2026-08-12 09:18:52] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (20138 行)
+[2026-08-12 09:18:52] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-12 09:18:52] [INFO] 订阅抓取完成
+[2026-08-12 09:18:52] [INFO] ==================================================
+[2026-08-12 20:52:58] [INFO] ==================================================
+[2026-08-12 20:52:58] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-12 20:52:58] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-12 20:52:58] [INFO] 处理 1 个 RSS 源...
+[2026-08-12 20:52:58] [INFO] 正在抓取 RSS: CFMem
+[2026-08-12 20:52:59] [INFO] 处理 19 个直链源...
+[2026-08-12 20:52:59] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-12 20:52:59] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-12 20:52:59] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-12 20:52:59] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-12 20:52:59] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-12 20:52:59] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-12 20:52:59] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-12 20:52:59] [INFO] 正在抓取直链：dongchengjie
+[2026-08-12 20:52:59] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-12 20:52:59] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-12 20:52:59] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-12 20:52:59] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-12 20:52:59] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-12 20:52:59] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-12 20:52:59] [INFO] 正在抓取直链：gslege
+[2026-08-12 20:52:59] [INFO] 正在抓取直链：medicandong
+[2026-08-12 20:52:59] [INFO] 正在抓取直链：PuddinCat
+[2026-08-12 20:52:59] [INFO] 正在抓取直链：ts-sf
+[2026-08-12 20:52:59] [INFO] 正在抓取直链：cfvvv
+[2026-08-12 20:52:59] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-12 20:52:59] [INFO] 去重后共 20538 个节点
+[2026-08-12 20:52:59] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (20538 行)
+[2026-08-12 20:52:59] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-12 20:52:59] [INFO] 订阅抓取完成
+[2026-08-12 20:52:59] [INFO] ==================================================
+[2026-08-13 09:20:23] [INFO] ==================================================
+[2026-08-13 09:20:23] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-13 09:20:23] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-13 09:20:23] [INFO] 处理 1 个 RSS 源...
+[2026-08-13 09:20:23] [INFO] 正在抓取 RSS: CFMem
+[2026-08-13 09:20:23] [INFO] 处理 19 个直链源...
+[2026-08-13 09:20:23] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-13 09:20:23] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-13 09:20:23] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-13 09:20:23] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-13 09:20:23] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-13 09:20:23] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-13 09:20:23] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-13 09:20:23] [INFO] 正在抓取直链：dongchengjie
+[2026-08-13 09:20:23] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-13 09:20:23] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-13 09:20:23] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-13 09:20:23] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-13 09:20:23] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-13 09:20:23] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-13 09:20:23] [INFO] 正在抓取直链：gslege
+[2026-08-13 09:20:23] [INFO] 正在抓取直链：medicandong
+[2026-08-13 09:20:23] [INFO] 正在抓取直链：PuddinCat
+[2026-08-13 09:20:23] [INFO] 正在抓取直链：ts-sf
+[2026-08-13 09:20:23] [INFO] 正在抓取直链：cfvvv
+[2026-08-13 09:20:23] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-13 09:20:24] [INFO] 去重后共 20488 个节点
+[2026-08-13 09:20:24] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (20488 行)
+[2026-08-13 09:20:24] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-13 09:20:24] [INFO] 订阅抓取完成
+[2026-08-13 09:20:24] [INFO] ==================================================
+[2026-08-13 20:54:15] [INFO] ==================================================
+[2026-08-13 20:54:15] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-13 20:54:15] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-13 20:54:15] [INFO] 处理 1 个 RSS 源...
+[2026-08-13 20:54:15] [INFO] 正在抓取 RSS: CFMem
+[2026-08-13 20:54:15] [INFO] 处理 19 个直链源...
+[2026-08-13 20:54:15] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-13 20:54:15] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-13 20:54:15] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-13 20:54:16] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-13 20:54:16] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-13 20:54:16] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-13 20:54:16] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-13 20:54:16] [INFO] 正在抓取直链：dongchengjie
+[2026-08-13 20:54:16] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-13 20:54:16] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-13 20:54:16] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-13 20:54:16] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-13 20:54:16] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-13 20:54:16] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-13 20:54:16] [INFO] 正在抓取直链：gslege
+[2026-08-13 20:54:16] [INFO] 正在抓取直链：medicandong
+[2026-08-13 20:54:16] [INFO] 正在抓取直链：PuddinCat
+[2026-08-13 20:54:16] [INFO] 正在抓取直链：ts-sf
+[2026-08-13 20:54:16] [INFO] 正在抓取直链：cfvvv
+[2026-08-13 20:54:16] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-13 20:54:17] [INFO] 去重后共 20727 个节点
+[2026-08-13 20:54:17] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (20727 行)
+[2026-08-13 20:54:17] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-13 20:54:17] [INFO] 订阅抓取完成
+[2026-08-13 20:54:17] [INFO] ==================================================
+[2026-08-14 09:20:12] [INFO] ==================================================
+[2026-08-14 09:20:12] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-14 09:20:12] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-14 09:20:12] [INFO] 处理 1 个 RSS 源...
+[2026-08-14 09:20:12] [INFO] 正在抓取 RSS: CFMem
+[2026-08-14 09:20:12] [INFO] 处理 19 个直链源...
+[2026-08-14 09:20:12] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-14 09:20:12] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-14 09:20:12] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-14 09:20:12] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-14 09:20:12] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-14 09:20:12] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-14 09:20:12] [INFO] 正在抓取直链：dongchengjie
+[2026-08-14 09:20:12] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-14 09:20:12] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-14 09:20:12] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-14 09:20:12] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-14 09:20:13] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-14 09:20:13] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-14 09:20:13] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-14 09:20:13] [INFO] 正在抓取直链：gslege
+[2026-08-14 09:20:13] [INFO] 正在抓取直链：medicandong
+[2026-08-14 09:20:13] [INFO] 正在抓取直链：PuddinCat
+[2026-08-14 09:20:13] [INFO] 正在抓取直链：ts-sf
+[2026-08-14 09:20:13] [INFO] 正在抓取直链：cfvvv
+[2026-08-14 09:20:13] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-14 09:20:13] [INFO] 去重后共 20757 个节点
+[2026-08-14 09:20:13] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (20757 行)
+[2026-08-14 09:20:13] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-14 09:20:13] [INFO] 订阅抓取完成
+[2026-08-14 09:20:13] [INFO] ==================================================
+[2026-08-14 20:50:24] [INFO] ==================================================
+[2026-08-14 20:50:24] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-14 20:50:24] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-14 20:50:24] [INFO] 处理 1 个 RSS 源...
+[2026-08-14 20:50:24] [INFO] 正在抓取 RSS: CFMem
+[2026-08-14 20:50:24] [INFO] 处理 19 个直链源...
+[2026-08-14 20:50:24] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-14 20:50:24] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-14 20:50:24] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-14 20:50:24] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-14 20:50:24] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-14 20:50:24] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-14 20:50:24] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-14 20:50:24] [INFO] 正在抓取直链：dongchengjie
+[2026-08-14 20:50:24] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-14 20:50:24] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-14 20:50:24] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-14 20:50:25] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-14 20:50:25] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-14 20:50:25] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-14 20:50:25] [INFO] 正在抓取直链：gslege
+[2026-08-14 20:50:25] [INFO] 正在抓取直链：medicandong
+[2026-08-14 20:50:25] [INFO] 正在抓取直链：PuddinCat
+[2026-08-14 20:50:25] [INFO] 正在抓取直链：ts-sf
+[2026-08-14 20:50:25] [INFO] 正在抓取直链：cfvvv
+[2026-08-14 20:50:25] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-14 20:50:26] [INFO] 去重后共 20456 个节点
+[2026-08-14 20:50:26] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (20456 行)
+[2026-08-14 20:50:26] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-14 20:50:26] [INFO] 订阅抓取完成
+[2026-08-14 20:50:26] [INFO] ==================================================
+[2026-08-15 08:51:38] [INFO] ==================================================
+[2026-08-15 08:51:38] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-15 08:51:38] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-15 08:51:38] [INFO] 处理 1 个 RSS 源...
+[2026-08-15 08:51:38] [INFO] 正在抓取 RSS: CFMem
+[2026-08-15 08:51:39] [INFO] 处理 19 个直链源...
+[2026-08-15 08:51:39] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-15 08:51:39] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-15 08:51:39] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-15 08:51:39] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-15 08:51:39] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-15 08:51:39] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-15 08:51:39] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-15 08:51:39] [INFO] 正在抓取直链：dongchengjie
+[2026-08-15 08:51:39] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-15 08:51:39] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-15 08:51:39] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-15 08:51:39] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-15 08:51:39] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-15 08:51:39] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-15 08:51:39] [INFO] 正在抓取直链：gslege
+[2026-08-15 08:51:39] [INFO] 正在抓取直链：PuddinCat
+[2026-08-15 08:51:39] [INFO] 正在抓取直链：medicandong
+[2026-08-15 08:51:39] [INFO] 正在抓取直链：ts-sf
+[2026-08-15 08:51:39] [INFO] 正在抓取直链：cfvvv
+[2026-08-15 08:51:40] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-15 08:51:40] [INFO] 去重后共 20329 个节点
+[2026-08-15 08:51:40] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (20329 行)
+[2026-08-15 08:51:40] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-15 08:51:40] [INFO] 订阅抓取完成
+[2026-08-15 08:51:40] [INFO] ==================================================
+[2026-08-15 20:23:09] [INFO] ==================================================
+[2026-08-15 20:23:09] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-15 20:23:09] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-15 20:23:09] [INFO] 处理 1 个 RSS 源...
+[2026-08-15 20:23:09] [INFO] 正在抓取 RSS: CFMem
+[2026-08-15 20:23:10] [INFO] 处理 19 个直链源...
+[2026-08-15 20:23:10] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-15 20:23:10] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-15 20:23:10] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-15 20:23:10] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-15 20:23:10] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-15 20:23:10] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-15 20:23:10] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-15 20:23:10] [INFO] 正在抓取直链：dongchengjie
+[2026-08-15 20:23:10] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-15 20:23:10] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-15 20:23:10] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-15 20:23:10] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-15 20:23:10] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-15 20:23:10] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-15 20:23:10] [INFO] 正在抓取直链：gslege
+[2026-08-15 20:23:10] [INFO] 正在抓取直链：medicandong
+[2026-08-15 20:23:10] [INFO] 正在抓取直链：PuddinCat
+[2026-08-15 20:23:10] [INFO] 正在抓取直链：ts-sf
+[2026-08-15 20:23:10] [INFO] 正在抓取直链：cfvvv
+[2026-08-15 20:23:10] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-15 20:23:11] [INFO] 去重后共 20370 个节点
+[2026-08-15 20:23:11] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (20370 行)
+[2026-08-15 20:23:11] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-15 20:23:11] [INFO] 订阅抓取完成
+[2026-08-15 20:23:11] [INFO] ==================================================
+[2026-08-16 08:54:31] [INFO] ==================================================
+[2026-08-16 08:54:31] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-16 08:54:31] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-16 08:54:31] [INFO] 处理 1 个 RSS 源...
+[2026-08-16 08:54:31] [INFO] 正在抓取 RSS: CFMem
+[2026-08-16 08:54:31] [INFO] 处理 19 个直链源...
+[2026-08-16 08:54:31] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-16 08:54:31] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-16 08:54:31] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-16 08:54:31] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-16 08:54:31] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-16 08:54:31] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-16 08:54:31] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-16 08:54:31] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-16 08:54:31] [INFO] 正在抓取直链：dongchengjie
+[2026-08-16 08:54:31] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-16 08:54:31] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-16 08:54:31] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-16 08:54:31] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-16 08:54:31] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-16 08:54:32] [INFO] 正在抓取直链：gslege
+[2026-08-16 08:54:32] [INFO] 正在抓取直链：medicandong
+[2026-08-16 08:54:32] [INFO] 正在抓取直链：PuddinCat
+[2026-08-16 08:54:32] [INFO] 正在抓取直链：ts-sf
+[2026-08-16 08:54:32] [INFO] 正在抓取直链：cfvvv
+[2026-08-16 08:54:32] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-16 08:54:33] [INFO] 去重后共 20437 个节点
+[2026-08-16 08:54:33] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (20437 行)
+[2026-08-16 08:54:33] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-16 08:54:33] [INFO] 订阅抓取完成
+[2026-08-16 08:54:33] [INFO] ==================================================
+[2026-08-16 20:24:46] [INFO] ==================================================
+[2026-08-16 20:24:46] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-16 20:24:46] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-16 20:24:46] [INFO] 处理 1 个 RSS 源...
+[2026-08-16 20:24:46] [INFO] 正在抓取 RSS: CFMem
+[2026-08-16 20:24:47] [INFO] 处理 19 个直链源...
+[2026-08-16 20:24:47] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-16 20:24:47] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-16 20:24:47] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-16 20:24:47] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-16 20:24:47] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-16 20:24:47] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-16 20:24:47] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-16 20:24:47] [INFO] 正在抓取直链：dongchengjie
+[2026-08-16 20:24:47] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-16 20:24:47] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-16 20:24:47] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-16 20:24:47] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-16 20:24:47] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-16 20:24:47] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-16 20:24:47] [INFO] 正在抓取直链：gslege
+[2026-08-16 20:24:47] [INFO] 正在抓取直链：medicandong
+[2026-08-16 20:24:47] [INFO] 正在抓取直链：PuddinCat
+[2026-08-16 20:24:47] [INFO] 正在抓取直链：ts-sf
+[2026-08-16 20:24:47] [INFO] 正在抓取直链：cfvvv
+[2026-08-16 20:24:47] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-16 20:24:48] [INFO] 去重后共 21193 个节点
+[2026-08-16 20:24:48] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (21193 行)
+[2026-08-16 20:24:48] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-16 20:24:48] [INFO] 订阅抓取完成
+[2026-08-16 20:24:48] [INFO] ==================================================
+[2026-08-17 08:51:54] [INFO] ==================================================
+[2026-08-17 08:51:54] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-17 08:51:54] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-17 08:51:54] [INFO] 处理 1 个 RSS 源...
+[2026-08-17 08:51:54] [INFO] 正在抓取 RSS: CFMem
+[2026-08-17 08:51:54] [INFO] 处理 19 个直链源...
+[2026-08-17 08:51:54] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-17 08:51:54] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-17 08:51:54] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-17 08:51:54] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-17 08:51:54] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-17 08:51:54] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-17 08:51:54] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-17 08:51:54] [INFO] 正在抓取直链：dongchengjie
+[2026-08-17 08:51:54] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-17 08:51:54] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-17 08:51:54] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-17 08:51:54] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-17 08:51:54] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-17 08:51:54] [INFO] 正在抓取直链：gslege
+[2026-08-17 08:51:54] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-17 08:51:54] [INFO] 正在抓取直链：medicandong
+[2026-08-17 08:51:54] [INFO] 正在抓取直链：PuddinCat
+[2026-08-17 08:51:54] [INFO] 正在抓取直链：ts-sf
+[2026-08-17 08:51:54] [INFO] 正在抓取直链：cfvvv
+[2026-08-17 08:51:55] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-17 08:51:55] [INFO] 去重后共 21344 个节点
+[2026-08-17 08:51:55] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (21344 行)
+[2026-08-17 08:51:55] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-17 08:51:55] [INFO] 订阅抓取完成
+[2026-08-17 08:51:55] [INFO] ==================================================
+[2026-08-17 20:29:21] [INFO] ==================================================
+[2026-08-17 20:29:21] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-17 20:29:21] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-17 20:29:21] [INFO] 处理 1 个 RSS 源...
+[2026-08-17 20:29:21] [INFO] 正在抓取 RSS: CFMem
+[2026-08-17 20:29:22] [INFO] 处理 19 个直链源...
+[2026-08-17 20:29:22] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-17 20:29:22] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-17 20:29:22] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-17 20:29:22] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-17 20:29:22] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-17 20:29:22] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-17 20:29:22] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-17 20:29:22] [INFO] 正在抓取直链：dongchengjie
+[2026-08-17 20:29:22] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-17 20:29:22] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-17 20:29:22] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-17 20:29:22] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-17 20:29:22] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-17 20:29:22] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-17 20:29:22] [INFO] 正在抓取直链：gslege
+[2026-08-17 20:29:22] [INFO] 正在抓取直链：medicandong
+[2026-08-17 20:29:22] [INFO] 正在抓取直链：PuddinCat
+[2026-08-17 20:29:22] [INFO] 正在抓取直链：ts-sf
+[2026-08-17 20:29:22] [INFO] 正在抓取直链：cfvvv
+[2026-08-17 20:29:22] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-17 20:29:23] [INFO] 去重后共 20302 个节点
+[2026-08-17 20:29:23] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (20302 行)
+[2026-08-17 20:29:23] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-17 20:29:23] [INFO] 订阅抓取完成
+[2026-08-17 20:29:23] [INFO] ==================================================
+[2026-08-18 08:50:43] [INFO] ==================================================
+[2026-08-18 08:50:43] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-18 08:50:43] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-18 08:50:43] [INFO] 处理 1 个 RSS 源...
+[2026-08-18 08:50:43] [INFO] 正在抓取 RSS: CFMem
+[2026-08-18 08:50:44] [INFO] 处理 19 个直链源...
+[2026-08-18 08:50:44] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-18 08:50:44] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-18 08:50:44] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-18 08:50:44] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-18 08:50:44] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-18 08:50:44] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-18 08:50:44] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-18 08:50:44] [INFO] 正在抓取直链：dongchengjie
+[2026-08-18 08:50:44] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-18 08:50:44] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-18 08:50:44] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-18 08:50:44] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-18 08:50:44] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-18 08:50:44] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-18 08:50:44] [INFO] 正在抓取直链：gslege
+[2026-08-18 08:50:44] [INFO] 正在抓取直链：medicandong
+[2026-08-18 08:50:44] [INFO] 正在抓取直链：ts-sf
+[2026-08-18 08:50:44] [INFO] 正在抓取直链：PuddinCat
+[2026-08-18 08:50:44] [INFO] 正在抓取直链：cfvvv
+[2026-08-18 08:50:44] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-18 08:50:45] [INFO] 去重后共 20463 个节点
+[2026-08-18 08:50:45] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (20463 行)
+[2026-08-18 08:50:45] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-18 08:50:45] [INFO] 订阅抓取完成
+[2026-08-18 08:50:45] [INFO] ==================================================
+[2026-08-18 20:31:08] [INFO] ==================================================
+[2026-08-18 20:31:08] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-18 20:31:08] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-18 20:31:08] [INFO] 处理 1 个 RSS 源...
+[2026-08-18 20:31:08] [INFO] 正在抓取 RSS: CFMem
+[2026-08-18 20:31:08] [INFO] 处理 19 个直链源...
+[2026-08-18 20:31:08] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-18 20:31:08] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-18 20:31:08] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-18 20:31:08] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-18 20:31:08] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-18 20:31:08] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-18 20:31:08] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-18 20:31:08] [INFO] 正在抓取直链：dongchengjie
+[2026-08-18 20:31:08] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-18 20:31:08] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-18 20:31:09] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-18 20:31:09] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-18 20:31:09] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-18 20:31:09] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-18 20:31:09] [INFO] 正在抓取直链：gslege
+[2026-08-18 20:31:09] [INFO] 正在抓取直链：medicandong
+[2026-08-18 20:31:09] [INFO] 正在抓取直链：PuddinCat
+[2026-08-18 20:31:09] [INFO] 正在抓取直链：ts-sf
+[2026-08-18 20:31:09] [INFO] 正在抓取直链：cfvvv
+[2026-08-18 20:31:09] [WARN] 直链 twj0sub_platform 内容为空
+[2026-08-18 20:31:09] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-18 20:31:09] [INFO] 去重后共 36066 个节点
+[2026-08-18 20:31:09] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (36066 行)
+[2026-08-18 20:31:09] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-18 20:31:09] [INFO] 订阅抓取完成
+[2026-08-18 20:31:09] [INFO] ==================================================
+[2026-08-19 08:51:24] [INFO] ==================================================
+[2026-08-19 08:51:24] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-19 08:51:24] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-19 08:51:24] [INFO] 处理 1 个 RSS 源...
+[2026-08-19 08:51:24] [INFO] 正在抓取 RSS: CFMem
+[2026-08-19 08:51:25] [INFO] 处理 19 个直链源...
+[2026-08-19 08:51:25] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-19 08:51:25] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-19 08:51:25] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-19 08:51:25] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-19 08:51:25] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-19 08:51:25] [INFO] 正在抓取直链：dongchengjie
+[2026-08-19 08:51:25] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-19 08:51:25] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-19 08:51:25] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-19 08:51:25] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-19 08:51:25] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-19 08:51:25] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-19 08:51:25] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-19 08:51:25] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-19 08:51:25] [INFO] 正在抓取直链：gslege
+[2026-08-19 08:51:25] [INFO] 正在抓取直链：medicandong
+[2026-08-19 08:51:25] [INFO] 正在抓取直链：PuddinCat
+[2026-08-19 08:51:25] [INFO] 正在抓取直链：ts-sf
+[2026-08-19 08:51:25] [INFO] 正在抓取直链：cfvvv
+[2026-08-19 08:51:25] [WARN] 直链 twj0sub_platform 内容为空
+[2026-08-19 08:51:25] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-19 08:51:26] [INFO] 去重后共 36264 个节点
+[2026-08-19 08:51:26] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (36264 行)
+[2026-08-19 08:51:26] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-19 08:51:26] [INFO] 订阅抓取完成
+[2026-08-19 08:51:26] [INFO] ==================================================
+[2026-08-19 20:32:11] [INFO] ==================================================
+[2026-08-19 20:32:11] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-19 20:32:11] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-19 20:32:11] [INFO] 处理 1 个 RSS 源...
+[2026-08-19 20:32:11] [INFO] 正在抓取 RSS: CFMem
+[2026-08-19 20:32:12] [INFO] 处理 19 个直链源...
+[2026-08-19 20:32:12] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-19 20:32:12] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-19 20:32:12] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-19 20:32:12] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-19 20:32:12] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-19 20:32:12] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-19 20:32:12] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-19 20:32:12] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-19 20:32:12] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-19 20:32:12] [INFO] 正在抓取直链：dongchengjie
+[2026-08-19 20:32:12] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-19 20:32:12] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-19 20:32:12] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-19 20:32:12] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-19 20:32:12] [INFO] 正在抓取直链：gslege
+[2026-08-19 20:32:12] [INFO] 正在抓取直链：medicandong
+[2026-08-19 20:32:12] [INFO] 正在抓取直链：PuddinCat
+[2026-08-19 20:32:12] [INFO] 正在抓取直链：ts-sf
+[2026-08-19 20:32:12] [INFO] 正在抓取直链：cfvvv
+[2026-08-19 20:32:12] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-19 20:32:12] [INFO] 去重后共 36373 个节点
+[2026-08-19 20:32:12] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (36373 行)
+[2026-08-19 20:32:12] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-19 20:32:12] [INFO] 订阅抓取完成
+[2026-08-19 20:32:12] [INFO] ==================================================
+[2026-08-20 08:51:26] [INFO] ==================================================
+[2026-08-20 08:51:26] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-20 08:51:26] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-20 08:51:26] [INFO] 处理 1 个 RSS 源...
+[2026-08-20 08:51:26] [INFO] 正在抓取 RSS: CFMem
+[2026-08-20 08:51:26] [INFO] 处理 19 个直链源...
+[2026-08-20 08:51:26] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-20 08:51:26] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-20 08:51:26] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-20 08:51:26] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-20 08:51:26] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-20 08:51:26] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-20 08:51:26] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-20 08:51:26] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-20 08:51:26] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-20 08:51:26] [INFO] 正在抓取直链：dongchengjie
+[2026-08-20 08:51:26] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-20 08:51:26] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-20 08:51:26] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-20 08:51:26] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-20 08:51:27] [INFO] 正在抓取直链：gslege
+[2026-08-20 08:51:27] [INFO] 正在抓取直链：medicandong
+[2026-08-20 08:51:27] [INFO] 正在抓取直链：PuddinCat
+[2026-08-20 08:51:27] [INFO] 正在抓取直链：ts-sf
+[2026-08-20 08:51:27] [INFO] 正在抓取直链：cfvvv
+[2026-08-20 08:51:27] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-20 08:51:27] [INFO] 去重后共 36492 个节点
+[2026-08-20 08:51:27] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (36492 行)
+[2026-08-20 08:51:27] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-20 08:51:27] [INFO] 订阅抓取完成
+[2026-08-20 08:51:27] [INFO] ==================================================
+[2026-08-20 20:33:28] [INFO] ==================================================
+[2026-08-20 20:33:28] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-20 20:33:28] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-20 20:33:28] [INFO] 处理 1 个 RSS 源...
+[2026-08-20 20:33:28] [INFO] 正在抓取 RSS: CFMem
+[2026-08-20 20:33:28] [INFO] 处理 19 个直链源...
+[2026-08-20 20:33:28] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-20 20:33:28] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-20 20:33:28] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-20 20:33:28] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-20 20:33:28] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-20 20:33:28] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-20 20:33:28] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-20 20:33:28] [INFO] 正在抓取直链：dongchengjie
+[2026-08-20 20:33:28] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-20 20:33:28] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-20 20:33:28] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-20 20:33:28] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-20 20:33:28] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-20 20:33:28] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-20 20:33:28] [INFO] 正在抓取直链：gslege
+[2026-08-20 20:33:28] [INFO] 正在抓取直链：medicandong
+[2026-08-20 20:33:28] [INFO] 正在抓取直链：PuddinCat
+[2026-08-20 20:33:29] [INFO] 正在抓取直链：ts-sf
+[2026-08-20 20:33:29] [INFO] 正在抓取直链：cfvvv
+[2026-08-20 20:33:29] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-20 20:33:29] [INFO] 去重后共 37540 个节点
+[2026-08-20 20:33:29] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (37540 行)
+[2026-08-20 20:33:29] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-20 20:33:29] [INFO] 订阅抓取完成
+[2026-08-20 20:33:29] [INFO] ==================================================
+[2026-08-21 08:54:44] [INFO] ==================================================
+[2026-08-21 08:54:44] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-21 08:54:44] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-21 08:54:44] [INFO] 处理 1 个 RSS 源...
+[2026-08-21 08:54:44] [INFO] 正在抓取 RSS: CFMem
+[2026-08-21 08:54:44] [INFO] 处理 19 个直链源...
+[2026-08-21 08:54:44] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-21 08:54:44] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-21 08:54:44] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-21 08:54:44] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-21 08:54:44] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-21 08:54:44] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-21 08:54:44] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-21 08:54:44] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-21 08:54:44] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-21 08:54:44] [INFO] 正在抓取直链：dongchengjie
+[2026-08-21 08:54:44] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-21 08:54:44] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-21 08:54:44] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-21 08:54:44] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-21 08:54:44] [INFO] 正在抓取直链：gslege
+[2026-08-21 08:54:44] [INFO] 正在抓取直链：medicandong
+[2026-08-21 08:54:44] [INFO] 正在抓取直链：PuddinCat
+[2026-08-21 08:54:44] [INFO] 正在抓取直链：ts-sf
+[2026-08-21 08:54:44] [INFO] 正在抓取直链：cfvvv
+[2026-08-21 08:54:45] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-21 08:54:45] [INFO] 去重后共 37542 个节点
+[2026-08-21 08:54:45] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (37542 行)
+[2026-08-21 08:54:45] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-21 08:54:45] [INFO] 订阅抓取完成
+[2026-08-21 08:54:45] [INFO] ==================================================
+[2026-08-21 20:32:19] [INFO] ==================================================
+[2026-08-21 20:32:19] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-21 20:32:19] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-21 20:32:19] [INFO] 处理 1 个 RSS 源...
+[2026-08-21 20:32:19] [INFO] 正在抓取 RSS: CFMem
+[2026-08-21 20:32:20] [INFO] 处理 19 个直链源...
+[2026-08-21 20:32:20] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-21 20:32:20] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-21 20:32:20] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-21 20:32:20] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-21 20:32:20] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-21 20:32:20] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-21 20:32:20] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-21 20:32:20] [INFO] 正在抓取直链：dongchengjie
+[2026-08-21 20:32:20] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-21 20:32:20] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-21 20:32:20] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-21 20:32:20] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-21 20:32:20] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-21 20:32:20] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-21 20:32:20] [INFO] 正在抓取直链：gslege
+[2026-08-21 20:32:20] [INFO] 正在抓取直链：medicandong
+[2026-08-21 20:32:20] [INFO] 正在抓取直链：PuddinCat
+[2026-08-21 20:32:20] [INFO] 正在抓取直链：ts-sf
+[2026-08-21 20:32:20] [INFO] 正在抓取直链：cfvvv
+[2026-08-21 20:32:20] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-21 20:32:21] [INFO] 去重后共 36371 个节点
+[2026-08-21 20:32:21] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (36371 行)
+[2026-08-21 20:32:21] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-21 20:32:21] [INFO] 订阅抓取完成
+[2026-08-21 20:32:21] [INFO] ==================================================
+[2026-08-22 08:51:17] [INFO] ==================================================
+[2026-08-22 08:51:17] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-22 08:51:17] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-22 08:51:17] [INFO] 处理 1 个 RSS 源...
+[2026-08-22 08:51:17] [INFO] 正在抓取 RSS: CFMem
+[2026-08-22 08:51:18] [INFO] 处理 19 个直链源...
+[2026-08-22 08:51:18] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-22 08:51:18] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-22 08:51:18] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-22 08:51:18] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-22 08:51:18] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-22 08:51:18] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-22 08:51:18] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-22 08:51:18] [INFO] 正在抓取直链：dongchengjie
+[2026-08-22 08:51:18] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-22 08:51:18] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-22 08:51:18] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-22 08:51:18] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-22 08:51:18] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-22 08:51:18] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-22 08:51:18] [INFO] 正在抓取直链：gslege
+[2026-08-22 08:51:18] [INFO] 正在抓取直链：medicandong
+[2026-08-22 08:51:18] [INFO] 正在抓取直链：PuddinCat
+[2026-08-22 08:51:18] [INFO] 正在抓取直链：ts-sf
+[2026-08-22 08:51:18] [INFO] 正在抓取直链：cfvvv
+[2026-08-22 08:51:19] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-22 08:51:19] [INFO] 去重后共 36381 个节点
+[2026-08-22 08:51:19] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (36381 行)
+[2026-08-22 08:51:19] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-22 08:51:19] [INFO] 订阅抓取完成
+[2026-08-22 08:51:19] [INFO] ==================================================
+[2026-08-22 20:24:17] [INFO] ==================================================
+[2026-08-22 20:24:17] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-22 20:24:17] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-22 20:24:17] [INFO] 处理 1 个 RSS 源...
+[2026-08-22 20:24:17] [INFO] 正在抓取 RSS: CFMem
+[2026-08-22 20:24:17] [INFO] 处理 19 个直链源...
+[2026-08-22 20:24:17] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-22 20:24:17] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-22 20:24:17] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-22 20:24:17] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-22 20:24:17] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-22 20:24:17] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-22 20:24:17] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-22 20:24:17] [INFO] 正在抓取直链：dongchengjie
+[2026-08-22 20:24:17] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-22 20:24:17] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-22 20:24:18] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-22 20:24:18] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-22 20:24:18] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-22 20:24:18] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-22 20:24:18] [INFO] 正在抓取直链：gslege
+[2026-08-22 20:24:18] [INFO] 正在抓取直链：medicandong
+[2026-08-22 20:24:18] [INFO] 正在抓取直链：PuddinCat
+[2026-08-22 20:24:18] [INFO] 正在抓取直链：ts-sf
+[2026-08-22 20:24:18] [INFO] 正在抓取直链：cfvvv
+[2026-08-22 20:24:18] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-22 20:24:19] [INFO] 去重后共 36253 个节点
+[2026-08-22 20:24:19] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (36253 行)
+[2026-08-22 20:24:19] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-22 20:24:19] [INFO] 订阅抓取完成
+[2026-08-22 20:24:19] [INFO] ==================================================
+[2026-08-23 08:55:17] [INFO] ==================================================
+[2026-08-23 08:55:17] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-23 08:55:17] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-23 08:55:17] [INFO] 处理 1 个 RSS 源...
+[2026-08-23 08:55:17] [INFO] 正在抓取 RSS: CFMem
+[2026-08-23 08:55:17] [INFO] 处理 19 个直链源...
+[2026-08-23 08:55:17] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-23 08:55:17] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-23 08:55:17] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-23 08:55:17] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-23 08:55:17] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-23 08:55:17] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-23 08:55:17] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-23 08:55:17] [INFO] 正在抓取直链：dongchengjie
+[2026-08-23 08:55:17] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-23 08:55:17] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-23 08:55:17] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-23 08:55:17] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-23 08:55:17] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-23 08:55:18] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-23 08:55:18] [INFO] 正在抓取直链：gslege
+[2026-08-23 08:55:18] [INFO] 正在抓取直链：medicandong
+[2026-08-23 08:55:18] [INFO] 正在抓取直链：PuddinCat
+[2026-08-23 08:55:18] [INFO] 正在抓取直链：ts-sf
+[2026-08-23 08:55:18] [INFO] 正在抓取直链：cfvvv
+[2026-08-23 08:55:18] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-23 08:55:18] [INFO] 去重后共 36301 个节点
+[2026-08-23 08:55:18] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (36301 行)
+[2026-08-23 08:55:18] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-23 08:55:18] [INFO] 订阅抓取完成
+[2026-08-23 08:55:18] [INFO] ==================================================
+[2026-08-23 20:25:19] [INFO] ==================================================
+[2026-08-23 20:25:19] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-23 20:25:19] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-23 20:25:19] [INFO] 处理 1 个 RSS 源...
+[2026-08-23 20:25:19] [INFO] 正在抓取 RSS: CFMem
+[2026-08-23 20:25:20] [INFO] 处理 19 个直链源...
+[2026-08-23 20:25:20] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-23 20:25:20] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-23 20:25:20] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-23 20:25:20] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-23 20:25:20] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-23 20:25:20] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-23 20:25:20] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-23 20:25:20] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-23 20:25:20] [INFO] 正在抓取直链：dongchengjie
+[2026-08-23 20:25:20] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-23 20:25:20] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-23 20:25:20] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-23 20:25:20] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-23 20:25:20] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-23 20:25:20] [INFO] 正在抓取直链：gslege
+[2026-08-23 20:25:20] [INFO] 正在抓取直链：medicandong
+[2026-08-23 20:25:20] [WARN] 直链 twj0sub_platform 内容为空
+[2026-08-23 20:25:20] [INFO] 正在抓取直链：PuddinCat
+[2026-08-23 20:25:20] [INFO] 正在抓取直链：ts-sf
+[2026-08-23 20:25:20] [INFO] 正在抓取直链：cfvvv
+[2026-08-23 20:25:20] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-23 20:25:20] [INFO] 去重后共 36801 个节点
+[2026-08-23 20:25:21] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (36801 行)
+[2026-08-23 20:25:21] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-23 20:25:21] [INFO] 订阅抓取完成
+[2026-08-23 20:25:21] [INFO] ==================================================
+[2026-08-24 08:53:21] [INFO] ==================================================
+[2026-08-24 08:53:21] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-24 08:53:21] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-24 08:53:21] [INFO] 处理 1 个 RSS 源...
+[2026-08-24 08:53:21] [INFO] 正在抓取 RSS: CFMem
+[2026-08-24 08:53:21] [INFO] 处理 19 个直链源...
+[2026-08-24 08:53:21] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-24 08:53:21] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-24 08:53:21] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-24 08:53:21] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-24 08:53:21] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-24 08:53:21] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-24 08:53:21] [INFO] 正在抓取直链：dongchengjie
+[2026-08-24 08:53:21] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-24 08:53:21] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-24 08:53:21] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-24 08:53:22] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-24 08:53:22] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-24 08:53:22] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-24 08:53:22] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-24 08:53:22] [INFO] 正在抓取直链：gslege
+[2026-08-24 08:53:22] [INFO] 正在抓取直链：medicandong
+[2026-08-24 08:53:22] [INFO] 正在抓取直链：PuddinCat
+[2026-08-24 08:53:22] [INFO] 正在抓取直链：cfvvv
+[2026-08-24 08:53:22] [INFO] 正在抓取直链：ts-sf
+[2026-08-24 08:53:22] [WARN] 直链 twj0sub_platform 内容为空
+[2026-08-24 08:53:22] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-24 08:53:22] [INFO] 去重后共 36876 个节点
+[2026-08-24 08:53:22] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (36876 行)
+[2026-08-24 08:53:22] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-24 08:53:22] [INFO] 订阅抓取完成
+[2026-08-24 08:53:22] [INFO] ==================================================
+[2026-08-24 20:34:55] [INFO] ==================================================
+[2026-08-24 20:34:55] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-24 20:34:55] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-24 20:34:55] [INFO] 处理 1 个 RSS 源...
+[2026-08-24 20:34:55] [INFO] 正在抓取 RSS: CFMem
+[2026-08-24 20:34:55] [INFO] 处理 19 个直链源...
+[2026-08-24 20:34:55] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-24 20:34:55] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-24 20:34:55] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-24 20:34:55] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-24 20:34:55] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-24 20:34:55] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-24 20:34:55] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-24 20:34:55] [INFO] 正在抓取直链：dongchengjie
+[2026-08-24 20:34:55] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-24 20:34:55] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-24 20:34:55] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-24 20:34:55] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-24 20:34:55] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-24 20:34:55] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-24 20:34:55] [INFO] 正在抓取直链：gslege
+[2026-08-24 20:34:55] [INFO] 正在抓取直链：medicandong
+[2026-08-24 20:34:55] [INFO] 正在抓取直链：PuddinCat
+[2026-08-24 20:34:55] [INFO] 正在抓取直链：ts-sf
+[2026-08-24 20:34:55] [INFO] 正在抓取直链：cfvvv
+[2026-08-24 20:34:56] [WARN] 直链 twj0sub_platform 内容为空
+[2026-08-24 20:34:56] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-24 20:34:56] [INFO] 去重后共 32781 个节点
+[2026-08-24 20:34:56] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (32781 行)
+[2026-08-24 20:34:56] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-24 20:34:56] [INFO] 订阅抓取完成
+[2026-08-24 20:34:56] [INFO] ==================================================
+[2026-08-25 08:53:07] [INFO] ==================================================
+[2026-08-25 08:53:07] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-25 08:53:07] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-25 08:53:07] [INFO] 处理 1 个 RSS 源...
+[2026-08-25 08:53:07] [INFO] 正在抓取 RSS: CFMem
+[2026-08-25 08:53:07] [INFO] 处理 19 个直链源...
+[2026-08-25 08:53:07] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-25 08:53:07] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-25 08:53:07] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-25 08:53:07] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-25 08:53:07] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-25 08:53:07] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-25 08:53:07] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-25 08:53:07] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-25 08:53:07] [INFO] 正在抓取直链：dongchengjie
+[2026-08-25 08:53:07] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-25 08:53:08] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-25 08:53:08] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-25 08:53:08] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-25 08:53:08] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-25 08:53:08] [INFO] 正在抓取直链：gslege
+[2026-08-25 08:53:08] [INFO] 正在抓取直链：medicandong
+[2026-08-25 08:53:08] [INFO] 正在抓取直链：PuddinCat
+[2026-08-25 08:53:08] [INFO] 正在抓取直链：ts-sf
+[2026-08-25 08:53:08] [INFO] 正在抓取直链：cfvvv
+[2026-08-25 08:53:08] [WARN] 直链 twj0sub_platform 内容为空
+[2026-08-25 08:53:08] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-25 08:53:08] [INFO] 去重后共 32975 个节点
+[2026-08-25 08:53:08] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (32975 行)
+[2026-08-25 08:53:08] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-25 08:53:08] [INFO] 订阅抓取完成
+[2026-08-25 08:53:08] [INFO] ==================================================
+[2026-08-25 20:34:09] [INFO] ==================================================
+[2026-08-25 20:34:09] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-25 20:34:09] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-25 20:34:09] [INFO] 处理 1 个 RSS 源...
+[2026-08-25 20:34:09] [INFO] 正在抓取 RSS: CFMem
+[2026-08-25 20:34:09] [INFO] 处理 19 个直链源...
+[2026-08-25 20:34:09] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-25 20:34:09] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-25 20:34:09] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-25 20:34:09] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-25 20:34:09] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-25 20:34:09] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-25 20:34:09] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-25 20:34:09] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-25 20:34:09] [INFO] 正在抓取直链：dongchengjie
+[2026-08-25 20:34:09] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-25 20:34:09] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-25 20:34:09] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-25 20:34:10] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-25 20:34:10] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-25 20:34:10] [INFO] 正在抓取直链：gslege
+[2026-08-25 20:34:10] [INFO] 正在抓取直链：medicandong
+[2026-08-25 20:34:10] [INFO] 正在抓取直链：PuddinCat
+[2026-08-25 20:34:10] [INFO] 正在抓取直链：ts-sf
+[2026-08-25 20:34:10] [INFO] 正在抓取直链：cfvvv
+[2026-08-25 20:34:10] [WARN] 直链 twj0sub_platform 内容为空
+[2026-08-25 20:34:10] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-25 20:34:10] [INFO] 去重后共 37496 个节点
+[2026-08-25 20:34:10] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (37496 行)
+[2026-08-25 20:34:10] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-25 20:34:10] [INFO] 订阅抓取完成
+[2026-08-25 20:34:10] [INFO] ==================================================
+[2026-08-26 08:54:01] [INFO] ==================================================
+[2026-08-26 08:54:01] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-26 08:54:01] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-26 08:54:01] [INFO] 处理 1 个 RSS 源...
+[2026-08-26 08:54:01] [INFO] 正在抓取 RSS: CFMem
+[2026-08-26 08:54:01] [INFO] 处理 19 个直链源...
+[2026-08-26 08:54:01] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-26 08:54:01] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-26 08:54:01] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-26 08:54:01] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-26 08:54:01] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-26 08:54:01] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-26 08:54:01] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-26 08:54:01] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-26 08:54:01] [INFO] 正在抓取直链：dongchengjie
+[2026-08-26 08:54:01] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-26 08:54:02] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-26 08:54:02] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-26 08:54:02] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-26 08:54:02] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-26 08:54:02] [INFO] 正在抓取直链：gslege
+[2026-08-26 08:54:02] [INFO] 正在抓取直链：medicandong
+[2026-08-26 08:54:02] [INFO] 正在抓取直链：PuddinCat
+[2026-08-26 08:54:02] [INFO] 正在抓取直链：ts-sf
+[2026-08-26 08:54:02] [INFO] 正在抓取直链：cfvvv
+[2026-08-26 08:54:02] [WARN] 直链 twj0sub_platform 内容为空
+[2026-08-26 08:54:02] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-26 08:54:02] [INFO] 去重后共 37547 个节点
+[2026-08-26 08:54:02] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (37547 行)
+[2026-08-26 08:54:02] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-26 08:54:02] [INFO] 订阅抓取完成
+[2026-08-26 08:54:02] [INFO] ==================================================
+[2026-08-26 20:37:32] [INFO] ==================================================
+[2026-08-26 20:37:32] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-26 20:37:32] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-26 20:37:32] [INFO] 处理 1 个 RSS 源...
+[2026-08-26 20:37:32] [INFO] 正在抓取 RSS: CFMem
+[2026-08-26 20:37:33] [INFO] 处理 19 个直链源...
+[2026-08-26 20:37:33] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-26 20:37:33] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-26 20:37:33] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-26 20:37:33] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-26 20:37:33] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-26 20:37:33] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-26 20:37:33] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-26 20:37:33] [INFO] 正在抓取直链：dongchengjie
+[2026-08-26 20:37:33] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-26 20:37:33] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-26 20:37:33] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-26 20:37:33] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-26 20:37:33] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-26 20:37:33] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-26 20:37:33] [INFO] 正在抓取直链：gslege
+[2026-08-26 20:37:33] [INFO] 正在抓取直链：medicandong
+[2026-08-26 20:37:33] [INFO] 正在抓取直链：PuddinCat
+[2026-08-26 20:37:33] [INFO] 正在抓取直链：ts-sf
+[2026-08-26 20:37:33] [INFO] 正在抓取直链：cfvvv
+[2026-08-26 20:37:33] [WARN] 直链 twj0sub_platform 内容为空
+[2026-08-26 20:37:33] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-26 20:37:33] [INFO] 去重后共 32572 个节点
+[2026-08-26 20:37:33] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (32572 行)
+[2026-08-26 20:37:33] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-26 20:37:33] [INFO] 订阅抓取完成
+[2026-08-26 20:37:33] [INFO] ==================================================
+[2026-08-27 14:36:51] [INFO] ==================================================
+[2026-08-27 14:36:51] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-27 14:36:51] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-27 14:36:51] [INFO] 处理 1 个 RSS 源...
+[2026-08-27 14:36:51] [INFO] 正在抓取 RSS: CFMem
+[2026-08-27 14:36:51] [INFO] 处理 19 个直链源...
+[2026-08-27 14:36:51] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-27 14:36:51] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-27 14:36:51] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-27 14:36:51] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-27 14:36:51] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-27 14:36:51] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-27 14:36:51] [INFO] 正在抓取直链：dongchengjie
+[2026-08-27 14:36:51] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-27 14:36:51] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-27 14:36:51] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-27 14:36:52] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-27 14:36:52] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-27 14:36:52] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-27 14:36:52] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-27 14:36:52] [INFO] 正在抓取直链：gslege
+[2026-08-27 14:36:52] [INFO] 正在抓取直链：medicandong
+[2026-08-27 14:36:52] [INFO] 正在抓取直链：PuddinCat
+[2026-08-27 14:36:52] [INFO] 正在抓取直链：ts-sf
+[2026-08-27 14:36:52] [WARN] 直链 twj0sub_platform 内容为空
+[2026-08-27 14:36:52] [INFO] 正在抓取直链：cfvvv
+[2026-08-27 14:36:52] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-27 14:36:52] [INFO] 去重后共 32709 个节点
+[2026-08-27 14:36:52] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (32709 行)
+[2026-08-27 14:36:52] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-27 14:36:52] [INFO] 订阅抓取完成
+[2026-08-27 14:36:52] [INFO] ==================================================
+[2026-08-28 05:33:45] [INFO] ==================================================
+[2026-08-28 05:33:45] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-28 05:33:45] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-28 05:33:45] [INFO] 处理 1 个 RSS 源...
+[2026-08-28 05:33:45] [INFO] 正在抓取 RSS: CFMem
+[2026-08-28 05:33:46] [INFO] 处理 19 个直链源...
+[2026-08-28 05:33:46] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-28 05:33:46] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-28 05:33:46] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-28 05:33:46] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-28 05:33:46] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-28 05:33:46] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-28 05:33:46] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-28 05:33:46] [INFO] 正在抓取直链：dongchengjie
+[2026-08-28 05:33:46] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-28 05:33:46] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-28 05:33:46] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-28 05:33:46] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-28 05:33:46] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-28 05:33:46] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-28 05:33:46] [INFO] 正在抓取直链：gslege
+[2026-08-28 05:33:46] [INFO] 正在抓取直链：medicandong
+[2026-08-28 05:33:46] [INFO] 正在抓取直链：PuddinCat
+[2026-08-28 05:33:46] [INFO] 正在抓取直链：ts-sf
+[2026-08-28 05:33:46] [INFO] 正在抓取直链：cfvvv
+[2026-08-28 05:33:46] [WARN] 直链 twj0sub_platform 内容为空
+[2026-08-28 05:33:46] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-28 05:33:47] [INFO] 去重后共 31438 个节点
+[2026-08-28 05:33:47] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (31438 行)
+[2026-08-28 05:33:47] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-28 05:33:47] [INFO] 订阅抓取完成
+[2026-08-28 05:33:47] [INFO] ==================================================
+[2026-08-28 16:26:48] [INFO] ==================================================
+[2026-08-28 16:26:48] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-28 16:26:48] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-28 16:26:48] [INFO] 处理 1 个 RSS 源...
+[2026-08-28 16:26:48] [INFO] 正在抓取 RSS: CFMem
+[2026-08-28 16:26:49] [INFO] 处理 19 个直链源...
+[2026-08-28 16:26:49] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-28 16:26:49] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-28 16:26:49] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-28 16:26:49] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-28 16:26:49] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-28 16:26:49] [INFO] 正在抓取直链：dongchengjie
+[2026-08-28 16:26:49] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-28 16:26:49] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-28 16:26:49] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-28 16:26:49] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-28 16:26:49] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-28 16:26:49] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-28 16:26:49] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-28 16:26:49] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-28 16:26:49] [INFO] 正在抓取直链：gslege
+[2026-08-28 16:26:49] [INFO] 正在抓取直链：medicandong
+[2026-08-28 16:26:49] [WARN] 直链 twj0sub_platform 内容为空
+[2026-08-28 16:26:49] [INFO] 正在抓取直链：PuddinCat
+[2026-08-28 16:26:49] [INFO] 正在抓取直链：ts-sf
+[2026-08-28 16:26:49] [INFO] 正在抓取直链：cfvvv
+[2026-08-28 16:26:49] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-28 16:26:50] [INFO] 去重后共 31158 个节点
+[2026-08-28 16:26:50] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (31158 行)
+[2026-08-28 16:26:50] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-28 16:26:50] [INFO] 订阅抓取完成
+[2026-08-28 16:26:50] [INFO] ==================================================
+[2026-08-29 05:38:13] [INFO] ==================================================
+[2026-08-29 05:38:13] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-29 05:38:13] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-29 05:38:13] [INFO] 处理 1 个 RSS 源...
+[2026-08-29 05:38:13] [INFO] 正在抓取 RSS: CFMem
+[2026-08-29 05:38:14] [INFO] 处理 19 个直链源...
+[2026-08-29 05:38:14] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-29 05:38:14] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-29 05:38:14] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-29 05:38:14] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-29 05:38:14] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-29 05:38:14] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-29 05:38:14] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-29 05:38:14] [INFO] 正在抓取直链：dongchengjie
+[2026-08-29 05:38:14] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-29 05:38:14] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-29 05:38:14] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-29 05:38:14] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-29 05:38:14] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-29 05:38:14] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-29 05:38:14] [INFO] 正在抓取直链：gslege
+[2026-08-29 05:38:14] [INFO] 正在抓取直链：medicandong
+[2026-08-29 05:38:14] [INFO] 正在抓取直链：PuddinCat
+[2026-08-29 05:38:14] [INFO] 正在抓取直链：cfvvv
+[2026-08-29 05:38:14] [INFO] 正在抓取直链：ts-sf
+[2026-08-29 05:38:14] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-29 05:38:15] [INFO] 去重后共 38302 个节点
+[2026-08-29 05:38:15] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (38302 行)
+[2026-08-29 05:38:15] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-29 05:38:15] [INFO] 订阅抓取完成
+[2026-08-29 05:38:15] [INFO] ==================================================
+[2026-08-29 13:07:31] [INFO] ==================================================
+[2026-08-29 13:07:31] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-29 13:07:31] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-29 13:07:31] [INFO] 处理 1 个 RSS 源...
+[2026-08-29 13:07:31] [INFO] 正在抓取 RSS: CFMem
+[2026-08-29 13:07:32] [INFO] 处理 19 个直链源...
+[2026-08-29 13:07:32] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-29 13:07:32] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-29 13:07:32] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-29 13:07:32] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-29 13:07:32] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-29 13:07:32] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-29 13:07:32] [INFO] 正在抓取直链：dongchengjie
+[2026-08-29 13:07:32] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-29 13:07:32] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-29 13:07:32] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-29 13:07:32] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-29 13:07:32] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-29 13:07:32] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-29 13:07:32] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-29 13:07:32] [INFO] 正在抓取直链：gslege
+[2026-08-29 13:07:32] [INFO] 正在抓取直链：medicandong
+[2026-08-29 13:07:32] [INFO] 正在抓取直链：PuddinCat
+[2026-08-29 13:07:32] [INFO] 正在抓取直链：ts-sf
+[2026-08-29 13:07:32] [INFO] 正在抓取直链：cfvvv
+[2026-08-29 13:07:32] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-29 13:07:33] [INFO] 去重后共 38495 个节点
+[2026-08-29 13:07:33] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (38495 行)
+[2026-08-29 13:07:33] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-29 13:07:33] [INFO] 订阅抓取完成
+[2026-08-29 13:07:33] [INFO] ==================================================
+[2026-08-30 00:01:39] [INFO] ==================================================
+[2026-08-30 00:01:39] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-30 00:01:39] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-30 00:01:39] [INFO] 处理 1 个 RSS 源...
+[2026-08-30 00:01:39] [INFO] 正在抓取 RSS: CFMem
+[2026-08-30 00:01:39] [INFO] 处理 19 个直链源...
+[2026-08-30 00:01:39] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-30 00:01:39] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-30 00:01:39] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-30 00:01:39] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-30 00:01:39] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-30 00:01:39] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-30 00:01:39] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-30 00:01:39] [INFO] 正在抓取直链：dongchengjie
+[2026-08-30 00:01:39] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-30 00:01:39] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-30 00:01:39] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-30 00:01:40] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-30 00:01:40] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-30 00:01:40] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-30 00:01:40] [INFO] 正在抓取直链：gslege
+[2026-08-30 00:01:40] [INFO] 正在抓取直链：medicandong
+[2026-08-30 00:01:40] [INFO] 正在抓取直链：PuddinCat
+[2026-08-30 00:01:40] [INFO] 正在抓取直链：ts-sf
+[2026-08-30 00:01:40] [INFO] 正在抓取直链：cfvvv
+[2026-08-30 00:01:40] [WARN] 直链 twj0sub_platform 内容为空
+[2026-08-30 00:01:40] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-30 00:01:40] [INFO] 去重后共 35793 个节点
+[2026-08-30 00:01:40] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (35793 行)
+[2026-08-30 00:01:40] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-30 00:01:40] [INFO] 订阅抓取完成
+[2026-08-30 00:01:40] [INFO] ==================================================
+[2026-08-30 10:57:32] [INFO] ==================================================
+[2026-08-30 10:57:32] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-30 10:57:32] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-30 10:57:32] [INFO] 处理 1 个 RSS 源...
+[2026-08-30 10:57:32] [INFO] 正在抓取 RSS: CFMem
+[2026-08-30 10:57:32] [INFO] 处理 19 个直链源...
+[2026-08-30 10:57:32] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-30 10:57:32] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-30 10:57:32] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-30 10:57:32] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-30 10:57:32] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-30 10:57:33] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-30 10:57:33] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-30 10:57:33] [INFO] 正在抓取直链：dongchengjie
+[2026-08-30 10:57:33] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-30 10:57:33] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-30 10:57:33] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-30 10:57:33] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-30 10:57:33] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-30 10:57:33] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-30 10:57:33] [INFO] 正在抓取直链：gslege
+[2026-08-30 10:57:33] [INFO] 正在抓取直链：medicandong
+[2026-08-30 10:57:33] [INFO] 正在抓取直链：PuddinCat
+[2026-08-30 10:57:33] [WARN] 直链 twj0sub_platform 内容为空
+[2026-08-30 10:57:33] [INFO] 正在抓取直链：ts-sf
+[2026-08-30 10:57:33] [INFO] 正在抓取直链：cfvvv
+[2026-08-30 10:57:33] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-30 10:57:33] [INFO] 去重后共 36000 个节点
+[2026-08-30 10:57:33] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (36000 行)
+[2026-08-30 10:57:33] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-30 10:57:33] [INFO] 订阅抓取完成
+[2026-08-30 10:57:33] [INFO] ==================================================
+[2026-08-30 23:50:40] [INFO] ==================================================
+[2026-08-30 23:50:40] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-30 23:50:40] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-30 23:50:40] [INFO] 处理 1 个 RSS 源...
+[2026-08-30 23:50:40] [INFO] 正在抓取 RSS: CFMem
+[2026-08-30 23:50:41] [INFO] 处理 19 个直链源...
+[2026-08-30 23:50:41] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-30 23:50:41] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-30 23:50:41] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-30 23:50:41] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-30 23:50:41] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-30 23:50:41] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-30 23:50:41] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-30 23:50:41] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-30 23:50:41] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-30 23:50:41] [INFO] 正在抓取直链：dongchengjie
+[2026-08-30 23:50:41] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-30 23:50:41] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-30 23:50:41] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-30 23:50:41] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-30 23:50:41] [INFO] 正在抓取直链：gslege
+[2026-08-30 23:50:41] [INFO] 正在抓取直链：medicandong
+[2026-08-30 23:50:41] [INFO] 正在抓取直链：PuddinCat
+[2026-08-30 23:50:41] [INFO] 正在抓取直链：ts-sf
+[2026-08-30 23:50:41] [INFO] 正在抓取直链：cfvvv
+[2026-08-30 23:50:41] [WARN] 直链 twj0sub_platform 内容为空
+[2026-08-30 23:50:41] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-30 23:50:42] [INFO] 去重后共 36031 个节点
+[2026-08-30 23:50:42] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (36031 行)
+[2026-08-30 23:50:42] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-30 23:50:42] [INFO] 订阅抓取完成
+[2026-08-30 23:50:42] [INFO] ==================================================
+[2026-08-31 10:51:48] [INFO] ==================================================
+[2026-08-31 10:51:48] [INFO] 开始抓取订阅（只去重，不做转换）
+[2026-08-31 10:51:48] [INFO] 从 ./subscribe_sources.txt 加载了 20 个订阅源
+[2026-08-31 10:51:48] [INFO] 处理 1 个 RSS 源...
+[2026-08-31 10:51:48] [INFO] 正在抓取 RSS: CFMem
+[2026-08-31 10:51:49] [INFO] 处理 19 个直链源...
+[2026-08-31 10:51:49] [INFO] 正在抓取直链：barry-far V2ray-config
+[2026-08-31 10:51:49] [INFO] 正在抓取直链：ebrasha free-v2ray
+[2026-08-31 10:51:49] [INFO] 正在抓取直链：AutoMergePublicNodes
+[2026-08-31 10:51:49] [INFO] 正在抓取直链：mahdibland V2RayAggregator
+[2026-08-31 10:51:49] [INFO] 正在抓取直链：free18 v2ray
+[2026-08-31 10:51:49] [INFO] 正在抓取直链：MatinGhanbari v2ray-configs
+[2026-08-31 10:51:49] [INFO] 正在抓取直链：PuddinCat BestClash
+[2026-08-31 10:51:49] [INFO] 正在抓取直链：ovmvo FreeSub
+[2026-08-31 10:51:49] [INFO] 正在抓取直链：dongchengjie
+[2026-08-31 10:51:49] [INFO] 正在抓取直链：shaoyouvip free
+[2026-08-31 10:51:49] [INFO] 正在抓取直链：tglaoshiji nodeshare
+[2026-08-31 10:51:49] [INFO] 正在抓取直链：openproxylist V2RAY_RAW
+[2026-08-31 10:51:49] [INFO] 正在抓取直链：twj0sub_platform
+[2026-08-31 10:51:49] [INFO] 正在抓取直链：twj0sub_github
+[2026-08-31 10:51:49] [INFO] 正在抓取直链：gslege
+[2026-08-31 10:51:49] [INFO] 正在抓取直链：medicandong
+[2026-08-31 10:51:49] [INFO] 正在抓取直链：PuddinCat
+[2026-08-31 10:51:49] [INFO] 正在抓取直链：ts-sf
+[2026-08-31 10:51:49] [WARN] 直链 twj0sub_platform 内容为空
+[2026-08-31 10:51:49] [INFO] 正在抓取直链：cfvvv
+[2026-08-31 10:51:50] [WARN] 直链 tglaoshiji nodeshare 内容为空
+[2026-08-31 10:51:50] [INFO] 去重后共 35935 个节点
+[2026-08-31 10:51:50] [INFO] 已保存 V2Ray 订阅：./subscribe/v2ray.txt (35935 行)
+[2026-08-31 10:51:50] [INFO] 已保存 Clash 订阅：./subscribe/clash.yml
+[2026-08-31 10:51:50] [INFO] 订阅抓取完成
+[2026-08-31 10:51:50] [INFO] ==================================================

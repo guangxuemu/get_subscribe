@@ -1,0 +1,35 @@
+# 订阅源列表
+# 来源：mihomo (SmartSub) + get_subscribe 原有订阅源
+# 格式：类型 | 名称|URL
+# 类型：rss, direct, telegram
+
+# ===== GitHub 订阅源 =====
+direct|AutoMergePublicNodes|https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/refs/heads/master/list_raw.txt
+direct|barry-far V2ray-config|https://github.com/barry-far/V2ray-Config/raw/refs/heads/main/All_Configs_Sub.txt
+direct|ebrasha free-v2ray|https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/refs/heads/main/V2Ray-Config-By-EbraSha.txt
+direct|free18 v2ray|https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml
+direct|mahdibland V2RayAggregator|https://raw.githubusercontent.com/mahdibland/V2RayAggregator/refs/heads/master/Eternity.txt
+direct|MatinGhanbari v2ray-configs|https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/all_sub.txt
+direct|ovmvo FreeSub|https://raw.githubusercontent.com/ovmvo/FreeSub/refs/heads/main/sub/permanent/mihomo.yaml
+direct|dongchengjie|https://raw.githubusercontent.com/dongchengjie/airport/refs/heads/main/subs/merged/tested_within.yaml
+direct|PuddinCat BestClash|https://raw.githubusercontent.com/PuddinCat/BestClash/refs/heads/main/proxies.yaml
+direct|shaoyouvip free|https://raw.githubusercontent.com/shaoyouvip/free/main/all.yaml
+direct|tglaoshiji nodeshare|https://github.com/tglaoshiji/nodeshare/raw/refs/heads/main/v2ray.txt
+direct|openproxylist V2RAY_RAW|https://raw.githubusercontent.com/roosterkid/openproxylist/refs/heads/main/V2RAY_RAW.txt
+direct|twj0sub_platform|https://raw.githubusercontent.com/twj0/subseek/refs/heads/master/data/sub_platform.txt
+direct|twj0sub_github|https://raw.githubusercontent.com/twj0/subseek/refs/heads/master/data/sub_github.txt
+direct|gslege|https://raw.githubusercontent.com/gslege/CloudflareIP/refs/heads/main/Vless.txt
+direct|medicandong|https://raw.githubusercontent.com/medicandong/mibei/refs/heads/main/subscription.txt
+direct|PuddinCat|https://raw.githubusercontent.com/PuddinCat/BestClash/refs/heads/main/proxies.yaml
+direct|ts-sf|https://raw.githubusercontent.com/ts-sf/fly/main/v2
+
+
+# ===== 其他订阅源 =====
+direct|cfvvv|https://cfvvv-ev1.pages.dev/sub?token=f0d335d1dde0f1c8881d3547c06f72b0
+
+# ===== RSS 订阅源 =====
+rss|CFMem|https://www.cfmem.com/feeds/posts/default?alt=rss
+
+# ===== Telegram 频道（完整列表）=====
+
+
