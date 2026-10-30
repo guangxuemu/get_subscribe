@@ -1,1902 +1,972 @@
-mixed-port: 7890
-allow-lan: false
+port: 7890
+socks-port: 7891
+mixed-port: 10801
+redir-port: 7892
+tproxy-port: 7893
+allow-lan: true
+bind-address: "*"
+find-process-mode: strict
 mode: rule
-log-level: warning
-ipv6: true
+secret: ""
+unified-delay: false
+tcp-concurrent: true
+geodata-mode: false
+skip-auth-prefixes:
+    - 127.0.0.1/32
+authentication: []
+lan-allowed-ips:
+    - 0.0.0.0/0
+    - ::/0
+lan-disallowed-ips: []
+geox-url:
+    geoip: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat"
+    geosite: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
+    mmdb: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.metadb"
+geo-auto-update: true
+geo-update-interval: 24
+log-level: silent
+ipv6: false
+external-controller: 0.0.0.0:9090 # 
+external-controller-tls: 0.0.0.0:9443
+external-controller-unix: mihomo.sock
+external-controller-pipe: \\.\pipe\mihomo
+external-ui: ui
+external-ui-url: "https://github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip"
+external-doh-server: /dns-query
+global-client-fingerprint: chrome
+profile:
+    store-selected: false
+    store-fake-ip: true
+sniffer:
+    enable: true
+    sniff:
+        HTTP:
+            ports: [80, 8080-8880]
+            override-destination: true
+        TLS:
+            ports: [443, 8443]
+        QUIC:
+            ports: [443, 8443]
+    skip-domain:
+        - "Mijia Cloud"
+        - "+.push.apple.com"
+tun:
+    enable: true
+    stack: system
+    auto-route: true
+    auto-redirect: true
+    auto-detect-interface: true
+    dns-hijack:
+        - any:53
+        - tcp://any:53
+    device: mihomo
+    mtu: 9000
+    strict-route: false
+    gso: true
+    gso-max-size: 65536
+    udp-timeout: 300
+    iproute2-table-index: 2022
+    iproute2-rule-index: 9000
+    endpoint-independent-nat: false
+    route-exclude-address:
+        - 172.16.0.0/12
+        - fc00::/7
 dns:
-  enable: true
-  listen: 127.0.0.1:1053
-  ipv6: true
-  prefer-h3: false
-  enhanced-mode: fake-ip
-  fake-ip-range: 198.18.0.1/16
-  fake-ip-filter-mode: blacklist
-  fake-ip-filter:
-    - localhost
-    - +.localhost
-    - +.lan
-    - +.local
-    - +.home.arpa
-  use-hosts: true
-  use-system-hosts: true
-  respect-rules: true
-  default-nameserver:
-    - https://223.5.5.5/dns-query#DIRECT
-    - https://223.6.6.6/dns-query#DIRECT
-  proxy-server-nameserver:
-    - https://223.5.5.5/dns-query#DIRECT
-    - https://223.6.6.6/dns-query#DIRECT
-  direct-nameserver:
-    - https://223.5.5.5/dns-query#DIRECT
-    - https://doh.pub/dns-query#DIRECT
-  direct-nameserver-follow-policy: false
-  nameserver-policy:
-    geosite:cn:
-      - https://223.5.5.5/dns-query#DIRECT
-      - https://doh.pub/dns-query#DIRECT
-  nameserver:
-    - https://1.1.1.1/dns-query
-    - https://1.0.0.1/dns-query
-proxies:
-  - type: vless
-    name: 每天更新，请加电报群防止失联
-    server: 51.161.204.242
-    port: 443
-    uuid: a14b736b-a92a-48d6-a596-5d31f7378ded
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: www.cloudflare.com
-    sni: www.cloudflare.com
-    skip-cert-verify: false
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: a2qGjvUPq6Nz5FTbn_MSHp-055q2h8YXqIL5VIJ5zwE
-      short-id: d15c17cef9b2e456
-  - type: trojan
-    name: 电报群：t.me/vvkj11
-    server: 193.239.160.134
-    port: 443
-    password: humanity
-    udp: true
-    tls: true
-    servername: www.calmlunch.com
-    sni: www.calmlunch.com
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /assignment
-  - type: vless
-    name: 日期：10-29
-    server: 177.7.51.29
-    port: 8443
-    uuid: c6b1b2d0-ed5e-48ce-99e6-112ff330030d
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: www.apple.com
-    sni: www.apple.com
-    skip-cert-verify: false
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: laG5BxoSbdRozpauATNFBPPTwhuDuu0JFl_SCP2ZQlU
-      short-id: 14fbf992
-  - type: vless
-    name: 免费VPN：tt.vg/FJOE2Mm
-    server: 177.7.51.29
-    port: 8443
-    uuid: c6b1b2d0-ed5e-48ce-99e6-112ff330030d
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: www.apple.com
-    sni: www.apple.com
-    skip-cert-verify: false
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: laG5BxoSbdRozpauATNFBPPTwhuDuu0JFl_SCP2ZQlU
-      short-id: 14fbf992
-  - type: vless
-    name: 🇨🇦_加拿大
-    server: ca001.zestapp778.com
-    port: 32355
-    uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
-    udp: true
-    tls: true
-    servername: ca001.zestapp778.com
-    sni: ca001.zestapp778.com
-    skip-cert-verify: false
-    client-fingerprint: chrome
-  - type: vless
-    name: 🇨🇾_塞浦路斯
-    server: 5.253.28.240
-    port: 40443
-    uuid: 405b964e-a2d2-454f-aaaa-711cc218897c
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: deepl.com
-    sni: deepl.com
-    skip-cert-verify: false
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: cwmcqsfS7klQlkcoUNuATEk0NiPY-NnRb9z8rCJDQw0
-      short-id: 88b6
-  - type: vless
-    name: 🇨🇾_塞浦路斯 (2)
-    server: dorado.yokkastars.com
-    port: 40443
-    uuid: af5eac96-e478-488a-bc8c-45269d7e8847
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: deepl.com
-    sni: deepl.com
-    skip-cert-verify: false
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: g77ZJbm18JEotapmVRjaXi133MzkbhkU2lxhVeXx8zw
-      short-id: 68a8
-  - type: vless
-    name: 🇨🇾_塞浦路斯 (3)
-    server: hydra.yokkastars.com
-    port: 40443
-    uuid: 405b964e-a2d2-454f-aaaa-711cc218897c
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: deepl.com
-    sni: deepl.com
-    skip-cert-verify: false
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: cwmcqsfS7klQlkcoUNuATEk0NiPY-NnRb9z8rCJDQw0
-      short-id: 88b6
-  - type: vless
-    name: 🇨🇾_塞浦路斯 (4)
-    server: hydra.yokkastars.com
-    port: 40443
-    uuid: 405b964e-a2d2-454f-aaaa-711cc218897c
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: deepl.com
-    sni: deepl.com
-    skip-cert-verify: false
-    client-fingerprint: qq
-    reality-opts:
-      public-key: cwmcqsfS7klQlkcoUNuATEk0NiPY-NnRb9z8rCJDQw0
-      short-id: 88b6
-  - type: vless
-    name: 🇩🇪_德国
-    server: 78.17.178.125
-    port: 443
-    uuid: 6c713691-3ca2-4446-ad25-113d1bed6b03
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: cdn.tbank.ru
-    sni: cdn.tbank.ru
-    skip-cert-verify: false
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: jcp4Lj_qYzxtkalm_XFjrmvqEMGRG7sb19yMwLe16WE
-      short-id: e0215064d8d1fd7c
-  - type: vless
-    name: 🇩🇪_德国 (2)
-    server: 78.17.178.125
-    port: 443
-    uuid: 6c713691-3ca2-4446-ad25-113d1bed6b03
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: cdn.tbank.ru
-    sni: cdn.tbank.ru
-    skip-cert-verify: false
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: jcp4Lj_qYzxtkalm_XFjrmvqEMGRG7sb19yMwLe16WE
-      short-id: e0215064d8d1fd7c
-  - type: vless
-    name: 🇩🇪_德国 (3)
-    server: ge-s-1.pythonmakemigreat.wiki
-    port: 443
-    uuid: f8d52ece-fad4-478d-875d-df6eed3befa7
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: ge-s-1.pythonmakemigreat.wiki
-    sni: ge-s-1.pythonmakemigreat.wiki
-    skip-cert-verify: false
-    client-fingerprint: ios
-    reality-opts:
-      public-key: 5fkwwCKZzMsE6Eb_b3iqluu-1AWIfnYl-p0N3EL9Al8
-      short-id: 2c9a2790ad5900b2
-  - type: vless
-    name: 🇩🇪_德国 (4)
-    server: ge-s-1.pythonmakemigreat.wiki
-    port: 443
-    uuid: f8d52ece-fad4-478d-875d-df6eed3befa7
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: ge-s-1.pythonmakemigreat.wiki
-    sni: ge-s-1.pythonmakemigreat.wiki
-    skip-cert-verify: false
-    client-fingerprint: safari
-    reality-opts:
-      public-key: 5fkwwCKZzMsE6Eb_b3iqluu-1AWIfnYl-p0N3EL9Al8
-      short-id: 2c9a2790ad5900b2
-  - type: vless
-    name: 🇩🇪_德国 (5)
-    server: 169.40.42.104
-    port: 443
-    uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: yahoo.com
-    sni: yahoo.com
-    skip-cert-verify: false
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-      short-id: c39cc7310a
-  - type: vless
-    name: 🇩🇪_德国 (6)
-    server: 5.75.195.83
-    port: 56879
-    uuid: 7b0f8733-03cc-472b-9c50-ed159b48ef59
-    udp: true
-    tls: true
-    servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
-    sni: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
-    skip-cert-verify: false
-    client-fingerprint: chrome
-    network: ws
-    ws-opts:
-      path: /@Marisa_kristi
-      headers:
-        Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
-  - type: vless
-    name: 🇩🇪_德国 (7)
-    server: 178.105.133.160
-    port: 4443
-    uuid: fb0818b3-4031-4843-b5f7-1d75177a1758
-    udp: true
-    tls: true
-    servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
-    sni: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
-    skip-cert-verify: false
-    client-fingerprint: chrome
-    network: ws
-    ws-opts:
-      path: /@Marisa_kristi
-      headers:
-        Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
-  - type: vless
-    name: 🇩🇪_德国 (8)
-    server: 91.107.188.129
-    port: 2083
-    uuid: 36592d47-b9f5-4e8f-949e-45ac05472aab
-    udp: true
-    tls: true
-    servername: site.check-looks.space
-    sni: site.check-looks.space
-    skip-cert-verify: false
-    client-fingerprint: chrome
-    network: ws
-    ws-opts:
-      path: /
-  - type: vless
-    name: 🇪🇪_爱沙尼亚
-    server: ee.h1cloud.net
-    port: 25895
-    uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
-    udp: true
-    tls: true
-    servername: www.samsung.com
-    sni: www.samsung.com
-    skip-cert-verify: false
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: jOVKSP-bS9OkILJ8Epz8hadh6qhavCrOiJYeF0NCn0k
-      short-id: a73f0410d728c823
-  - type: vless
-    name: 🇪🇪_爱沙尼亚 (2)
-    server: ee.h1cloud.net
-    port: 25895
-    uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
-    udp: true
-    tls: true
-    servername: www.samsung.com
-    sni: www.samsung.com
-    skip-cert-verify: false
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: jOVKSP-bS9OkILJ8Epz8hadh6qhavCrOiJYeF0NCn0k
-      short-id: a73f0410d728c823
-  - type: vless
-    name: 🇬🇧_英国
-    server: 128.203.252.97
-    port: 443
-    uuid: 5e610f80-fc6a-479d-8621-b672355b96a1
-    udp: true
-    tls: true
-    servername: cf-1rm.pages.dev
-    sni: cf-1rm.pages.dev
-    skip-cert-verify: false
-    client-fingerprint: chrome
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: cf-1rm.pages.dev
-  - type: vless
-    name: 🇮🇷_伊朗
-    server: req.apptrendv.com
-    port: 2083
-    uuid: 7cc18adc-1ef0-42c9-8e7b-722d7622c7dd
-    udp: true
-    tls: true
-    servername: email.apptrendv.com
-    sni: email.apptrendv.com
-    skip-cert-verify: false
-    alpn:
-      - h2
-      - http/1.1
-    client-fingerprint: chrome
-  - type: vless
-    name: 🇯🇵_日本
-    server: 203.137.165.164
-    port: 57554
-    uuid: 0985e268-5c1c-4141-9d96-139f8046c47c
-    udp: true
-    tls: true
-    servername: kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev
-    sni: kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev
-    skip-cert-verify: false
-    client-fingerprint: chrome
-    network: ws
-    ws-opts:
-      path: /@Marisa_kristi
-      headers:
-        Host: kqjifhg9rw.tradsc8p9xp7wxyqmc1wy0ah.workers.dev
-  - type: vless
-    name: 🇰🇿_哈萨克斯坦
-    server: 46.8.43.125
-    port: 443
-    uuid: 846cedee-2a52-4a62-a0b9-11850ead6a8b
-    udp: true
-    tls: true
-    servername: kz-central.v8x2b.lol
-    sni: kz-central.v8x2b.lol
-    skip-cert-verify: false
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: ER-T5En54-sn6IXy7jU8vQVcBbOiWvznnezf3qZ273w
-  - type: vless
-    name: 🇰🇿_哈萨克斯坦 (2)
-    server: 46.8.43.125
-    port: 443
-    uuid: 846cedee-2a52-4a62-a0b9-11850ead6a8b
-    udp: true
-    tls: true
-    servername: kz-central.v8x2b.lol
-    sni: kz-central.v8x2b.lol
-    skip-cert-verify: false
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: ER-T5En54-sn6IXy7jU8vQVcBbOiWvznnezf3qZ273w
-  - type: vless
-    name: 🇱🇻_拉脱维亚
-    server: 195.123.213.28
-    port: 443
-    uuid: 02fcc1a4-ee90-4970-8bbb-4ffaa8109d24
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: www.cloudflare.com
-    sni: www.cloudflare.com
-    skip-cert-verify: false
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: NMgy1XgCSXExOg6Tg8xG9lCWttMF6sjdpB41lZy6FWo
-      short-id: 5c256336e3b673fa
-  - type: vless
-    name: 🇳🇱_荷兰
-    server: 31.77.13.22
-    port: 2063
-    uuid: b18d5990-96eb-4587-a386-7f8ef7591e6a
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: rusbid.de
-    sni: rusbid.de
-    skip-cert-verify: false
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM
-  - type: vless
-    name: 🇳🇱_荷兰 (2)
-    server: 79.137.197.212
-    port: 2105
-    uuid: 663c0d65-f2bc-43f3-b329-1a4e2b781d44
-    udp: true
-    tls: true
-    servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
-    sni: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
-    skip-cert-verify: false
-    client-fingerprint: chrome
-    network: ws
-    ws-opts:
-      path: /@Marisa_kristi
-      headers:
-        Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
-  - type: vless
-    name: 🇳🇱_荷兰 (3)
-    server: cz-prg.dontblockmepls.com
-    port: 2063
-    uuid: b18d5990-96eb-4587-a386-7f8ef7591e6a
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: rusbid.de
-    sni: rusbid.de
-    skip-cert-verify: false
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM
-  - type: vless
-    name: 🇳🇱_荷兰 (4)
-    server: nl-central.v8x2b.lol
-    port: 443
-    uuid: 846cedee-2a52-0002-a0b9-11850ead6a8b
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: nl-central.v8x2b.lol
-    sni: nl-central.v8x2b.lol
-    skip-cert-verify: false
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: q3UXFUE5yYxNE4ugLUnYdpc9WRtR-sjsDTrKsiqzDHE
-  - type: vless
-    name: 🇳🇱_荷兰 (5)
-    server: 79.182.39.35
-    port: 25548
-    uuid: 5a519754-a673-4462-83f6-5eb25d2af141
-    udp: true
-    tls: true
-    servername: www.cloudflare.com
-    sni: www.cloudflare.com
-    skip-cert-verify: false
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: lceynvFy326oU4ew9OPR7079m-L5ZcFELgCl0sqxU2M
-      short-id: bceb5b2197b76818
-  - type: vless
-    name: 🇳🇱_荷兰 (6)
-    server: 79.182.39.232
-    port: 25895
-    uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
-    udp: true
-    tls: true
-    servername: www.samsung.com
-    sni: www.samsung.com
-    skip-cert-verify: false
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: jOVKSP-bS9OkILJ8Epz8hadh6qhavCrOiJYeF0NCn0k
-      short-id: a73f0410d728c823
-  - type: vless
-    name: 🇳🇱_荷兰 (7)
-    server: 79.182.39.57
-    port: 443
-    uuid: 5a519754-a673-4462-83f6-5eb25d2af141
-    udp: true
-    tls: true
-    servername: f36f5ft.us4.h1clayd.click
-    sni: f36f5ft.us4.h1clayd.click
-    skip-cert-verify: false
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: 5KZVzOFqMgdL47--JzLlg5HmPlAYp-cmQsXxkTXngS0
-      short-id: 8d50d3a4df71468c
-  - type: vless
-    name: 🇳🇱_荷兰 (8)
-    server: 5.180.181.113
-    port: 443
-    uuid: b1da2601-ff93-46d6-af87-04af3f541fde
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: sun1-19.userapi.com
-    sni: sun1-19.userapi.com
-    skip-cert-verify: false
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: wY_MYPJUx849su3BlowuxnwnUaj25iLfRw2LooQfPAY
-  - type: vless
-    name: 🇳🇱_荷兰 (9)
-    server: 2.27.118.10
-    port: 443
-    uuid: d9fe2431-8351-41eb-b956-75d96dec5d4a
-    udp: true
-    tls: true
-    servername: ph-nl-s3784.cybercat.network
-    sni: ph-nl-s3784.cybercat.network
-    skip-cert-verify: false
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: goey7Sc4Xm6Nvdukb_DuoUnrkPSV0p4hPWbAmk2_AHc
-      short-id: ecf1d9f7caa6ba67
-  - type: vless
-    name: 🇳🇱_荷兰 (10)
-    server: 188.164.248.110
-    port: 443
-    uuid: 13134515-adc7-404b-8d2a-f9ad99e8dcbd
-    udp: true
-    tls: true
-    servername: imanvipreserved.pages.dev
-    sni: imanvipreserved.pages.dev
-    skip-cert-verify: false
-    client-fingerprint: chrome
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: imanvipreserved.pages.dev
-  - type: vless
-    name: 🇷🇺_俄罗斯
-    server: tau1.freerunet.online
-    port: 443
-    uuid: ca14493b-b984-4ffb-bc0e-9cb5da969e15
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: tau1.freerunet.online
-    sni: tau1.freerunet.online
-    skip-cert-verify: false
-    client-fingerprint: safari
-    reality-opts:
-      public-key: l1mx_plNc2oiWxJCcZLh3SGfFU-5QxYpgQ__Ea59WEg
-      short-id: 4a7b1c8d
-  - type: vless
-    name: 🇷🇺_俄罗斯 (2)
-    server: z1q3pv4g78.rucdncomp.pro
-    port: 443
-    uuid: c720cb74-4c84-4fce-b8ae-637dbaa16199
-    udp: true
-    tls: true
-    servername: z1q3pv4g78.rucdncomp.pro
-    sni: z1q3pv4g78.rucdncomp.pro
-    skip-cert-verify: false
-    alpn:
-      - http/1.1
-    client-fingerprint: random
-    network: ws
-    ws-opts:
-      path: /useraction/events/b892639b7195/
-      headers:
-        Host: z1q3pv4g78.rucdncomp.pro
-  - type: vless
-    name: 🇷🇺_俄罗斯 (3)
-    server: tau1.freerunet.online
-    port: 443
-    uuid: ca14493b-b984-4ffb-bc0e-9cb5da969e15
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: tau1.freerunet.online
-    sni: tau1.freerunet.online
-    skip-cert-verify: false
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: l1mx_plNc2oiWxJCcZLh3SGfFU-5QxYpgQ__Ea59WEg
-      short-id: 4a7b1c8d
-  - type: vless
-    name: 🇷🇺_俄罗斯 (4)
-    server: tau1.freerunet.online
-    port: 443
-    uuid: ca14493b-b984-4ffb-bc0e-9cb5da969e15
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: tau1.freerunet.online
-    sni: tau1.freerunet.online
-    skip-cert-verify: false
-    client-fingerprint: qq
-    reality-opts:
-      public-key: l1mx_plNc2oiWxJCcZLh3SGfFU-5QxYpgQ__Ea59WEg
-      short-id: 4a7b1c8d
-  - type: vless
-    name: 🇷🇺_俄罗斯 (5)
-    server: tau1.freerunet.online
-    port: 443
-    uuid: ca14493b-b984-4ffb-bc0e-9cb5da969e15
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: tau1.freerunet.online
-    sni: tau1.freerunet.online
-    skip-cert-verify: false
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: l1mx_plNc2oiWxJCcZLh3SGfFU-5QxYpgQ__Ea59WEg
-      short-id: 4a7b1c8d
-  - type: vless
-    name: 🇷🇺_俄罗斯 (6)
-    server: tau1.freerunet.online
-    port: 443
-    uuid: ca14493b-b984-4ffb-bc0e-9cb5da969e15
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: tau1.freerunet.online
-    sni: tau1.freerunet.online
-    skip-cert-verify: false
-    client-fingerprint: ios
-    reality-opts:
-      public-key: l1mx_plNc2oiWxJCcZLh3SGfFU-5QxYpgQ__Ea59WEg
-      short-id: 4a7b1c8d
-  - type: vless
-    name: 🇷🇺_俄罗斯 (7)
-    server: 193.160.141.81
-    port: 8443
-    uuid: ee82f319-ab92-425d-8e04-28a29f33f670
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: apple.com
-    sni: apple.com
-    skip-cert-verify: false
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  - type: vless
-    name: 🇷🇺_俄罗斯 (8)
-    server: 185.148.104.30
-    port: 8880
-    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-    udp: true
-    tls: false
-    servername: 185.148.104.30
-    sni: 185.148.104.30
-    skip-cert-verify: false
-    client-fingerprint: chrome
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: vms.lifetime51.workers.dev
-  - type: vless
-    name: 🇷🇺_俄罗斯 (9)
-    server: 217.19.122.156
-    port: 443
-    uuid: c720cb74-4c84-4fce-b8ae-637dbaa16199
-    udp: true
-    tls: true
-    servername: z1q3pv4g78.rucdncomp.pro
-    sni: z1q3pv4g78.rucdncomp.pro
-    skip-cert-verify: false
-    client-fingerprint: chrome
-    network: ws
-    ws-opts:
-      path: /useraction/events/b892639b7195/
-  - type: vless
-    name: 🇷🇺_俄罗斯 (10)
-    server: 194.87.143.165
-    port: 8443
-    uuid: f9613819-d2fe-4b3a-a2e6-40c184c6854c
-    udp: true
-    tls: true
-    servername: wsru1.wba-pn.ru
-    sni: wsru1.wba-pn.ru
-    skip-cert-verify: false
-    client-fingerprint: chrome
-    network: ws
-    ws-opts:
-      path: /
-  - type: vless
-    name: 🇸🇬_新加坡
-    server: sg2-8sb.6121999.dpdns.org
-    port: 19825
-    uuid: 2d1ad594-80a4-4bfb-87a6-038e39701f51
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: sg2-8sb.6121999.dpdns.org
-    sni: sg2-8sb.6121999.dpdns.org
-    skip-cert-verify: false
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: GvvkY8xYb9QjvwvzYq_uNC4tOGd0DCxRnz6770-xgkI
-      short-id: 6ba85179e30d4fc2
-  - type: vless
-    name: 🇸🇬_新加坡 (2)
-    server: 43.174.195.1
-    port: 443
-    uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
-    udp: true
-    tls: true
-    servername: kv.074167.xyz
-    sni: kv.074167.xyz
-    skip-cert-verify: false
-    client-fingerprint: chrome
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: kv.074167.xyz
-  - type: vless
-    name: 🇸🇬_新加坡 (3)
-    server: 175.41.179.37
-    port: 51262
-    uuid: 6c6ea474-0cf5-4a3d-bc81-aa2eeb6516d6
-    udp: true
-    tls: true
-    servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
-    sni: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
-    skip-cert-verify: false
-    client-fingerprint: chrome
-    network: ws
-    ws-opts:
-      path: /@Marisa_kristi
-      headers:
-        Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
-  - type: vless
-    name: 🇸🇬_新加坡 (4)
-    server: 43.174.195.1
-    port: 443
-    uuid: 24916ad0-847d-4522-9e17-f4347dee57fd
-    udp: true
-    tls: true
-    servername: kv.074167.xyz
-    sni: kv.074167.xyz
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: kv.074167.xyz
-  - type: vmess
-    name: 🇸🇬_新加坡 (5)
-    server: 170.187.229.90
-    port: 80
-    uuid: 9bda13eb-66bb-4ff5-b01c-aa7c2d291412
-    cipher: auto
-    alterId: 0
-    udp: true
-    tls: false
-    servername: shoutingtoutiao3.10010.com
-    sni: shoutingtoutiao3.10010.com
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /images
-      headers:
-        Host: shoutingtoutiao3.10010.com
-  - type: vless
-    name: 🇺🇦_乌克兰
-    server: 92.113.107.120
-    port: 443
-    uuid: dbda40e2-25b5-416c-8d35-56d07e8dcdbc
-    udp: true
-    tls: true
-    servername: indigostar.click
-    sni: indigostar.click
-    skip-cert-verify: false
-    client-fingerprint: qq
-    network: ws
-    ws-opts:
-      path: /ws
-  - type: trojan
-    name: 🇺🇸_美国
-    server: 216.152.156.65
-    port: 443
-    password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-    udp: true
-    tls: true
-    servername: learn.healthcarejobshubenhancemedicalprofessionalskillstoday.com
-    sni: learn.healthcarejobshubenhancemedicalprofessionalskillstoday.com
-    skip-cert-verify: false
-  - type: vless
-    name: 🇺🇸_美国 (2)
-    server: 195.211.98.43
-    port: 443
-    uuid: 1b4b11d5-4c2d-4533-9a55-636757cdee94
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: www.cloudflare.com
-    sni: www.cloudflare.com
-    skip-cert-verify: false
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: xPnpkXu5qfwIArlHKvJsqKJnGdGbJK1tT2GzWMyLohA
-      short-id: 9c56fddf237e8eaf
-  - type: trojan
-    name: 🇺🇸_美国 (3)
-    server: 66.163.112.142
-    port: 443
-    password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-    udp: true
-    tls: true
-    servername: cdn.unlockyourfuturefindyourperfectcareer.com
-    sni: cdn.unlockyourfuturefindyourperfectcareer.com
-    skip-cert-verify: false
-  - type: trojan
-    name: 🇺🇸_美国 (4)
-    server: 66.163.112.242
-    port: 443
-    password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-    udp: true
-    tls: true
-    servername: resources.unlockyourfuturefindyourperfectcareer.com
-    sni: resources.unlockyourfuturefindyourperfectcareer.com
-    skip-cert-verify: false
-  - type: vless
-    name: 🇺🇸_美国 (5)
-    server: 51.81.203.63
-    port: 443
-    uuid: cb2dbb6a-a1ea-4023-9ace-6466cee57241
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: www.icloud.com
-    sni: www.icloud.com
-    skip-cert-verify: false
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: nqwCf6oW49tEtmQ0EzxigZ0uu1pg0E30CS54G40Iti0
-      short-id: 4477382ff6d3d41c
-  - type: trojan
-    name: 🇺🇸_美国 (6)
-    server: 66.163.112.76
-    port: 443
-    password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-    udp: true
-    tls: true
-    servername: api.unlockyourfuturefindyourperfectcareer.com
-    sni: api.unlockyourfuturefindyourperfectcareer.com
-    skip-cert-verify: false
-  - type: trojan
-    name: 🇺🇸_美国 (7)
-    server: 216.152.155.23
-    port: 443
-    password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-    udp: true
-    tls: true
-    servername: courses.nextjobopportunityandclaimyouridealrole.com
-    sni: courses.nextjobopportunityandclaimyouridealrole.com
-    skip-cert-verify: false
-  - type: vmess
-    name: 🇺🇸_美国 (8)
-    server: 169.197.142.22
-    port: 18000
-    uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-    cipher: auto
-    alterId: 0
-    udp: true
-    tls: false
-    skip-cert-verify: false
-  - type: trojan
-    name: 🇺🇸_美国 (9)
-    server: 216.152.155.59
-    port: 443
-    password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-    udp: true
-    tls: true
-    servername: api.nextjobopportunityandclaimyouridealrole.com
-    sni: api.nextjobopportunityandclaimyouridealrole.com
-    skip-cert-verify: false
-  - type: vless
-    name: 🇺🇸_美国 (10)
-    server: 154.40.55.185
-    port: 443
-    uuid: 52919204-4ed9-42c8-97a0-0f01d007f898
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: www.oracle.com
-    sni: www.oracle.com
-    skip-cert-verify: false
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: XY0OTrgnRWxHbqBC8u4qFWvZakjNZY83AAnL_lwHu1M
-      short-id: 7f
-  - type: vless
-    name: 🇺🇸_美国 (11)
-    server: 15.204.97.198
-    port: 23576
-    uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: fuck.rkn
-    sni: fuck.rkn
-    skip-cert-verify: false
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-      short-id: "01"
-  - type: trojan
-    name: 🇺🇸_美国 (12)
-    server: blog.findlocaljobnetworkandbuildcommunityconnections.com
-    port: 443
-    password: dba20dcb635e430fa4d3bfc303a149d2
-    udp: true
-    tls: true
-    servername: blog.findlocaljobnetworkandbuildcommunityconnections.com
-    sni: blog.findlocaljobnetworkandbuildcommunityconnections.com
-    skip-cert-verify: false
-  - type: vless
-    name: 🇺🇸_美国 (13)
-    server: 15.204.97.216
-    port: 23576
-    uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: fuck.rkn
-    sni: fuck.rkn
-    skip-cert-verify: false
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-      short-id: "01"
-  - type: vless
-    name: 🇺🇸_美国 (14)
-    server: 47.251.25.74
-    port: 443
-    uuid: 18805ff3-b420-45de-af18-93be14024ae8
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: www.amazon.com
-    sni: www.amazon.com
-    skip-cert-verify: false
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: H56cOJhw0xw76lDEpt7IuJJmVGemK6_CK34KtHwDMX8
-  - type: trojan
-    name: 🇺🇸_美国 (15)
-    server: 66.163.122.113
-    port: 443
-    password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-    udp: true
-    tls: true
-    servername: api.searchnationwidecareerchangehelperandguidancetoday.com
-    sni: api.searchnationwidecareerchangehelperandguidancetoday.com
-    skip-cert-verify: false
-  - type: vless
-    name: 🇺🇸_美国 (16)
-    server: us007.zestapp778.com
-    port: 18580
-    uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
-    udp: true
-    tls: true
-    servername: us007.zestapp778.com
-    sni: us007.zestapp778.com
-    skip-cert-verify: false
-    client-fingerprint: chrome
-  - type: vless
-    name: 🇺🇸_美国 (17)
-    server: 63.141.128.30
-    port: 8880
-    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-    udp: true
-    tls: false
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: vms.lifetime42.workers.dev
-  - type: trojan
-    name: 🇺🇸_美国 (18)
-    server: 165.215.250.14
-    port: 443
-    password: humanity
-    udp: true
-    tls: true
-    servername: www.calmlunch.com
-    sni: www.calmlunch.com
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /assignment
-      headers:
-        Host: www.calmlunch.com
-  - type: vless
-    name: 🇺🇸_美国 (19)
-    server: 155.46.167.30
-    port: 8880
-    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-    udp: true
-    tls: false
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: vms.lifetime50.workers.dev
-  - type: vless
-    name: 🇺🇸_美国 (20)
-    server: 80.93.202.40
-    port: 8880
-    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-    udp: true
-    tls: false
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: vms.lifetime02.workers.dev
-  - type: vless
-    name: 🇺🇸_美国 (21)
-    server: 156.229.163.237
-    port: 10238
-    uuid: f97f81df-edac-47b6-badb-316125e61bfb
-    udp: true
-    tls: true
-    servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
-    sni: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
-    skip-cert-verify: false
-    client-fingerprint: chrome
-    network: ws
-    ws-opts:
-      path: /@Marisa_kristi
-      headers:
-        Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
-  - type: trojan
-    name: 🇺🇸_美国 (22)
-    server: 165.215.250.14
-    port: 443
-    password: humanity
-    udp: true
-    tls: true
-    servername: www.calmlunch.com
-    sni: www.calmlunch.com
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /assignment
-  - type: trojan
-    name: 🇺🇸_美国 (23)
-    server: resources.findlocaljobnetworkandbuildcommunityconnections.com
-    port: 443
-    password: f0eb8c92ce8946aaba856569cff1a16b
-    udp: true
-    tls: true
-    servername: resources.findlocaljobnetworkandbuildcommunityconnections.com
-    sni: resources.findlocaljobnetworkandbuildcommunityconnections.com
-    skip-cert-verify: false
-  - type: trojan
-    name: 🇺🇸_美国 (24)
-    server: 165.215.250.14
-    port: 443
-    password: humanity
-    udp: true
-    tls: true
-    servername: www.calmlunch.com
-    sni: www.calmlunch.com
-    skip-cert-verify: false
-    client-fingerprint: chrome
-    network: ws
-    ws-opts:
-      path: /assignment
-  - type: vmess
-    name: 🇺🇸_美国 (25)
-    server: 129.146.77.248
-    port: 39495
-    uuid: f836c736-87fc-4fde-aabc-00857ecdff3e
-    cipher: auto
-    alterId: 0
-    udp: true
-    tls: false
-    servername: 129.146.77.248
-    sni: 129.146.77.248
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /cctv13.m3u8
-      headers:
-        Host: 129.146.77.248
-  - type: vless
-    name: 🇺🇸_美国 (26)
-    server: 51.81.203.63
-    port: 443
-    uuid: cb2dbb6a-a1ea-4023-9ace-6466cee57241
-    flow: xtls-rprx-vision
-    udp: true
-    tls: true
-    servername: www.icloud.com
-    sni: www.icloud.com
-    skip-cert-verify: false
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: nqwCf6oW49tEtmQ0EzxigZ0uu1pg0E30CS54G40Iti0
-      short-id: 4477382ff6d3d41c
-  - type: vmess
-    name: 🇺🇸_美国 (27)
-    server: 38.91.107.49
-    port: 18000
-    uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-    cipher: auto
-    alterId: 0
-    udp: true
-    tls: false
-    skip-cert-verify: false
-  - type: trojan
-    name: 🇺🇸_美国 (28)
-    server: 216.152.156.42
-    port: 443
-    password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-    udp: true
-    tls: true
-    servername: blog.healthcarejobshubenhancemedicalprofessionalskillstoday.com
-    sni: blog.healthcarejobshubenhancemedicalprofessionalskillstoday.com
-    skip-cert-verify: false
-  - type: trojan
-    name: 🇺🇸_美国 (29)
-    server: 216.152.156.49
-    port: 443
-    password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-    udp: true
-    tls: true
-    servername: cdn.healthcarejobshubenhancemedicalprofessionalskillstoday.com
-    sni: cdn.healthcarejobshubenhancemedicalprofessionalskillstoday.com
-    skip-cert-verify: false
-  - type: trojan
-    name: 🇺🇸_美国 (30)
-    server: 216.152.155.176
-    port: 443
-    password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-    udp: true
-    tls: true
-    servername: blog.nextjobopportunityandclaimyouridealrole.com
-    sni: blog.nextjobopportunityandclaimyouridealrole.com
-    skip-cert-verify: false
-  - type: trojan
-    name: 🇺🇸_美国 (31)
-    server: 216.152.155.158
-    port: 443
-    password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-    udp: true
-    tls: true
-    servername: resources.nextjobopportunityandclaimyouridealrole.com
-    sni: resources.nextjobopportunityandclaimyouridealrole.com
-    skip-cert-verify: false
+    enable: true
+    listen: 0.0.0.0:53
+    ipv6: false
+    default-nameserver: [223.5.5.5, 119.29.29.29]
+    enhanced-mode: fake-ip
+    fake-ip-range: 198.18.0.1/16
+    use-hosts: true
+    nameserver: ['https://doh.pub/dns-query', 'https://dns.alidns.com/dns-query']
+    url-test: ['https://doh.dns.sb/dns-query', 'https://dns.cloudflare.com/dns-query', 'https://dns.twnic.tw/dns-query', 'tls://8.8.4.4:853']
+    url-test-filter: {geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32]}
 proxy-groups:
-  - name: 🚀 节点选择
-    type: select
-    proxies:
-      - ♻️ 自动选择
-      - DIRECT
-      - 每天更新，请加电报群防止失联
-      - 电报群：t.me/vvkj11
-      - 日期：10-29
-      - 免费VPN：tt.vg/FJOE2Mm
-      - 🇨🇦_加拿大
-      - 🇨🇾_塞浦路斯
-      - 🇨🇾_塞浦路斯 (2)
-      - 🇨🇾_塞浦路斯 (3)
-      - 🇨🇾_塞浦路斯 (4)
-      - 🇩🇪_德国
-      - 🇩🇪_德国 (2)
-      - 🇩🇪_德国 (3)
-      - 🇩🇪_德国 (4)
-      - 🇩🇪_德国 (5)
-      - 🇩🇪_德国 (6)
-      - 🇩🇪_德国 (7)
-      - 🇩🇪_德国 (8)
-      - 🇪🇪_爱沙尼亚
-      - 🇪🇪_爱沙尼亚 (2)
-      - 🇬🇧_英国
-      - 🇮🇷_伊朗
-      - 🇯🇵_日本
-      - 🇰🇿_哈萨克斯坦
-      - 🇰🇿_哈萨克斯坦 (2)
-      - 🇱🇻_拉脱维亚
-      - 🇳🇱_荷兰
-      - 🇳🇱_荷兰 (2)
-      - 🇳🇱_荷兰 (3)
-      - 🇳🇱_荷兰 (4)
-      - 🇳🇱_荷兰 (5)
-      - 🇳🇱_荷兰 (6)
-      - 🇳🇱_荷兰 (7)
-      - 🇳🇱_荷兰 (8)
-      - 🇳🇱_荷兰 (9)
-      - 🇳🇱_荷兰 (10)
-      - 🇷🇺_俄罗斯
-      - 🇷🇺_俄罗斯 (2)
-      - 🇷🇺_俄罗斯 (3)
-      - 🇷🇺_俄罗斯 (4)
-      - 🇷🇺_俄罗斯 (5)
-      - 🇷🇺_俄罗斯 (6)
-      - 🇷🇺_俄罗斯 (7)
-      - 🇷🇺_俄罗斯 (8)
-      - 🇷🇺_俄罗斯 (9)
-      - 🇷🇺_俄罗斯 (10)
-      - 🇸🇬_新加坡
-      - 🇸🇬_新加坡 (2)
-      - 🇸🇬_新加坡 (3)
-      - 🇸🇬_新加坡 (4)
-      - 🇸🇬_新加坡 (5)
-      - 🇺🇦_乌克兰
-      - 🇺🇸_美国
-      - 🇺🇸_美国 (2)
-      - 🇺🇸_美国 (3)
-      - 🇺🇸_美国 (4)
-      - 🇺🇸_美国 (5)
-      - 🇺🇸_美国 (6)
-      - 🇺🇸_美国 (7)
-      - 🇺🇸_美国 (8)
-      - 🇺🇸_美国 (9)
-      - 🇺🇸_美国 (10)
-      - 🇺🇸_美国 (11)
-      - 🇺🇸_美国 (12)
-      - 🇺🇸_美国 (13)
-      - 🇺🇸_美国 (14)
-      - 🇺🇸_美国 (15)
-      - 🇺🇸_美国 (16)
-      - 🇺🇸_美国 (17)
-      - 🇺🇸_美国 (18)
-      - 🇺🇸_美国 (19)
-      - 🇺🇸_美国 (20)
-      - 🇺🇸_美国 (21)
-      - 🇺🇸_美国 (22)
-      - 🇺🇸_美国 (23)
-      - 🇺🇸_美国 (24)
-      - 🇺🇸_美国 (25)
-      - 🇺🇸_美国 (26)
-      - 🇺🇸_美国 (27)
-      - 🇺🇸_美国 (28)
-      - 🇺🇸_美国 (29)
-      - 🇺🇸_美国 (30)
-      - 🇺🇸_美国 (31)
-  - name: ♻️ 自动选择
-    type: url-test
-    proxies:
-      - 每天更新，请加电报群防止失联
-      - 电报群：t.me/vvkj11
-      - 日期：10-29
-      - 免费VPN：tt.vg/FJOE2Mm
-      - 🇨🇦_加拿大
-      - 🇨🇾_塞浦路斯
-      - 🇨🇾_塞浦路斯 (2)
-      - 🇨🇾_塞浦路斯 (3)
-      - 🇨🇾_塞浦路斯 (4)
-      - 🇩🇪_德国
-      - 🇩🇪_德国 (2)
-      - 🇩🇪_德国 (3)
-      - 🇩🇪_德国 (4)
-      - 🇩🇪_德国 (5)
-      - 🇩🇪_德国 (6)
-      - 🇩🇪_德国 (7)
-      - 🇩🇪_德国 (8)
-      - 🇪🇪_爱沙尼亚
-      - 🇪🇪_爱沙尼亚 (2)
-      - 🇬🇧_英国
-      - 🇮🇷_伊朗
-      - 🇯🇵_日本
-      - 🇰🇿_哈萨克斯坦
-      - 🇰🇿_哈萨克斯坦 (2)
-      - 🇱🇻_拉脱维亚
-      - 🇳🇱_荷兰
-      - 🇳🇱_荷兰 (2)
-      - 🇳🇱_荷兰 (3)
-      - 🇳🇱_荷兰 (4)
-      - 🇳🇱_荷兰 (5)
-      - 🇳🇱_荷兰 (6)
-      - 🇳🇱_荷兰 (7)
-      - 🇳🇱_荷兰 (8)
-      - 🇳🇱_荷兰 (9)
-      - 🇳🇱_荷兰 (10)
-      - 🇷🇺_俄罗斯
-      - 🇷🇺_俄罗斯 (2)
-      - 🇷🇺_俄罗斯 (3)
-      - 🇷🇺_俄罗斯 (4)
-      - 🇷🇺_俄罗斯 (5)
-      - 🇷🇺_俄罗斯 (6)
-      - 🇷🇺_俄罗斯 (7)
-      - 🇷🇺_俄罗斯 (8)
-      - 🇷🇺_俄罗斯 (9)
-      - 🇷🇺_俄罗斯 (10)
-      - 🇸🇬_新加坡
-      - 🇸🇬_新加坡 (2)
-      - 🇸🇬_新加坡 (3)
-      - 🇸🇬_新加坡 (4)
-      - 🇸🇬_新加坡 (5)
-      - 🇺🇦_乌克兰
-      - 🇺🇸_美国
-      - 🇺🇸_美国 (2)
-      - 🇺🇸_美国 (3)
-      - 🇺🇸_美国 (4)
-      - 🇺🇸_美国 (5)
-      - 🇺🇸_美国 (6)
-      - 🇺🇸_美国 (7)
-      - 🇺🇸_美国 (8)
-      - 🇺🇸_美国 (9)
-      - 🇺🇸_美国 (10)
-      - 🇺🇸_美国 (11)
-      - 🇺🇸_美国 (12)
-      - 🇺🇸_美国 (13)
-      - 🇺🇸_美国 (14)
-      - 🇺🇸_美国 (15)
-      - 🇺🇸_美国 (16)
-      - 🇺🇸_美国 (17)
-      - 🇺🇸_美国 (18)
-      - 🇺🇸_美国 (19)
-      - 🇺🇸_美国 (20)
-      - 🇺🇸_美国 (21)
-      - 🇺🇸_美国 (22)
-      - 🇺🇸_美国 (23)
-      - 🇺🇸_美国 (24)
-      - 🇺🇸_美国 (25)
-      - 🇺🇸_美国 (26)
-      - 🇺🇸_美国 (27)
-      - 🇺🇸_美国 (28)
-      - 🇺🇸_美国 (29)
-      - 🇺🇸_美国 (30)
-      - 🇺🇸_美国 (31)
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-  - name: 🌍 国外媒体
-    type: select
-    proxies:
-      - 🚀 节点选择
-      - ♻️ 自动选择
-      - 🎯 全球直连
-      - 每天更新，请加电报群防止失联
-      - 电报群：t.me/vvkj11
-      - 日期：10-29
-      - 免费VPN：tt.vg/FJOE2Mm
-      - 🇨🇦_加拿大
-      - 🇨🇾_塞浦路斯
-      - 🇨🇾_塞浦路斯 (2)
-      - 🇨🇾_塞浦路斯 (3)
-      - 🇨🇾_塞浦路斯 (4)
-      - 🇩🇪_德国
-      - 🇩🇪_德国 (2)
-      - 🇩🇪_德国 (3)
-      - 🇩🇪_德国 (4)
-      - 🇩🇪_德国 (5)
-      - 🇩🇪_德国 (6)
-      - 🇩🇪_德国 (7)
-      - 🇩🇪_德国 (8)
-      - 🇪🇪_爱沙尼亚
-      - 🇪🇪_爱沙尼亚 (2)
-      - 🇬🇧_英国
-      - 🇮🇷_伊朗
-      - 🇯🇵_日本
-      - 🇰🇿_哈萨克斯坦
-      - 🇰🇿_哈萨克斯坦 (2)
-      - 🇱🇻_拉脱维亚
-      - 🇳🇱_荷兰
-      - 🇳🇱_荷兰 (2)
-      - 🇳🇱_荷兰 (3)
-      - 🇳🇱_荷兰 (4)
-      - 🇳🇱_荷兰 (5)
-      - 🇳🇱_荷兰 (6)
-      - 🇳🇱_荷兰 (7)
-      - 🇳🇱_荷兰 (8)
-      - 🇳🇱_荷兰 (9)
-      - 🇳🇱_荷兰 (10)
-      - 🇷🇺_俄罗斯
-      - 🇷🇺_俄罗斯 (2)
-      - 🇷🇺_俄罗斯 (3)
-      - 🇷🇺_俄罗斯 (4)
-      - 🇷🇺_俄罗斯 (5)
-      - 🇷🇺_俄罗斯 (6)
-      - 🇷🇺_俄罗斯 (7)
-      - 🇷🇺_俄罗斯 (8)
-      - 🇷🇺_俄罗斯 (9)
-      - 🇷🇺_俄罗斯 (10)
-      - 🇸🇬_新加坡
-      - 🇸🇬_新加坡 (2)
-      - 🇸🇬_新加坡 (3)
-      - 🇸🇬_新加坡 (4)
-      - 🇸🇬_新加坡 (5)
-      - 🇺🇦_乌克兰
-      - 🇺🇸_美国
-      - 🇺🇸_美国 (2)
-      - 🇺🇸_美国 (3)
-      - 🇺🇸_美国 (4)
-      - 🇺🇸_美国 (5)
-      - 🇺🇸_美国 (6)
-      - 🇺🇸_美国 (7)
-      - 🇺🇸_美国 (8)
-      - 🇺🇸_美国 (9)
-      - 🇺🇸_美国 (10)
-      - 🇺🇸_美国 (11)
-      - 🇺🇸_美国 (12)
-      - 🇺🇸_美国 (13)
-      - 🇺🇸_美国 (14)
-      - 🇺🇸_美国 (15)
-      - 🇺🇸_美国 (16)
-      - 🇺🇸_美国 (17)
-      - 🇺🇸_美国 (18)
-      - 🇺🇸_美国 (19)
-      - 🇺🇸_美国 (20)
-      - 🇺🇸_美国 (21)
-      - 🇺🇸_美国 (22)
-      - 🇺🇸_美国 (23)
-      - 🇺🇸_美国 (24)
-      - 🇺🇸_美国 (25)
-      - 🇺🇸_美国 (26)
-      - 🇺🇸_美国 (27)
-      - 🇺🇸_美国 (28)
-      - 🇺🇸_美国 (29)
-      - 🇺🇸_美国 (30)
-      - 🇺🇸_美国 (31)
-  - name: 📲 电报信息
-    type: select
-    proxies:
-      - 🚀 节点选择
-      - 🎯 全球直连
-      - 每天更新，请加电报群防止失联
-      - 电报群：t.me/vvkj11
-      - 日期：10-29
-      - 免费VPN：tt.vg/FJOE2Mm
-      - 🇨🇦_加拿大
-      - 🇨🇾_塞浦路斯
-      - 🇨🇾_塞浦路斯 (2)
-      - 🇨🇾_塞浦路斯 (3)
-      - 🇨🇾_塞浦路斯 (4)
-      - 🇩🇪_德国
-      - 🇩🇪_德国 (2)
-      - 🇩🇪_德国 (3)
-      - 🇩🇪_德国 (4)
-      - 🇩🇪_德国 (5)
-      - 🇩🇪_德国 (6)
-      - 🇩🇪_德国 (7)
-      - 🇩🇪_德国 (8)
-      - 🇪🇪_爱沙尼亚
-      - 🇪🇪_爱沙尼亚 (2)
-      - 🇬🇧_英国
-      - 🇮🇷_伊朗
-      - 🇯🇵_日本
-      - 🇰🇿_哈萨克斯坦
-      - 🇰🇿_哈萨克斯坦 (2)
-      - 🇱🇻_拉脱维亚
-      - 🇳🇱_荷兰
-      - 🇳🇱_荷兰 (2)
-      - 🇳🇱_荷兰 (3)
-      - 🇳🇱_荷兰 (4)
-      - 🇳🇱_荷兰 (5)
-      - 🇳🇱_荷兰 (6)
-      - 🇳🇱_荷兰 (7)
-      - 🇳🇱_荷兰 (8)
-      - 🇳🇱_荷兰 (9)
-      - 🇳🇱_荷兰 (10)
-      - 🇷🇺_俄罗斯
-      - 🇷🇺_俄罗斯 (2)
-      - 🇷🇺_俄罗斯 (3)
-      - 🇷🇺_俄罗斯 (4)
-      - 🇷🇺_俄罗斯 (5)
-      - 🇷🇺_俄罗斯 (6)
-      - 🇷🇺_俄罗斯 (7)
-      - 🇷🇺_俄罗斯 (8)
-      - 🇷🇺_俄罗斯 (9)
-      - 🇷🇺_俄罗斯 (10)
-      - 🇸🇬_新加坡
-      - 🇸🇬_新加坡 (2)
-      - 🇸🇬_新加坡 (3)
-      - 🇸🇬_新加坡 (4)
-      - 🇸🇬_新加坡 (5)
-      - 🇺🇦_乌克兰
-      - 🇺🇸_美国
-      - 🇺🇸_美国 (2)
-      - 🇺🇸_美国 (3)
-      - 🇺🇸_美国 (4)
-      - 🇺🇸_美国 (5)
-      - 🇺🇸_美国 (6)
-      - 🇺🇸_美国 (7)
-      - 🇺🇸_美国 (8)
-      - 🇺🇸_美国 (9)
-      - 🇺🇸_美国 (10)
-      - 🇺🇸_美国 (11)
-      - 🇺🇸_美国 (12)
-      - 🇺🇸_美国 (13)
-      - 🇺🇸_美国 (14)
-      - 🇺🇸_美国 (15)
-      - 🇺🇸_美国 (16)
-      - 🇺🇸_美国 (17)
-      - 🇺🇸_美国 (18)
-      - 🇺🇸_美国 (19)
-      - 🇺🇸_美国 (20)
-      - 🇺🇸_美国 (21)
-      - 🇺🇸_美国 (22)
-      - 🇺🇸_美国 (23)
-      - 🇺🇸_美国 (24)
-      - 🇺🇸_美国 (25)
-      - 🇺🇸_美国 (26)
-      - 🇺🇸_美国 (27)
-      - 🇺🇸_美国 (28)
-      - 🇺🇸_美国 (29)
-      - 🇺🇸_美国 (30)
-      - 🇺🇸_美国 (31)
-  - name: Ⓜ️ 微软服务
-    type: select
-    proxies:
-      - 🎯 全球直连
-      - 🚀 节点选择
-      - 每天更新，请加电报群防止失联
-      - 电报群：t.me/vvkj11
-      - 日期：10-29
-      - 免费VPN：tt.vg/FJOE2Mm
-      - 🇨🇦_加拿大
-      - 🇨🇾_塞浦路斯
-      - 🇨🇾_塞浦路斯 (2)
-      - 🇨🇾_塞浦路斯 (3)
-      - 🇨🇾_塞浦路斯 (4)
-      - 🇩🇪_德国
-      - 🇩🇪_德国 (2)
-      - 🇩🇪_德国 (3)
-      - 🇩🇪_德国 (4)
-      - 🇩🇪_德国 (5)
-      - 🇩🇪_德国 (6)
-      - 🇩🇪_德国 (7)
-      - 🇩🇪_德国 (8)
-      - 🇪🇪_爱沙尼亚
-      - 🇪🇪_爱沙尼亚 (2)
-      - 🇬🇧_英国
-      - 🇮🇷_伊朗
-      - 🇯🇵_日本
-      - 🇰🇿_哈萨克斯坦
-      - 🇰🇿_哈萨克斯坦 (2)
-      - 🇱🇻_拉脱维亚
-      - 🇳🇱_荷兰
-      - 🇳🇱_荷兰 (2)
-      - 🇳🇱_荷兰 (3)
-      - 🇳🇱_荷兰 (4)
-      - 🇳🇱_荷兰 (5)
-      - 🇳🇱_荷兰 (6)
-      - 🇳🇱_荷兰 (7)
-      - 🇳🇱_荷兰 (8)
-      - 🇳🇱_荷兰 (9)
-      - 🇳🇱_荷兰 (10)
-      - 🇷🇺_俄罗斯
-      - 🇷🇺_俄罗斯 (2)
-      - 🇷🇺_俄罗斯 (3)
-      - 🇷🇺_俄罗斯 (4)
-      - 🇷🇺_俄罗斯 (5)
-      - 🇷🇺_俄罗斯 (6)
-      - 🇷🇺_俄罗斯 (7)
-      - 🇷🇺_俄罗斯 (8)
-      - 🇷🇺_俄罗斯 (9)
-      - 🇷🇺_俄罗斯 (10)
-      - 🇸🇬_新加坡
-      - 🇸🇬_新加坡 (2)
-      - 🇸🇬_新加坡 (3)
-      - 🇸🇬_新加坡 (4)
-      - 🇸🇬_新加坡 (5)
-      - 🇺🇦_乌克兰
-      - 🇺🇸_美国
-      - 🇺🇸_美国 (2)
-      - 🇺🇸_美国 (3)
-      - 🇺🇸_美国 (4)
-      - 🇺🇸_美国 (5)
-      - 🇺🇸_美国 (6)
-      - 🇺🇸_美国 (7)
-      - 🇺🇸_美国 (8)
-      - 🇺🇸_美国 (9)
-      - 🇺🇸_美国 (10)
-      - 🇺🇸_美国 (11)
-      - 🇺🇸_美国 (12)
-      - 🇺🇸_美国 (13)
-      - 🇺🇸_美国 (14)
-      - 🇺🇸_美国 (15)
-      - 🇺🇸_美国 (16)
-      - 🇺🇸_美国 (17)
-      - 🇺🇸_美国 (18)
-      - 🇺🇸_美国 (19)
-      - 🇺🇸_美国 (20)
-      - 🇺🇸_美国 (21)
-      - 🇺🇸_美国 (22)
-      - 🇺🇸_美国 (23)
-      - 🇺🇸_美国 (24)
-      - 🇺🇸_美国 (25)
-      - 🇺🇸_美国 (26)
-      - 🇺🇸_美国 (27)
-      - 🇺🇸_美国 (28)
-      - 🇺🇸_美国 (29)
-      - 🇺🇸_美国 (30)
-      - 🇺🇸_美国 (31)
-  - name: 🍎 苹果服务
-    type: select
-    proxies:
-      - 🚀 节点选择
-      - 🎯 全球直连
-      - 每天更新，请加电报群防止失联
-      - 电报群：t.me/vvkj11
-      - 日期：10-29
-      - 免费VPN：tt.vg/FJOE2Mm
-      - 🇨🇦_加拿大
-      - 🇨🇾_塞浦路斯
-      - 🇨🇾_塞浦路斯 (2)
-      - 🇨🇾_塞浦路斯 (3)
-      - 🇨🇾_塞浦路斯 (4)
-      - 🇩🇪_德国
-      - 🇩🇪_德国 (2)
-      - 🇩🇪_德国 (3)
-      - 🇩🇪_德国 (4)
-      - 🇩🇪_德国 (5)
-      - 🇩🇪_德国 (6)
-      - 🇩🇪_德国 (7)
-      - 🇩🇪_德国 (8)
-      - 🇪🇪_爱沙尼亚
-      - 🇪🇪_爱沙尼亚 (2)
-      - 🇬🇧_英国
-      - 🇮🇷_伊朗
-      - 🇯🇵_日本
-      - 🇰🇿_哈萨克斯坦
-      - 🇰🇿_哈萨克斯坦 (2)
-      - 🇱🇻_拉脱维亚
-      - 🇳🇱_荷兰
-      - 🇳🇱_荷兰 (2)
-      - 🇳🇱_荷兰 (3)
-      - 🇳🇱_荷兰 (4)
-      - 🇳🇱_荷兰 (5)
-      - 🇳🇱_荷兰 (6)
-      - 🇳🇱_荷兰 (7)
-      - 🇳🇱_荷兰 (8)
-      - 🇳🇱_荷兰 (9)
-      - 🇳🇱_荷兰 (10)
-      - 🇷🇺_俄罗斯
-      - 🇷🇺_俄罗斯 (2)
-      - 🇷🇺_俄罗斯 (3)
-      - 🇷🇺_俄罗斯 (4)
-      - 🇷🇺_俄罗斯 (5)
-      - 🇷🇺_俄罗斯 (6)
-      - 🇷🇺_俄罗斯 (7)
-      - 🇷🇺_俄罗斯 (8)
-      - 🇷🇺_俄罗斯 (9)
-      - 🇷🇺_俄罗斯 (10)
-      - 🇸🇬_新加坡
-      - 🇸🇬_新加坡 (2)
-      - 🇸🇬_新加坡 (3)
-      - 🇸🇬_新加坡 (4)
-      - 🇸🇬_新加坡 (5)
-      - 🇺🇦_乌克兰
-      - 🇺🇸_美国
-      - 🇺🇸_美国 (2)
-      - 🇺🇸_美国 (3)
-      - 🇺🇸_美国 (4)
-      - 🇺🇸_美国 (5)
-      - 🇺🇸_美国 (6)
-      - 🇺🇸_美国 (7)
-      - 🇺🇸_美国 (8)
-      - 🇺🇸_美国 (9)
-      - 🇺🇸_美国 (10)
-      - 🇺🇸_美国 (11)
-      - 🇺🇸_美国 (12)
-      - 🇺🇸_美国 (13)
-      - 🇺🇸_美国 (14)
-      - 🇺🇸_美国 (15)
-      - 🇺🇸_美国 (16)
-      - 🇺🇸_美国 (17)
-      - 🇺🇸_美国 (18)
-      - 🇺🇸_美国 (19)
-      - 🇺🇸_美国 (20)
-      - 🇺🇸_美国 (21)
-      - 🇺🇸_美国 (22)
-      - 🇺🇸_美国 (23)
-      - 🇺🇸_美国 (24)
-      - 🇺🇸_美国 (25)
-      - 🇺🇸_美国 (26)
-      - 🇺🇸_美国 (27)
-      - 🇺🇸_美国 (28)
-      - 🇺🇸_美国 (29)
-      - 🇺🇸_美国 (30)
-      - 🇺🇸_美国 (31)
-  - name: 🎯 全球直连
-    type: select
-    proxies:
-      - DIRECT
-      - 🚀 节点选择
-      - ♻️ 自动选择
-  - name: 🛑 全球拦截
-    type: select
-    proxies:
-      - REJECT
-      - DIRECT
-  - name: 🍃 应用净化
-    type: select
-    proxies:
-      - REJECT
-      - DIRECT
-  - name: 🐟 漏网之鱼
-    type: select
-    proxies:
-      - 🚀 节点选择
-      - 🎯 全球直连
-      - ♻️ 自动选择
-      - 每天更新，请加电报群防止失联
-      - 电报群：t.me/vvkj11
-      - 日期：10-29
-      - 免费VPN：tt.vg/FJOE2Mm
-      - 🇨🇦_加拿大
-      - 🇨🇾_塞浦路斯
-      - 🇨🇾_塞浦路斯 (2)
-      - 🇨🇾_塞浦路斯 (3)
-      - 🇨🇾_塞浦路斯 (4)
-      - 🇩🇪_德国
-      - 🇩🇪_德国 (2)
-      - 🇩🇪_德国 (3)
-      - 🇩🇪_德国 (4)
-      - 🇩🇪_德国 (5)
-      - 🇩🇪_德国 (6)
-      - 🇩🇪_德国 (7)
-      - 🇩🇪_德国 (8)
-      - 🇪🇪_爱沙尼亚
-      - 🇪🇪_爱沙尼亚 (2)
-      - 🇬🇧_英国
-      - 🇮🇷_伊朗
-      - 🇯🇵_日本
-      - 🇰🇿_哈萨克斯坦
-      - 🇰🇿_哈萨克斯坦 (2)
-      - 🇱🇻_拉脱维亚
-      - 🇳🇱_荷兰
-      - 🇳🇱_荷兰 (2)
-      - 🇳🇱_荷兰 (3)
-      - 🇳🇱_荷兰 (4)
-      - 🇳🇱_荷兰 (5)
-      - 🇳🇱_荷兰 (6)
-      - 🇳🇱_荷兰 (7)
-      - 🇳🇱_荷兰 (8)
-      - 🇳🇱_荷兰 (9)
-      - 🇳🇱_荷兰 (10)
-      - 🇷🇺_俄罗斯
-      - 🇷🇺_俄罗斯 (2)
-      - 🇷🇺_俄罗斯 (3)
-      - 🇷🇺_俄罗斯 (4)
-      - 🇷🇺_俄罗斯 (5)
-      - 🇷🇺_俄罗斯 (6)
-      - 🇷🇺_俄罗斯 (7)
-      - 🇷🇺_俄罗斯 (8)
-      - 🇷🇺_俄罗斯 (9)
-      - 🇷🇺_俄罗斯 (10)
-      - 🇸🇬_新加坡
-      - 🇸🇬_新加坡 (2)
-      - 🇸🇬_新加坡 (3)
-      - 🇸🇬_新加坡 (4)
-      - 🇸🇬_新加坡 (5)
-      - 🇺🇦_乌克兰
-      - 🇺🇸_美国
-      - 🇺🇸_美国 (2)
-      - 🇺🇸_美国 (3)
-      - 🇺🇸_美国 (4)
-      - 🇺🇸_美国 (5)
-      - 🇺🇸_美国 (6)
-      - 🇺🇸_美国 (7)
-      - 🇺🇸_美国 (8)
-      - 🇺🇸_美国 (9)
-      - 🇺🇸_美国 (10)
-      - 🇺🇸_美国 (11)
-      - 🇺🇸_美国 (12)
-      - 🇺🇸_美国 (13)
-      - 🇺🇸_美国 (14)
-      - 🇺🇸_美国 (15)
-      - 🇺🇸_美国 (16)
-      - 🇺🇸_美国 (17)
-      - 🇺🇸_美国 (18)
-      - 🇺🇸_美国 (19)
-      - 🇺🇸_美国 (20)
-      - 🇺🇸_美国 (21)
-      - 🇺🇸_美国 (22)
-      - 🇺🇸_美国 (23)
-      - 🇺🇸_美国 (24)
-      - 🇺🇸_美国 (25)
-      - 🇺🇸_美国 (26)
-      - 🇺🇸_美国 (27)
-      - 🇺🇸_美国 (28)
-      - 🇺🇸_美国 (29)
-      - 🇺🇸_美国 (30)
-      - 🇺🇸_美国 (31)
+    - name: Proxy
+      type: select
+      interval: 300
+      url: https://gstatic.com/generate_204
+      lazy: true
+      timeout: 2000
+      max-failed-times: 3
+      proxies:
+        - "\U0001F64F 自动选择"
+        - "\U0001F4AA 手动选择"
+        - "\U0001F3A1负载均衡"
+        - "\U0001F1ED\U0001F1F0 香港节点"
+        - "\U0001F1EF\U0001F1F5 日本节点"
+        - "\U0001F1F0\U0001F1F7 韩国节点"
+        - "\U0001F1F8\U0001F1EC 新加坡节点"
+        - "\U0001F1FA\U0001F1F8 美国节点"
+        - "\U0001F1EC\U0001F1E7 英国节点"
+        - "\U0001F1EB\U0001F1F7 法国节点"
+        - "\U0001F1E9\U0001F1EA 德国节点"
+        - "\U0001F1E8\U0001F1E6 加拿大节点"
+        - "\U0001F1E6\U0001F1FA 澳大利亚节点"
+        - "\U0001F1F3\U0001F1F1 荷兰节点"
+        - "\U0001F1F7\U0001F1FA 俄罗斯节点"
+        - "\U0001F1ED\U0001F1FA 匈牙利节点"
+        - "\U0001F1FA\U0001F1E6 乌克兰节点"
+        - "\U0001F1F5\U0001F1F1 波兰节点"
+        - "\U0001F1EE\U0001F1F9 意大利节点"
+        - "\U0001F1EE\U0001F1F7 伊朗节点"
+      icon: https://cdn.jsdelivr.net/gh/mihomo-party-org/mihomo-party/resources/icon.png
+    - name: Cloudflare
+      type: select
+      interval: 300
+      url: https://gstatic.com/generate_204
+      lazy: true
+      timeout: 2000
+      max-failed-times: 3
+      proxies:
+        - Proxy
+        - DIRECT
+        - "\U0001F1ED\U0001F1F0 香港节点"
+        - "\U0001F1EF\U0001F1F5 日本节点"
+        - "\U0001F1F0\U0001F1F7 韩国节点"
+        - "\U0001F1F8\U0001F1EC 新加坡节点"
+        - "\U0001F1FA\U0001F1F8 美国节点"
+        - "\U0001F1EC\U0001F1E7 英国节点"
+        - "\U0001F1EB\U0001F1F7 法国节点"
+        - "\U0001F1E9\U0001F1EA 德国节点"
+        - "\U0001F1E8\U0001F1E6 加拿大节点"
+        - "\U0001F1E6\U0001F1FA 澳大利亚节点"
+        - "\U0001F1F3\U0001F1F1 荷兰节点"
+        - "\U0001F1F7\U0001F1FA 俄罗斯节点"
+        - "\U0001F1ED\U0001F1FA 匈牙利节点"
+        - "\U0001F1FA\U0001F1E6 乌克兰节点"
+        - "\U0001F1F5\U0001F1F1 波兰节点"
+        - "\U0001F1EE\U0001F1F9 意大利节点"
+        - "\U0001F1EE\U0001F1F7 伊朗节点"
+      icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/cloudflare.png
+    - name: Bing
+      type: select
+      interval: 300
+      url: https://gstatic.com/generate_204
+      lazy: true
+      timeout: 2000
+      max-failed-times: 3
+      proxies:
+        - DIRECT
+        - Proxy
+        - "\U0001F1ED\U0001F1F0 香港节点"
+        - "\U0001F1EF\U0001F1F5 日本节点"
+        - "\U0001F1F0\U0001F1F7 韩国节点"
+        - "\U0001F1F8\U0001F1EC 新加坡节点"
+        - "\U0001F1FA\U0001F1F8 美国节点"
+        - "\U0001F1EC\U0001F1E7 英国节点"
+        - "\U0001F1EB\U0001F1F7 法国节点"
+        - "\U0001F1E9\U0001F1EA 德国节点"
+        - "\U0001F1E8\U0001F1E6 加拿大节点"
+        - "\U0001F1E6\U0001F1FA 澳大利亚节点"
+        - "\U0001F1F3\U0001F1F1 荷兰节点"
+        - "\U0001F1F7\U0001F1FA 俄罗斯节点"
+        - "\U0001F1ED\U0001F1FA 匈牙利节点"
+        - "\U0001F1FA\U0001F1E6 乌克兰节点"
+        - "\U0001F1F5\U0001F1F1 波兰节点"
+        - "\U0001F1EE\U0001F1F9 意大利节点"
+        - "\U0001F1EE\U0001F1F7 伊朗节点"
+      icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/microsoft-bing.png
+    - name: Github
+      type: select
+      interval: 300
+      url: https://github.com
+      lazy: true
+      timeout: 2000
+      max-failed-times: 3
+      proxies:
+        - Proxy
+        - "\U0001F1ED\U0001F1F0 香港节点"
+        - "\U0001F1EF\U0001F1F5 日本节点"
+        - "\U0001F1F0\U0001F1F7 韩国节点"
+        - "\U0001F1F8\U0001F1EC 新加坡节点"
+        - "\U0001F1FA\U0001F1F8 美国节点"
+        - "\U0001F1EC\U0001F1E7 英国节点"
+        - "\U0001F1EB\U0001F1F7 法国节点"
+        - "\U0001F1E9\U0001F1EA 德国节点"
+        - "\U0001F1E8\U0001F1E6 加拿大节点"
+        - "\U0001F1E6\U0001F1FA 澳大利亚节点"
+        - "\U0001F1F3\U0001F1F1 荷兰节点"
+        - "\U0001F1F7\U0001F1FA 俄罗斯节点"
+        - "\U0001F1ED\U0001F1FA 匈牙利节点"
+        - "\U0001F1FA\U0001F1E6 乌克兰节点"
+        - "\U0001F1F5\U0001F1F1 波兰节点"
+        - "\U0001F1EE\U0001F1F9 意大利节点"
+        - "\U0001F1EE\U0001F1F7 伊朗节点"
+      icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/github.png
+    - name: OpenAI
+      type: select
+      interval: 300
+      url: https://openai.com
+      lazy: true
+      timeout: 2000
+      max-failed-times: 3
+      proxies:
+        - "\U0001F64F 自动选择"
+        - "\U0001F4AA 手动选择"
+        - "\U0001F1FA\U0001F1F8 美国节点"
+        - "\U0001F1ED\U0001F1F0 香港节点"
+        - "\U0001F1F9\U0001F1FC 台湾节点"
+        - "\U0001F1EF\U0001F1F5 日本节点"
+        - "\U0001F1F0\U0001F1F7 韩国节点"
+        - "\U0001F1F8\U0001F1EC 新加坡节点"
+        - "\U0001F1EC\U0001F1E7 英国节点"
+        - "\U0001F1EB\U0001F1F7 法国节点"
+        - "\U0001F1E9\U0001F1EA 德国节点"
+        - "\U0001F1E8\U0001F1E6 加拿大节点"
+        - "\U0001F1E6\U0001F1FA 澳大利亚节点"
+        - "\U0001F1F3\U0001F1F1 荷兰节点"
+        - "\U0001F1F7\U0001F1FA 俄罗斯节点"
+        - "\U0001F1ED\U0001F1FA 匈牙利节点"
+        - "\U0001F1FA\U0001F1E6 乌克兰节点"
+        - "\U0001F1F5\U0001F1F1 波兰节点"
+        - "\U0001F1EE\U0001F1F9 意大利节点"
+        - "\U0001F1EE\U0001F1F7 伊朗节点"
+      icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/chatgpt.png
+    - name: Netflix
+      type: select
+      interval: 300
+      url: https://netflix.com
+      lazy: true
+      timeout: 2000
+      max-failed-times: 3
+      proxies:
+        - "\U0001F64F 自动选择"
+        - "\U0001F4AA 手动选择"
+        - "\U0001F1FA\U0001F1F8 美国节点"
+        - "\U0001F1ED\U0001F1F0 香港节点"
+        - "\U0001F1F9\U0001F1FC 台湾节点"
+        - "\U0001F1EF\U0001F1F5 日本节点"
+        - "\U0001F1F0\U0001F1F7 韩国节点"
+        - "\U0001F1F8\U0001F1EC 新加坡节点"
+        - "\U0001F1EC\U0001F1E7 英国节点"
+        - "\U0001F1EB\U0001F1F7 法国节点"
+        - "\U0001F1E9\U0001F1EA 德国节点"
+        - "\U0001F1E8\U0001F1E6 加拿大节点"
+        - "\U0001F1E6\U0001F1FA 澳大利亚节点"
+        - "\U0001F1F3\U0001F1F1 荷兰节点"
+        - "\U0001F1F7\U0001F1FA 俄罗斯节点"
+        - "\U0001F1ED\U0001F1FA 匈牙利节点"
+        - "\U0001F1FA\U0001F1E6 乌克兰节点"
+        - "\U0001F1F5\U0001F1F1 波兰节点"
+        - "\U0001F1EE\U0001F1F9 意大利节点"
+        - "\U0001F1EE\U0001F1F7 伊朗节点"
+      icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/netflix.png
+    - name: Disney+
+      type: select
+      interval: 300
+      url: https://disney.com
+      lazy: true
+      timeout: 2000
+      max-failed-times: 3
+      proxies:
+        - "\U0001F64F 自动选择"
+        - "\U0001F4AA 手动选择"
+        - "\U0001F1FA\U0001F1F8 美国节点"
+        - "\U0001F1ED\U0001F1F0 香港节点"
+        - "\U0001F1F9\U0001F1FC 台湾节点"
+        - "\U0001F1EF\U0001F1F5 日本节点"
+        - "\U0001F1F0\U0001F1F7 韩国节点"
+        - "\U0001F1F8\U0001F1EC 新加坡节点"
+        - "\U0001F1EC\U0001F1E7 英国节点"
+        - "\U0001F1EB\U0001F1F7 法国节点"
+        - "\U0001F1E9\U0001F1EA 德国节点"
+        - "\U0001F1E8\U0001F1E6 加拿大节点"
+        - "\U0001F1E6\U0001F1FA 澳大利亚节点"
+        - "\U0001F1F3\U0001F1F1 荷兰节点"
+        - "\U0001F1F7\U0001F1FA 俄罗斯节点"
+        - "\U0001F1ED\U0001F1FA 匈牙利节点"
+        - "\U0001F1FA\U0001F1E6 乌克兰节点"
+        - "\U0001F1F5\U0001F1F1 波兰节点"
+        - "\U0001F1EE\U0001F1F9 意大利节点"
+        - "\U0001F1EE\U0001F1F7 伊朗节点"
+      icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/disney-plus.png
+    - name: YouTube
+      type: select
+      interval: 300
+      url: https://youtube.com
+      lazy: true
+      timeout: 2000
+      max-failed-times: 3
+      proxies:
+        - "\U0001F64F 自动选择"
+        - "\U0001F4AA 手动选择"
+        - "\U0001F1FA\U0001F1F8 美国节点"
+        - "\U0001F1ED\U0001F1F0 香港节点"
+        - "\U0001F1F9\U0001F1FC 台湾节点"
+        - "\U0001F1EF\U0001F1F5 日本节点"
+        - "\U0001F1F0\U0001F1F7 韩国节点"
+        - "\U0001F1F8\U0001F1EC 新加坡节点"
+        - "\U0001F1EC\U0001F1E7 英国节点"
+        - "\U0001F1EB\U0001F1F7 法国节点"
+        - "\U0001F1E9\U0001F1EA 德国节点"
+        - "\U0001F1E8\U0001F1E6 加拿大节点"
+        - "\U0001F1E6\U0001F1FA 澳大利亚节点"
+        - "\U0001F1F3\U0001F1F1 荷兰节点"
+        - "\U0001F1F7\U0001F1FA 俄罗斯节点"
+        - "\U0001F1ED\U0001F1FA 匈牙利节点"
+        - "\U0001F1FA\U0001F1E6 乌克兰节点"
+        - "\U0001F1F5\U0001F1F1 波兰节点"
+        - "\U0001F1EE\U0001F1F9 意大利节点"
+        - "\U0001F1EE\U0001F1F7 伊朗节点"
+      icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/youtube.png
+    - name: TikTok
+      type: select
+      proxies:
+        - Proxy
+        - "\U0001F1ED\U0001F1F0 香港节点"
+        - "\U0001F1EF\U0001F1F5 日本节点"
+        - "\U0001F1F0\U0001F1F7 韩国节点"
+        - "\U0001F1F8\U0001F1EC 新加坡节点"
+        - "\U0001F1FA\U0001F1F8 美国节点"
+        - "\U0001F1EC\U0001F1E7 英国节点"
+        - "\U0001F1EB\U0001F1F7 法国节点"
+        - "\U0001F1E9\U0001F1EA 德国节点"
+        - "\U0001F1E8\U0001F1E6 加拿大节点"
+        - "\U0001F1E6\U0001F1FA 澳大利亚节点"
+        - "\U0001F1F3\U0001F1F1 荷兰节点"
+        - "\U0001F1F7\U0001F1FA 俄罗斯节点"
+        - "\U0001F1ED\U0001F1FA 匈牙利节点"
+        - "\U0001F1FA\U0001F1E6 乌克兰节点"
+        - "\U0001F1F5\U0001F1F1 波兰节点"
+        - "\U0001F1EE\U0001F1F9 意大利节点"
+        - "\U0001F1EE\U0001F1F7 伊朗节点"
+      icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/tiktok.png
+    - name: Spotify
+      type: select
+      proxies:
+        - Proxy
+        - "\U0001F1ED\U0001F1F0 香港节点"
+        - "\U0001F1EF\U0001F1F5 日本节点"
+        - "\U0001F1F0\U0001F1F7 韩国节点"
+        - "\U0001F1F8\U0001F1EC 新加坡节点"
+        - "\U0001F1FA\U0001F1F8 美国节点"
+        - "\U0001F1EC\U0001F1E7 英国节点"
+        - "\U0001F1EB\U0001F1F7 法国节点"
+        - "\U0001F1E9\U0001F1EA 德国节点"
+        - "\U0001F1E8\U0001F1E6 加拿大节点"
+        - "\U0001F1E6\U0001F1FA 澳大利亚节点"
+        - "\U0001F1F3\U0001F1F1 荷兰节点"
+        - "\U0001F1F7\U0001F1FA 俄罗斯节点"
+        - "\U0001F1ED\U0001F1FA 匈牙利节点"
+        - "\U0001F1FA\U0001F1E6 乌克兰节点"
+        - "\U0001F1F5\U0001F1F1 波兰节点"
+        - "\U0001F1EE\U0001F1F9 意大利节点"
+        - "\U0001F1EE\U0001F1F7 伊朗节点"
+      icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/spotify.png
+    - name: Telegram
+      type: select
+      url: https://telegram.org
+      interval: 300
+      timeout: 2000
+      max-failed-times: 3
+      proxies:
+        - Proxy
+        - "\U0001F1ED\U0001F1F0 香港节点"
+        - "\U0001F1EF\U0001F1F5 日本节点"
+        - "\U0001F1F0\U0001F1F7 韩国节点"
+        - "\U0001F1F8\U0001F1EC 新加坡节点"
+        - "\U0001F1FA\U0001F1F8 美国节点"
+        - "\U0001F1EC\U0001F1E7 英国节点"
+        - "\U0001F1EB\U0001F1F7 法国节点"
+        - "\U0001F1E9\U0001F1EA 德国节点"
+        - "\U0001F1E8\U0001F1E6 加拿大节点"
+        - "\U0001F1E6\U0001F1FA 澳大利亚节点"
+        - "\U0001F1F3\U0001F1F1 荷兰节点"
+        - "\U0001F1F7\U0001F1FA 俄罗斯节点"
+        - "\U0001F1ED\U0001F1FA 匈牙利节点"
+        - "\U0001F1FA\U0001F1E6 乌克兰节点"
+        - "\U0001F1F5\U0001F1F1 波兰节点"
+        - "\U0001F1EE\U0001F1F9 意大利节点"
+        - "\U0001F1EE\U0001F1F7 伊朗节点"
+      icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/telegram.png
+    - name: Microsoft
+      type: select
+      proxies:
+        - Proxy
+        - DIRECT
+        - "\U0001F1ED\U0001F1F0 香港节点"
+        - "\U0001F1EF\U0001F1F5 日本节点"
+        - "\U0001F1F0\U0001F1F7 韩国节点"
+        - "\U0001F1F8\U0001F1EC 新加坡节点"
+        - "\U0001F1FA\U0001F1F8 美国节点"
+        - "\U0001F1EC\U0001F1E7 英国节点"
+        - "\U0001F1EB\U0001F1F7 法国节点"
+        - "\U0001F1E9\U0001F1EA 德国节点"
+        - "\U0001F1E8\U0001F1E6 加拿大节点"
+        - "\U0001F1E6\U0001F1FA 澳大利亚节点"
+        - "\U0001F1F3\U0001F1F1 荷兰节点"
+        - "\U0001F1F7\U0001F1FA 俄罗斯节点"
+        - "\U0001F1ED\U0001F1FA 匈牙利节点"
+        - "\U0001F1FA\U0001F1E6 乌克兰节点"
+        - "\U0001F1F5\U0001F1F1 波兰节点"
+        - "\U0001F1EE\U0001F1F9 意大利节点"
+        - "\U0001F1EE\U0001F1F7 伊朗节点"
+      icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/microsoft.png
+    - name: Onedrive
+      type: select
+      proxies:
+        - DIRECT
+        - Proxy
+        - "\U0001F1ED\U0001F1F0 香港节点"
+        - "\U0001F1EF\U0001F1F5 日本节点"
+        - "\U0001F1F0\U0001F1F7 韩国节点"
+        - "\U0001F1F8\U0001F1EC 新加坡节点"
+        - "\U0001F1FA\U0001F1F8 美国节点"
+        - "\U0001F1EC\U0001F1E7 英国节点"
+        - "\U0001F1EB\U0001F1F7 法国节点"
+        - "\U0001F1E9\U0001F1EA 德国节点"
+        - "\U0001F1E8\U0001F1E6 加拿大节点"
+        - "\U0001F1E6\U0001F1FA 澳大利亚节点"
+        - "\U0001F1F3\U0001F1F1 荷兰节点"
+        - "\U0001F1F7\U0001F1FA 俄罗斯节点"
+        - "\U0001F1ED\U0001F1FA 匈牙利节点"
+        - "\U0001F1FA\U0001F1E6 乌克兰节点"
+        - "\U0001F1F5\U0001F1F1 波兰节点"
+        - "\U0001F1EE\U0001F1F9 意大利节点"
+        - "\U0001F1EE\U0001F1F7 伊朗节点"
+      icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/microsoft-onedrive.png
+    - name: Apple
+      type: select
+      proxies:
+        - DIRECT
+        - Proxy
+        - "\U0001F1ED\U0001F1F0 香港节点"
+        - "\U0001F1EF\U0001F1F5 日本节点"
+        - "\U0001F1F0\U0001F1F7 韩国节点"
+        - "\U0001F1F8\U0001F1EC 新加坡节点"
+        - "\U0001F1FA\U0001F1F8 美国节点"
+        - "\U0001F1EC\U0001F1E7 英国节点"
+        - "\U0001F1EB\U0001F1F7 法国节点"
+        - "\U0001F1E9\U0001F1EA 德国节点"
+        - "\U0001F1E8\U0001F1E6 加拿大节点"
+        - "\U0001F1E6\U0001F1FA 澳大利亚节点"
+        - "\U0001F1F3\U0001F1F1 荷兰节点"
+        - "\U0001F1F7\U0001F1FA 俄罗斯节点"
+        - "\U0001F1ED\U0001F1FA 匈牙利节点"
+        - "\U0001F1FA\U0001F1E6 乌克兰节点"
+        - "\U0001F1F5\U0001F1F1 波兰节点"
+        - "\U0001F1EE\U0001F1F9 意大利节点"
+        - "\U0001F1EE\U0001F1F7 伊朗节点"
+      icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/apple.png
+    - name: Gamer
+      type: select
+      include-all: true
+      filter: "^(?=.*((?i)游戏|\U0001F3AE|(\\b(GAME)\\b)))(?!.*((?i)回国|校园)).*$"
+      proxies:
+        - DIRECT
+        - Proxy
+      icon: https://cdn.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Game.png
+    - name: GlobalMedia
+      type: select
+      proxies:
+        - Proxy
+        - DIRECT
+        - "\U0001F1ED\U0001F1F0 香港节点"
+        - "\U0001F1EF\U0001F1F5 日本节点"
+        - "\U0001F1F0\U0001F1F7 韩国节点"
+        - "\U0001F1F8\U0001F1EC 新加坡节点"
+        - "\U0001F1FA\U0001F1F8 美国节点"
+        - "\U0001F1EC\U0001F1E7 英国节点"
+        - "\U0001F1EB\U0001F1F7 法国节点"
+        - "\U0001F1E9\U0001F1EA 德国节点"
+        - "\U0001F1E8\U0001F1E6 加拿大节点"
+        - "\U0001F1E6\U0001F1FA 澳大利亚节点"
+        - "\U0001F1F3\U0001F1F1 荷兰节点"
+        - "\U0001F1F7\U0001F1FA 俄罗斯节点"
+        - "\U0001F1ED\U0001F1FA 匈牙利节点"
+        - "\U0001F1FA\U0001F1E6 乌克兰节点"
+        - "\U0001F1F5\U0001F1F1 波兰节点"
+        - "\U0001F1EE\U0001F1F9 意大利节点"
+        - "\U0001F1EE\U0001F1F7 伊朗节点"
+      icon: https://cdn.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/ForeignMedia.png
+    - name: "\U0001F4AA 手动选择"
+      type: select
+      include-all: true
+    - name: "\U0001F64F 自动选择"
+      type: url-test
+      tolerance: 100
+      interval: 60
+      lazy: true
+      url: https://gstatic.com/generate_204
+      timeout: 2000
+      max-failed-times: 3
+      include-all: true
+    - name: "\U0001F3A1负载均衡"
+      type: load-balance
+      interval: 60
+      lazy: true
+      url: https://gstatic.com/generate_204
+      disable-udp: false
+      timeout: 2000
+      max-failed-times: 3
+      strategy: sticky-sessions
+      include-all: true
+    - name: "\U0001F1ED\U0001F1F0 香港节点"
+      type: url-test
+      tolerance: 100
+      interval: 60
+      lazy: true
+      url: https://gstatic.com/generate_204
+      timeout: 2000
+      max-failed-times: 3
+      filter: "(?i)HK|香港|港"
+      include-all: true
+    - name: "\U0001F1F9\U0001F1FC 台湾节点"
+      type: url-test
+      tolerance: 100
+      interval: 60
+      lazy: true
+      url: https://gstatic.com/generate_204
+      timeout: 2000
+      max-failed-times: 3
+      filter: "(?i)TW|台湾|台"
+      include-all: true
+    - name: "\U0001F1EF\U0001F1F5 日本节点"
+      type: url-test
+      tolerance: 100
+      interval: 60
+      lazy: true
+      url: https://gstatic.com/generate_204
+      timeout: 2000
+      max-failed-times: 3
+      filter: "(?i)JP"
+      include-all: true
+    - name: "\U0001F1F0\U0001F1F7 韩国节点"
+      type: url-test
+      tolerance: 100
+      interval: 60
+      lazy: true
+      url: https://gstatic.com/generate_204
+      timeout: 2000
+      max-failed-times: 3
+      filter: "(?i)KR|韩国|韩"
+      include-all: true
+    - name: "\U0001F1F8\U0001F1EC 新加坡节点"
+      type: url-test
+      tolerance: 100
+      interval: 60
+      lazy: true
+      url: https://gstatic.com/generate_204
+      timeout: 2000
+      max-failed-times: 3
+      filter: "(?i)SG|新加坡|狮城"
+      include-all: true
+    - name: "\U0001F1FA\U0001F1F8 美国节点"
+      type: url-test
+      tolerance: 100
+      interval: 60
+      lazy: true
+      url: https://gstatic.com/generate_204
+      timeout: 2000
+      max-failed-times: 3
+      filter: "(?i)US|美国|美"
+      include-all: true
+    - name: "\U0001F1EC\U0001F1E7 英国节点"
+      type: url-test
+      tolerance: 100
+      interval: 60
+      lazy: true
+      url: https://gstatic.com/generate_204
+      timeout: 2000
+      max-failed-times: 3
+      filter: "(?i)UK|GB|英国|英"
+      include-all: true
+    - name: "\U0001F1EB\U0001F1F7 法国节点"
+      type: url-test
+      tolerance: 100
+      interval: 60
+      lazy: true
+      url: https://gstatic.com/generate_204
+      timeout: 2000
+      max-failed-times: 3
+      filter: "(?i)FR|法国|法"
+      include-all: true
+    - name: "\U0001F1E9\U0001F1EA 德国节点"
+      type: url-test
+      tolerance: 100
+      interval: 60
+      lazy: true
+      url: https://gstatic.com/generate_204
+      timeout: 2000
+      max-failed-times: 3
+      filter: "(?i)DE|德国|德"
+      include-all: true
+    - name: "\U0001F1E8\U0001F1E6 加拿大节点"
+      type: url-test
+      tolerance: 100
+      interval: 60
+      lazy: true
+      url: https://gstatic.com/generate_204
+      timeout: 2000
+      max-failed-times: 3
+      filter: "(?i)CA|加拿大"
+      include-all: true
+    - name: "\U0001F1E6\U0001F1FA 澳大利亚节点"
+      type: url-test
+      tolerance: 100
+      interval: 60
+      lazy: true
+      url: https://gstatic.com/generate_204
+      timeout: 2000
+      max-failed-times: 3
+      filter: "(?i)AU|澳大利亚|澳洲"
+      include-all: true
+    - name: "\U0001F1F3\U0001F1F1 荷兰节点"
+      type: url-test
+      tolerance: 100
+      interval: 60
+      lazy: true
+      url: https://gstatic.com/generate_204
+      timeout: 2000
+      max-failed-times: 3
+      filter: "(?i)NL|荷兰"
+      include-all: true
+    - name: "\U0001F1F7\U0001F1FA 俄罗斯节点"
+      type: url-test
+      tolerance: 100
+      interval: 60
+      lazy: true
+      url: https://gstatic.com/generate_204
+      timeout: 2000
+      max-failed-times: 3
+      filter: "(?i)RU|俄罗斯|俄"
+      include-all: true
+    - name: "\U0001F1ED\U0001F1FA 匈牙利节点"
+      type: url-test
+      tolerance: 100
+      interval: 60
+      lazy: true
+      url: https://gstatic.com/generate_204
+      timeout: 2000
+      max-failed-times: 3
+      filter: "(?i)HU|匈牙利"
+      include-all: true
+    - name: "\U0001F1FA\U0001F1E6 乌克兰节点"
+      type: url-test
+      tolerance: 100
+      interval: 60
+      lazy: true
+      url: https://gstatic.com/generate_204
+      timeout: 2000
+      max-failed-times: 3
+      filter: "(?i)UA|乌克兰"
+      include-all: true
+    - name: "\U0001F1F5\U0001F1F1 波兰节点"
+      type: url-test
+      tolerance: 100
+      interval: 60
+      lazy: true
+      url: https://gstatic.com/generate_204
+      timeout: 2000
+      max-failed-times: 3
+      filter: "(?i)PL|波兰"
+      include-all: true
+    - name: "\U0001F1EE\U0001F1F9 意大利节点"
+      type: url-test
+      tolerance: 100
+      interval: 60
+      lazy: true
+      url: https://gstatic.com/generate_204
+      timeout: 2000
+      max-failed-times: 3
+      filter: "(?i)IT|意大利"
+      include-all: true
+    - name: "\U0001F1EE\U0001F1F7 伊朗节点"
+      type: url-test
+      tolerance: 100
+      interval: 60
+      lazy: true
+      url: https://gstatic.com/generate_204
+      timeout: 2000
+      max-failed-times: 3
+      filter: "(?i)IR|伊朗"
+      include-all: true
+
 rule-providers:
-  LocalAreaNetwork:
-    type: http
-    behavior: classical
-    format: text
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
-    path: ./rules/LocalAreaNetwork.list
-    interval: 86400
-  BanAD:
-    type: http
-    behavior: classical
-    format: text
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
-    path: ./rules/BanAD.list
-    interval: 86400
-  BanProgramAD:
-    type: http
-    behavior: classical
-    format: text
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
-    path: ./rules/BanProgramAD.list
-    interval: 86400
-  GoogleCN:
-    type: http
-    behavior: classical
-    format: text
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
-    path: ./rules/GoogleCN.list
-    interval: 86400
-  SteamCN:
-    type: http
-    behavior: classical
-    format: text
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
-    path: ./rules/SteamCN.list
-    interval: 86400
-  Microsoft:
-    type: http
-    behavior: classical
-    format: text
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list
-    path: ./rules/Microsoft.list
-    interval: 86400
-  Apple:
-    type: http
-    behavior: classical
-    format: text
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list
-    path: ./rules/Apple.list
-    interval: 86400
-  ProxyMedia:
-    type: http
-    behavior: classical
-    format: text
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
-    path: ./rules/ProxyMedia.list
-    interval: 86400
-  Telegram:
-    type: http
-    behavior: classical
-    format: text
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
-    path: ./rules/Telegram.list
-    interval: 86400
-  ProxyLite:
-    type: http
-    behavior: classical
-    format: text
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list
-    path: ./rules/ProxyLite.list
-    interval: 86400
-  ChinaDomain:
-    type: http
-    behavior: classical
-    format: text
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
-    path: ./rules/ChinaDomain.list
-    interval: 86400
-  ChinaCompanyIp:
-    type: http
-    behavior: classical
-    format: text
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
-    path: ./rules/ChinaCompanyIp.list
-    interval: 86400
+    GlobalMedia:
+        type: http
+        behavior: classical
+        interval: 86400
+        format: yaml
+        proxy: DIRECT
+        url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GlobalMedia/GlobalMedia_Classical.yaml
+        path: ./RuleSet/GlobalMedia.yaml
+    ChinaMedia:
+        type: http
+        behavior: classical
+        interval: 86400
+        format: yaml
+        proxy: DIRECT
+        url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/ChinaMedia/ChinaMedia.yaml
+        path: ./RuleSet/ChinaMedia.yaml
+    Netflix:
+        type: http
+        behavior: classical
+        interval: 86400
+        format: yaml
+        proxy: DIRECT
+        url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Netflix/Netflix_Classical_No_Resolve.yaml
+        path: ./RuleSet/Netflix.yaml
+    Disney+:
+        type: http
+        behavior: classical
+        interval: 86400
+        format: yaml
+        proxy: DIRECT
+        url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Disney/Disney_No_Resolve.yaml
+        path: ./RuleSet/Disney+.yaml
+    YouTube:
+        type: http
+        behavior: classical
+        interval: 86400
+        format: yaml
+        proxy: DIRECT
+        url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/YouTube/YouTube_No_Resolve.yaml
+        path: ./RuleSet/YouTube.yaml
+    Apple:
+        type: http
+        behavior: classical
+        interval: 86400
+        format: yaml
+        proxy: DIRECT
+        url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Apple/Apple_Classical_No_Resolve.yaml
+        path: ./RuleSet/Apple.yaml
+    Microsoft:
+        type: http
+        behavior: classical
+        interval: 86400
+        format: yaml
+        proxy: DIRECT
+        url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Microsoft/Microsoft_No_Resolve.yaml
+        path: ./RuleSet/Microsoft.yaml
+    Nintendo:
+        type: http
+        behavior: classical
+        interval: 86400
+        format: yaml
+        proxy: DIRECT
+        url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Nintendo/Nintendo.yaml
+        path: ./RuleSet/Nintendo.yaml
+    PlayStation:
+        type: http
+        behavior: classical
+        interval: 86400
+        format: yaml
+        proxy: DIRECT
+        url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/PlayStation/PlayStation.yaml
+        path: ./RuleSet/PlayStation.yaml
+    Epic:
+        type: http
+        behavior: classical
+        interval: 86400
+        format: yaml
+        proxy: DIRECT
+        url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Epic/Epic.yaml
+        path: ./RuleSet/Epic.yaml
+    Xbox:
+        type: http
+        behavior: classical
+        interval: 86400
+        format: yaml
+        proxy: DIRECT
+        url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Xbox/Xbox.yaml
+        path: ./RuleSet/Xbox.yaml
+    TikTok:
+        type: http
+        behavior: classical
+        interval: 86400
+        format: yaml
+        proxy: DIRECT
+        url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/TikTok/TikTok_No_Resolve.yaml
+        path: ./RuleSet/TikTok.yaml
+    Spotify:
+        type: http
+        behavior: classical
+        interval: 86400
+        format: yaml
+        proxy: DIRECT
+        url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Spotify/Spotify.yaml
+        path: ./RuleSet/Spotify.yaml
+    OpenAI:
+        type: http
+        behavior: classical
+        interval: 86400
+        format: yaml
+        proxy: DIRECT
+        url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OpenAI/OpenAI_No_Resolve.yaml
+        path: ./RuleSet/OpenAI.yaml
+    Proxy:
+        type: http
+        behavior: classical
+        interval: 86400
+        format: yaml
+        proxy: DIRECT
+        url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Proxy/Proxy_Classical_No_Resolve.yaml
+        path: ./RuleSet/Proxy.yaml
+    China:
+        type: http
+        behavior: classical
+        interval: 86400
+        format: yaml
+        proxy: DIRECT
+        url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/ChinaMax/ChinaMax_Classical.yaml
+        path: ./RuleSet/China.yaml
+    Tencent:
+        type: http
+        behavior: classical
+        interval: 86400
+        format: yaml
+        proxy: DIRECT
+        url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Tencent/Tencent.yaml
+        path: ./RuleSet/Tencent.yaml
+    LAN:
+        type: http
+        behavior: classical
+        interval: 86400
+        format: yaml
+        proxy: DIRECT
+        url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Lan/Lan.yaml
+        path: ./RuleSet/LAN.yaml
+    Cloudflare:
+        type: http
+        behavior: classical
+        interval: 86400
+        format: yaml
+        proxy: DIRECT
+        url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Cloudflare/Cloudflare.yaml
+        path: ./RuleSet/Cloudflare.yaml
+    Onedrive:
+        type: http
+        behavior: classical
+        interval: 86400
+        format: yaml
+        proxy: DIRECT
+        url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OneDrive/OneDrive.yaml
+        path: ./RuleSet/Onedrive.yaml
+    Bing:
+        type: http
+        behavior: classical
+        interval: 86400
+        format: yaml
+        proxy: DIRECT
+        url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Bing/Bing.yaml
+        path: ./RuleSet/Bing.yaml
+    Github:
+        type: http
+        behavior: classical
+        interval: 86400
+        format: yaml
+        proxy: DIRECT
+        url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GitHub/GitHub.yaml
+        path: ./RuleSet/Github.yaml
+    Telegram:
+        type: http
+        behavior: classical
+        interval: 86400
+        format: yaml
+        proxy: DIRECT
+        url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Telegram/Telegram.yaml
+        path: ./RuleSet/Telegram.yaml
 rules:
-  - DOMAIN-SUFFIX,nodebuf.com,🚀 节点选择
-  - RULE-SET,LocalAreaNetwork,🎯 全球直连
-  - RULE-SET,BanAD,🛑 全球拦截
-  - RULE-SET,BanProgramAD,🍃 应用净化
-  - RULE-SET,GoogleCN,🎯 全球直连
-  - RULE-SET,SteamCN,🎯 全球直连
-  - RULE-SET,Microsoft,Ⓜ️ 微软服务
-  - RULE-SET,Apple,🍎 苹果服务
-  - RULE-SET,ProxyMedia,🌍 国外媒体
-  - RULE-SET,Telegram,📲 电报信息
-  - RULE-SET,ProxyLite,🚀 节点选择
-  - RULE-SET,ChinaDomain,🎯 全球直连
-  - RULE-SET,ChinaCompanyIp,🎯 全球直连
-  - GEOIP,CN,🎯 全球直连
-  - MATCH,🐟 漏网之鱼
+    - RULE-SET,ChinaMedia,DIRECT
+    - RULE-SET,China,DIRECT
+    - RULE-SET,LAN,DIRECT
+    - GEOIP,CN,DIRECT
+    - RULE-SET,ChinaMedia,DIRECT
+    - RULE-SET,China,DIRECT
+    - RULE-SET,LAN,DIRECT
+    - GEOIP,CN,DIRECT
+    - RULE-SET,OpenAI,OpenAI
+    - RULE-SET,Cloudflare,Cloudflare
+    - RULE-SET,Github,Github
+    - RULE-SET,Onedrive,Onedrive
+    - RULE-SET,Bing,Bing
+    - RULE-SET,Apple,Apple
+    - RULE-SET,Spotify,Spotify
+    - RULE-SET,TikTok,TikTok
+    - RULE-SET,Netflix,Netflix
+    - RULE-SET,Disney+,Disney+
+    - RULE-SET,YouTube,YouTube
+    - RULE-SET,Telegram,Telegram
+    - RULE-SET,Nintendo,Gamer
+    - RULE-SET,PlayStation,Gamer
+    - RULE-SET,Epic,Gamer
+    - RULE-SET,Xbox,Gamer
+    - RULE-SET,Microsoft,Microsoft
+    - RULE-SET,GlobalMedia,GlobalMedia
+    - RULE-SET,Proxy,Proxy
+    - MATCH,Proxy
+
+proxies:
+  - {"cipher":"chacha20-ietf-poly1305","name":"🇸🇬 001  | ⬇️ 2MB/s","password":"t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv","plugin":"obfs","plugin-opts":{"host":"817aa69.default.nintendo.com:112719","mode":"tls"},"port":2377,"server":"18.143.63.164","type":"ss","udp":true}
+  - {"type":"vless","name":"🇺🇸 002  | ⬇️ 53KB/s","server":"67.216.218.76","port":443,"uuid":"77821190-1670-4e06-8111-98388d6fcefd","udp":true,"tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"packet-encoding":"xudp","reality-opts":{"public-key":"wYF-6QYrpUnKHTt26H__bpgkCjqeYZ-rKz7c_wjBqXA","short-id":"2ea109a3d9651ecf"},"network":"tcp","encryption":"none","servername":"www.apple.com"}
+  - {"type":"vless","name":"🇨🇭 003  | ⬇️ 100KB/s","server":"lv2.himoy.space","port":443,"uuid":"5131b5e9-2c3c-44a0-8f18-0641f3f21cac","udp":true,"tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"firefox","skip-cert-verify":false,"packet-encoding":"xudp","reality-opts":{"public-key":"AoPku9i0xSD2cCzJdPcUSSft8c_RkIZbsbP888VO938","short-id":"287b3d62899669d7"},"network":"tcp","servername":"lv2.himoy.space"}
+  - {"type":"vless","name":"🇫🇮 004  | ⬇️ 3MB/s","server":"8fc752g.fi3.h1clayd.click","port":443,"uuid":"056405e8-de9f-4d0d-8145-956f13cc34da","udp":true,"tls":true,"client-fingerprint":"qq","skip-cert-verify":false,"packet-encoding":"xudp","reality-opts":{"public-key":"GJzag9Wrvz_bO9AQaA-Oq0P1kV9btmxxAdzPV-uQB18","short-id":"09d0a94a1c6fc9d5","_spider-x":"/"},"network":"grpc","grpc-opts":{"grpc-service-name":"f345a414c040"},"encryption":"none","servername":"8fc752g.fi3.h1clayd.click"}
+  - {"type":"anytls","name":"🇹🇼 005  | ⬇️ 364KB/s","server":"er8u54dh.df6h451rh.xin","port":443,"udp":true,"sni":"px.ads.linkedin.com","skip-cert-verify":true,"packet-encoding":"","password":"0324fbc29561","packetEncoding":"none","allowInsecure":"1","sub-tag":"P002-260618"}
+  - {"name":"🇭🇰 006  | ⬇️ 13KB/s","type":"vmess","server":"47.76.57.83","port":443,"cipher":"auto","uuid":"f23bb427-c1f9-4373-876c-2f43e9f790f3","alterId":0,"tls":true,"network":"ws","ws-opts":{"path":"/ws-vmess","headers":{"Host":"VAH4URdZL3jDX5r2.v.3dns.vip"}},"servername":"VAH4URdZL3jDX5r2.v.3dns.vip"}
+  - {"name":"🇸🇬 007  | ⬇️ 1MB/s","server":"172.64.150.28","port":2082,"type":"vless","uuid":"e5cc16a6-ea42-46b2-82ae-ad2157e1641b","tls":false,"tfo":true,"skip-cert-verify":false,"network":"ws","ws-opts":{"path":"/fp","headers":{"Host":"hhlfy.twiladaphne.ndjp.net"}},"udp":true}
+  - {"client-fingerprint":"chrome","flow":"xtls-rprx-vision","name":"🇺🇸 008  | ⬇️ 579KB/s","network":"tcp","port":443,"reality-opts":{"public-key":"q6WMAqAzFYui3TiWXdOJ1-E4NbiHHk5o1mx6W6m4hEM","short-id":"c4623fa4291795e7"},"server":"rn.20066002.xyz","tls":true,"type":"vless","udp":true,"uuid":"444715e6-1c6a-4027-90df-fa01ac984669","servername":"gateway.icloud.com"}
+  - {"type":"vless","name":"🇫🇮 009  | ⬇️ 116KB/s","server":"263651t.fi3.h1clayd.click","port":443,"uuid":"056405e8-de9f-4d0d-8145-956f13cc34da","udp":true,"tls":true,"client-fingerprint":"edge","skip-cert-verify":false,"packet-encoding":"xudp","reality-opts":{"public-key":"nNe5Y8_G7L0_VO5lqlee3h5UmRH4RXjaRYGCDUkbQz4","short-id":"2892e611785bafd1"},"network":"tcp","encryption":"none","servername":"263651t.fi3.h1clayd.click"}
+  - {"type":"vless","name":"🇺🇸 010  | ⬇️ 177KB/s","server":"la.20066002.xyz","port":443,"uuid":"9866e390-c95d-409f-bb0d-5618e5c10978","udp":true,"tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"firefox","skip-cert-verify":false,"packet-encoding":"xudp","reality-opts":{"public-key":"Otc1A9KX3_itArtCHz4N5O33kONWoRdyWUyeZPF9rl8","short-id":"57156f2a944d2034"},"network":"tcp","encryption":"none","servername":"gateway.icloud.com"}
+  - {"name":"🇺🇸 011  | ⬇️ 163KB/s","network":"ws","password":"e20fd145-65f1-4aa3-96be-da0524bbb16e","port":20230,"server":"us003.421421.xyz","skip-cert-verify":true,"sni":"www.alibaba.com","sub_tag":"R002-260618","type":"trojan","ws-opts":{"path":"/"},"udp":true}
+  - {"name":"🇸🇬 012  | ⬇️ 2MB/s","server":"104.16.162.89","port":8080,"type":"vless","uuid":"e5cc16a6-ea42-46b2-82ae-ad2157e1641b","tls":false,"tfo":true,"skip-cert-verify":false,"network":"ws","ws-opts":{"path":"/sg-melbi","headers":{"Host":"hhlfy.twiladaphne.ndjp.net"}},"udp":true}
+  - {"name":"🇮🇹 013  | ⬇️ 4MB/s","server":"202.50.253.36","port":19999,"type":"ss","cipher":"aes-256-gcm","password":"ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=","udp":true}
+  - {"name":"🇮🇹 014  | ⬇️ 48KB/s","server":"202.50.253.27","port":19999,"type":"ss","cipher":"aes-256-gcm","password":"ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=","udp":true}
+  - {"name":"🇮🇹 015  | ⬇️ 625KB/s","server":"202.50.253.72","port":19999,"type":"ss","cipher":"aes-256-gcm","password":"ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=","udp":true}
+  - {"type":"vless","name":"🇺🇸 016  | ⬇️ 122KB/s","server":"199.232.78.160","port":443,"uuid":"7dee06cc-4bc8-43ca-a6c2-59f81107f2e3","udp":true,"tls":true,"skip-cert-verify":false,"packet-encoding":"xudp","network":"ws","ws-opts":{"headers":{"Host":"copy_az_channel_NUFiLTER_10i.global.ssl.fastly.net."},"path":"/"},"encryption":"none","servername":"firefox.com","fingerprint":"CD6E838B9BFE31CAB8B3D5C858B0D6223FE84ECE236C1FDB281BE93C302E1E6E"}
+  - {"name":"🇭🇰 017  | ⬇️ 9KB/s","server":"8.217.254.88","type":"vmess","country":"🇸🇬SG","port":443,"uuid":"f23bb427c1f94373876c2f43e9f790f3","alterId":0,"cipher":"auto","network":"ws","http-opts":{},"h2-opts":{},"tls":true,"skip-cert-verify":true,"ws-opts":{"path":"/ws-vmess","headers":{"HOST":"2b9hwY8oCx7Q74NM.v.3dns.vip"}},"servername":"2b9hwY8oCx7Q74NM.v.3dns.vip"}
+  - {"name":"🇮🇹 018  | ⬇️ 4MB/s","server":"202.50.253.99","port":19999,"type":"ss","cipher":"aes-256-gcm","password":"ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=","udp":true}
+  - {"name":"🇭🇰 019  | ⬇️ 1KB/s","type":"vmess","server":"qtkdr8jxe3wefxjm.v.3dns.vip","port":443,"cipher":"auto","uuid":"f23bb427-c1f9-4373-876c-2f43e9f790f3","alterId":0,"tls":true,"network":"ws","ws-opts":{"path":"/ws-vmess","headers":{"Host":"qTKDR8jXE3wEFxJM.v.3dns.vip"}},"servername":"qTKDR8jXE3wEFxJM.v.3dns.vip"}
+  - {"name":"🇮🇹 020  | ⬇️ 5MB/s","server":"202.50.253.81","port":19999,"type":"ss","cipher":"aes-256-gcm","password":"ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=","udp":true}
+  - {"type":"vless","name":"🇺🇸 021  | ⬇️ 9KB/s","server":"wwww.qarvian.ir","port":443,"uuid":"7dee06cc-4bc8-43ca-a6c2-59f81107f2e3","udp":true,"tls":true,"client-fingerprint":"chrome","skip-cert-verify":false,"packet-encoding":"xudp","network":"ws","ws-opts":{"headers":{"Host":"copy_az_channel_NUFiLTER_7i.global.ssl.fastly.net."},"path":"/"},"encryption":"none","servername":"firefox.com","fingerprint":"CD6E838B9BFE31CAB8B3D5C858B0D6223FE84ECE236C1FDB281BE93C302E1E6E"}
+  - {"type":"vless","name":"🇨🇦 022  | ⬇️ 3MB/s","server":"213.152.165.203","port":2093,"uuid":"0b418782-e023-447e-ba99-e66b84ff118d","udp":true,"tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"packet-encoding":"xudp","reality-opts":{"public-key":"C_GA8wVjeLmyqLK6em5OHn4WPlsbndA-RyvyNU1aGFM","short-id":"8a9725533854a7e8"},"network":"tcp","servername":"www.apple.com"}
+  - {"type":"vless","name":"🇩🇪 023  | ⬇️ 12KB/s","server":"germany01.azotvpn.xyz","port":9443,"uuid":"5a96c1fc-f167-44b9-9020-8f6867537d14","udp":true,"tls":true,"client-fingerprint":"firefox","alpn":["h2","http/1.1"],"skip-cert-verify":false,"packet-encoding":"xudp","network":"xhttp","encryption":"none","servername":"germany01.azotvpn.xyz"}
+  - {"type":"hysteria","name":"🇫🇷 024  | ⬇️ 193KB/s","server":"62.210.70.191","port":24667,"alpn":["h3"],"auth-str":"dongtaiwang.com","down":"55 Mbps","protocol":"udp","skip-cert-verify":true,"sub-tag":"P002-260618","up":"11 Mbps","udp":"true","sni":"bing.com"}
+  - {"type":"wireguard","name":"🇨🇳 025  | ⬇️ 434KB/s","server":"8.6.112.249","port":939,"private-key":"CItzlhi34lByi7hccik7tHYCP1y6cPnJylMDXaRvrEM=","udp":true,"ip":"172.16.0.2/32","ipv6":"2606:4700:110:81cf:afd6:7564:e1f3:2827/128","reserved":[171,105,152],"public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","mtu":1280,"keepalive":"25","persistent-keepalive":"25"}
+  - {"type":"wireguard","name":"🇨🇳 026  | ⬇️ 208KB/s","server":"8.6.112.194","port":864,"private-key":"IKnKTTYInPHdx82qyY8SCskH2/5Vv06CsIxcjuOGJkM=","udp":true,"ip":"172.16.0.2/32","ipv6":"2606:4700:110:81cf:afd6:7564:e1f3:2827/128","reserved":[221,190,11],"public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","mtu":1280,"keepalive":"25","persistent-keepalive":"25"}
+  - {"type":"wireguard","name":"🇨🇳 027  | ⬇️ 137KB/s","server":"8.6.112.196","port":7103,"private-key":"QJEpilscgBJU68hsICv40+5eEvOFp0TOb5WqAeu9Gls=","udp":true,"ip":"172.16.0.2/32","ipv6":"2606:4700:110:81cf:afd6:7564:e1f3:2827/128","reserved":[251,139,179],"public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","mtu":1280,"keepalive":"25","persistent-keepalive":"25"}
+  - {"type":"wireguard","name":"🇨🇳 028  | ⬇️ 212KB/s","server":"8.6.112.191","port":7559,"private-key":"cGdOrw5Aw1UrkS3VPLW5iKZUqSTSfcPozJhBzy+Cy2w=","udp":true,"ip":"172.16.0.2/32","ipv6":"2606:4700:110:81cf:afd6:7564:e1f3:2827/128","reserved":[44,205,91],"public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","mtu":1280,"keepalive":"25","persistent-keepalive":"25"}
+  - {"type":"vless","name":"🇹🇷 029  | ⬇️ 4MB/s","server":"trend.eidoslab.link","port":443,"uuid":"7072eeba-94fd-4fb3-92f2-a4506dd84cd8","udp":true,"tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"firefox","skip-cert-verify":false,"packet-encoding":"xudp","reality-opts":{"public-key":"p7X0vRL9R-23Ey-MZZZj7FY0g87nQq0Jzc01DwuryRk","short-id":"7597c5df264bcc10"},"network":"tcp","encryption":"none","servername":"trend.eidoslab.link"}
+  - {"type":"vless","name":"🇵🇱 030  | ⬇️ 1MB/s","server":"pl1.himoy.space","port":443,"uuid":"5131b5e9-2c3c-44a0-8f18-0641f3f21cac","udp":true,"tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"firefox","skip-cert-verify":false,"packet-encoding":"xudp","reality-opts":{"public-key":"1D_oMYRytcccH8J2SiM9o0bjmWlDND9CXWLL8LwDvE8","short-id":"e2201d4d8b942ccc"},"network":"tcp","encryption":"none","servername":"pl1.himoy.space"}
+  - {"name":"🇭🇰 031  | ⬇️ 3KB/s","type":"vmess","server":"47.243.194.125","port":443,"cipher":"auto","uuid":"f23bb427c1f94373876c2f43e9f790f3","alterId":0,"tls":true,"network":"ws","ws-opts":{"path":"/ws-vmess","headers":{"Host":"NYcQg19zkwaCPM1B.v.3dns.vip"}},"servername":"NYcQg19zkwaCPM1B.v.3dns.vip"}
+  - {"type":"vless","name":"🇭🇰 032  | ⬇️ 62KB/s","server":"213.152.165.203","port":2091,"uuid":"76b6a658-ce80-4500-b24d-404c94639ac6","udp":true,"tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"packet-encoding":"xudp","reality-opts":{"public-key":"1N6AW5YuEwBoYcZK5KuugDzBHsa0NKZMT8QI-EmyL0k","short-id":"08a4b1f473932632"},"network":"tcp","servername":"www.apple.com"}
+  - {"type":"vless","name":"🇫🇮 033  | ⬇️ 46KB/s","server":"se-2.pythonsetupbib.online","port":61374,"uuid":"f8d52ece-fad4-478d-875d-df6eed3befa7","udp":true,"tls":true,"client-fingerprint":"chrome","skip-cert-verify":false,"packet-encoding":"xudp","reality-opts":{"public-key":"QrNs0ew7snHqLfpVXS9RAhlRzgAzzGZK9fXmDcx9xHI"},"network":"xhttp","xhttp-opts":{"host":"se-2.pythonsetupbib.online","path":"/","mode":"packet-up","x-padding-bytes":"100-500","reuse-settings":{"max-connections":"3"}},"encryption":"none","servername":"se-2.pythonsetupbib.online"}
+  - {"type":"hysteria","name":"🇩🇪 034  | ⬇️ 2MB/s","server":"5.83.129.90","port":54177,"alpn":["h3"],"auth-str":"dongtaiwang.com","down":"1000","obfs":"","protocol":"udp","skip-cert-verify":true,"sub-tag":"C002-260622","up":"500","udp":"true","sni":"apple.com"}
+  - {"type":"vless","name":"🇭🇰 035  | ⬇️ 201KB/s","server":"47.238.210.5","port":13779,"uuid":"928e6cce-8ced-4243-9a48-a6642edd09b0","udp":true,"tls":true,"client-fingerprint":"chrome","skip-cert-verify":false,"packet-encoding":"xudp","reality-opts":{"public-key":"llTyp52oRXnJmQ3I9UUrmlwbMA79B-wLCRHCu-8dLGg","short-id":"af1bdd293097b664"},"network":"tcp","encryption":"none","servername":"tesla.com"}
+  - {"client-fingerprint":"random","flow":"xtls-rprx-vision","name":"🇩🇪 036  | ⬇️ 238KB/s","network":"raw","port":443,"reality-opts":{"public-key":"4goy1hsfLyeu1POy0fjyH7qIrc1CK4p3nAZQVMTdPFY","short-id":"af3292b33826ae94"},"server":"germany01.azotvpn.xyz","tls":true,"type":"vless","udp":true,"uuid":"5a96c1fc-f167-44b9-9020-8f6867537d14","servername":"germany01.azotvpn.xyz"}
+  - {"name":"🇮🇹 037  | ⬇️ 47KB/s","server":"202.50.253.18","port":19999,"type":"ss","cipher":"aes-256-gcm","password":"ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=","udp":true}
+  - {"name":"🇫🇷 038  | ⬇️ 27KB/s","server":"v35.hdacd.com","port":30835,"type":"vmess","uuid":"cbb3f877-d1fb-344c-87a9-d153bffd5484","alterId":2,"cipher":"auto","tls":false,"skip-cert-verify":false,"udp":true,"network":"tcp"}
+  - {"type":"anytls","name":"🇭🇰 039  | ⬇️ 2MB/s","server":"654968169.df6h451rh.xin","port":443,"udp":true,"sni":"images.ctfassets.net","client-fingerprint":"chrome","alpn":["http/1.1"],"skip-cert-verify":true,"packet-encoding":"","password":"0324fbc29561","packetEncoding":"none","allowInsecure":"1","fp":"chrome","sub-tag":"R002-260618"}
+  - {"type":"vless","name":"🇺🇸 040  | ⬇️ 2KB/s","server":"jp.sofast.live","port":52683,"uuid":"5aaa5259-f924-4682-a4a3-149d472a9dcc","udp":true,"client-fingerprint":"chrome","skip-cert-verify":false,"packet-encoding":"xudp","network":"tcp"}
+  - {"name":"🇺🇸 041  | ⬇️ 10KB/s","password":"test123","port":1080,"server":"104.168.249.36","type":"socks5","username":"test123"}
+  - {"type":"trojan","password":"0a9f1f5a397bd427","server":"125.227.86.45","port":443,"name":"🇹🇼 042  | ⬇️ 478KB/s","skip-cert-verify":true,"sni":"TG.freecodes","alpn":["h2"],"network":"grpc","grpc-opts":{"grpc-service-name":"db"}}
+  - {"type":"wireguard","name":"🇨🇳 043  | ⬇️ 52KB/s","server":"8.6.112.245","port":939,"private-key":"4FLFnClfDQJU8AEBVoF2g1hn9kx+XRGU/Y487dbL03o=","udp":true,"ip":"172.16.0.2/32","ipv6":"2606:4700:110:81cf:afd6:7564:e1f3:2827/128","reserved":[101,127,88],"public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","mtu":1280,"keepalive":"25","persistent-keepalive":"25"}
+  - {"name":"🇳🇱 044  | ⬇️ 5MB/s","type":"vmess","server":"v29.hdacd.com","port":30829,"cipher":"auto","uuid":"cbb3f877-d1fb-344c-87a9-d153bffd5484","alterId":2,"tls":false,"network":"tcp"}
+  - {"type":"wireguard","name":"🇨🇳 045  | ⬇️ 290KB/s","server":"162.159.192.2","port":4500,"private-key":"gPp2ccvQS9adu228HbRy7wQZkzEczlrH87oweB/IcWo=","udp":true,"ip":"172.16.0.2/32","reserved":[3,60,199],"public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","mtu":1280,"keepalive":"5","wnoise":"quic","wnoisecount":"5","wnoisedelay":"5","wpayloadsize":"40-90","persistent-keepalive":"5"}
+  - {"type":"vless","name":"🇺🇸 046  | ⬇️ 18KB/s","server":"8.35.211.36","port":2087,"uuid":"56e4896e-90a9-4fe0-8480-90d3d68b9928","udp":true,"tls":true,"client-fingerprint":"chrome","skip-cert-verify":false,"packet-encoding":"xudp","network":"ws","ws-opts":{"headers":{"Host":"go.iranfree.de5.net"},"path":"/"},"encryption":"none","servername":"go.iranfree.de5.net"}
+  - {"client-fingerprint":"chrome","flow":"xtls-rprx-vision","name":"🇯🇵 047  | ⬇️ 56KB/s","network":"raw","port":35544,"reality-opts":{"public-key":"HrcXRHtsitc_AVlN-_8fZuRgaP-Mqa_9JJotI9OnkVc","short-id":"25c79e5856c7"},"server":"funagfrdfs.alixxplay.com","tls":true,"type":"vless","udp":true,"uuid":"57beeeb0-03fc-4fc9-94da-7604488a7134","servername":"iosapps.itunes.apple.com"}
+  - {"name":"🇸🇬 048  | ⬇️ 2KB/s","type":"vmess","server":"wjofhsqteueywxeq.v.3dns.vip","port":443,"cipher":"auto","uuid":"a9f4de8b-68f1-44b6-b6a2-1db60940503a","alterId":0,"tls":true,"network":"ws","ws-opts":{"path":"/ws-vmess","headers":{}},"servername":"wjofhsqteueywxeq.v.3dns.vip"}
+  - {"type":"wireguard","name":"🇨🇳 049  | ⬇️ 4KB/s","server":"162.159.192.5","port":4500,"private-key":"GNy8IIaC8oylrrXWymbi/yAEKMBF8rqnZKuKiz2Qvmk=","udp":true,"ip":"172.16.0.2/32","reserved":[197,35,123],"public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","mtu":1280,"keepalive":"5","wnoise":"quic","wnoisecount":"5","wnoisedelay":"5","wpayloadsize":"40-90","persistent-keepalive":"5"}
+  - {"type":"wireguard","name":"🇨🇳 050  | ⬇️ 1MB/s","server":"8.6.112.185","port":878,"private-key":"8POmMoo2qD3czYe1B+39d7r4eAt0XV5QvMnGZ7zw1nI=","udp":true,"ip":"172.16.0.2/32","ipv6":"2606:4700:110:81cf:afd6:7564:e1f3:2827/128","reserved":[116,216,169],"public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","mtu":1280,"keepalive":"25","persistent-keepalive":"25"}
+  - {"name":"🇮🇹 051  | ⬇️ 18KB/s","server":"202.50.253.90","port":19999,"type":"ss","cipher":"aes-256-gcm","password":"ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=","udp":true}
+  - {"type":"ss","skip-cert-verify":false,"udp":false,"server":"202.50.253.63","port":19999,"cipher":"aes-256-gcm","password":"ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=","name":"🇮🇹 052  | ⬇️ 209KB/s"}
+  - {"type":"wireguard","name":"🇨🇳 053  | ⬇️ 2KB/s","server":"8.6.112.67","port":1002,"private-key":"AM8WNSWXUaqHrOCAAzU4Y98Ypo3QkudBRgpC6Wz1MmI=","udp":true,"ip":"172.16.0.2/32","ipv6":"2606:4700:110:81cf:afd6:7564:e1f3:2827/128","reserved":[115,186,217],"public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","mtu":1280,"keepalive":"25","persistent-keepalive":"25"}
+  - {"type":"wireguard","name":"🇨🇳 054  | ⬇️ 195KB/s","server":"8.6.112.91","port":7103,"private-key":"GINuZfAPclEIlMr/fUd9odnKdFGFBiXSk7NJBNbuklk=","udp":true,"ip":"172.16.0.2/32","ipv6":"2606:4700:110:81cf:afd6:7564:e1f3:2827/128","reserved":[242,2,113],"public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","mtu":1280,"keepalive":"25","persistent-keepalive":"25"}
+  - {"name":"🇸🇬 055  | ⬇️ 139KB/s","server":"104.18.0.181","port":2082,"type":"vless","uuid":"e5cc16a6-ea42-46b2-82ae-ad2157e1641b","tls":false,"tfo":true,"skip-cert-verify":false,"network":"ws","ws-opts":{"path":"/fp","headers":{"Host":"hhlfy.twiladaphne.ndjp.net"}},"udp":true,"servername":"hhlfy.twiladaphne.ndjp.net"}
+  - {"type":"vless","name":"🇪🇪 056  | ⬇️ 1KB/s","server":"tlokexcm.himoy.space","port":443,"uuid":"5131b5e9-2c3c-44a0-8f18-0641f3f21cac","udp":true,"tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"firefox","skip-cert-verify":false,"packet-encoding":"xudp","reality-opts":{"public-key":"Pb37t99NiJqm-lsTi4tucPFqRXIsek-5G5dqjIqVfxE","short-id":"15c87d0b99c0d132"},"network":"tcp","encryption":"none","servername":"tlokexcm.himoy.space"}
+  - {"type":"wireguard","name":"🇨🇳 057  | ⬇️ 95KB/s","server":"8.6.112.148","port":1180,"private-key":"kDGQmi8MA3XmCxGpf8kRiEFyonfdWf2h8XKLetdGLUg=","udp":true,"ip":"172.16.0.2/32","ipv6":"2606:4700:110:81cf:afd6:7564:e1f3:2827/128","reserved":[211,49,1],"public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","mtu":1280,"keepalive":"25","persistent-keepalive":"25"}
+  - {"type":"anytls","name":"🇭🇰 058  | ⬇️ 159KB/s","server":"56481.df6h451rh.xin","port":443,"udp":true,"sni":"images.ctfassets.net","skip-cert-verify":true,"packet-encoding":"","password":"0324fbc29561","packetEncoding":"none","allowInsecure":"1","sub-tag":"P002-260618"}
+  - {"name":"🇭🇰 059  | ⬇️ 10MB/s","type":"vmess","server":"47.243.65.243","port":443,"cipher":"auto","uuid":"f23bb427c1f94373876c2f43e9f790f3","alterId":0,"tls":true,"network":"ws","ws-opts":{"path":"/ws-vmess","headers":{"Host":"lcv8v9l7oyamxxfz.v.3dns.vip"}},"servername":"lcv8v9l7oyamxxfz.v.3dns.vip"}
+  - {"name":"🇭🇰 060  | ⬇️ 2KB/s","type":"vmess","server":"8.218.195.61","port":443,"cipher":"auto","uuid":"f23bb427c1f94373876c2f43e9f790f3","alterId":0,"tls":true,"network":"ws","ws-opts":{"path":"/ws-vmess","headers":{"Host":"ex1ogt73nzpqkac2.v.3dns.vip"}},"servername":"ex1ogt73nzpqkac2.v.3dns.vip"}
+  - {"type":"ss","skip-cert-verify":false,"udp":false,"server":"202.50.253.45","port":19999,"cipher":"aes-256-gcm","password":"ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=","name":"🇮🇹 061  | ⬇️ 3MB/s"}
+  - {"type":"wireguard","name":"🇨🇳 062  | ⬇️ 4MB/s","server":"188.114.97.143","port":3581,"private-key":"kHqIbTiP3uGRHOdn6SOZBLm6oZgXU2Ls8KxJ97fGwnE=","udp":true,"ip":"172.16.0.2/32","ipv6":"2606:4700:110:81cf:afd6:7564:e1f3:2827/128","reserved":[166,34,66],"public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","mtu":1280,"keepalive":"25","persistent-keepalive":"25"}
+  - {"type":"wireguard","name":"🇨🇳 063  | ⬇️ 4MB/s","server":"188.114.97.28","port":878,"private-key":"QKWHUv3oJVT09St5hRxXr6xJHc5t1CZbuDqw6QBSqWI=","udp":true,"ip":"172.16.0.2/32","ipv6":"2606:4700:110:81cf:afd6:7564:e1f3:2827/128","reserved":[133,89,249],"public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","mtu":1280,"keepalive":"25","persistent-keepalive":"25"}
+  - {"name":"🇹🇼 064 ","password":"111","port":1080,"server":"106.107.236.110","type":"socks5","username":"111"}
+  - {"name":"🇭🇰 065  | ⬇️ 10MB/s","type":"vmess","server":"8.210.24.181","port":443,"cipher":"auto","uuid":"f23bb427c1f94373876c2f43e9f790f3","alterId":0,"tls":true,"network":"ws","ws-opts":{"path":"/ws-vmess","headers":{"Host":"6jdvarazgu3qqr6q.v.3dns.vip"}},"servername":"6jdvarazgu3qqr6q.v.3dns.vip"}
+  - {"type":"wireguard","name":"🇨🇳 066  | ⬇️ 4MB/s","server":"188.114.97.61","port":4177,"private-key":"OGkiskzA134Ry+P1EaQSDfq8mbGx7qY1UAFRo4hZzk8=","udp":true,"ip":"172.16.0.2/32","ipv6":"2606:4700:110:81cf:afd6:7564:e1f3:2827/128","reserved":[106,222,139],"public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","mtu":1280,"keepalive":"25","persistent-keepalive":"25"}
+  - {"type":"vless","name":"🇳🇱 067  | ⬇️ 4MB/s","server":"vb41fwol.himoy.space","port":443,"uuid":"5131b5e9-2c3c-44a0-8f18-0641f3f21cac","udp":true,"tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"firefox","skip-cert-verify":false,"packet-encoding":"xudp","reality-opts":{"public-key":"CwVoZSZr3MQ8IEaxOqmZRolV2Vw5Ve-hwhRLHuOerzg","short-id":"44aa59cc84b532ed"},"network":"tcp","encryption":"none","servername":"vb41fwol.himoy.space"}
+  - {"alpn":["h3"],"client-fingerprint":"chrome","encryption":"none","name":"🇩🇪 068  | ⬇️ 5MB/s","network":"xhttp","port":443,"server":"www.canva.com","tls":true,"type":"vless","udp":true,"uuid":"a0431667-fe5b-4a55-b466-49bb04f74120","xhttp-opts":{"host":"kanapucin.tolkun-tv.ru","mode":"packet-up","path":"/"},"xudp":true,"packet-encoding":"xudp","servername":"kanapucin.tolkun-tv.ru"}
+  - {"type":"wireguard","name":"🇨🇳 069  | ⬇️ 4MB/s","server":"188.114.97.95","port":500,"private-key":"SPzhp2MeXko2A1u51l1trbvZwknYJppbsPB0w0TlCEI=","udp":true,"ip":"172.16.0.2/32","ipv6":"2606:4700:110:81cf:afd6:7564:e1f3:2827/128","reserved":[214,83,8],"public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","mtu":1280,"keepalive":"25","persistent-keepalive":"25"}
+  - {"type":"wireguard","name":"🇨🇳 070  | ⬇️ 1KB/s","server":"188.114.97.235","port":2371,"private-key":"EHGSBx1fPk0GR1lV8jirQcOOAvBEScCwPdbWh6DVDHA=","udp":true,"ip":"172.16.0.2/32","ipv6":"2606:4700:110:81cf:afd6:7564:e1f3:2827/128","reserved":[129,202,80],"public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","mtu":1280,"keepalive":"25","persistent-keepalive":"25"}
